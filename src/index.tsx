@@ -12,3 +12,5 @@ render(
   </BrowserRouter>,
   document.getElementById('root')
 );
+
+// git add . && git commit -m "end lesson 8" && git push -u origin main

@@ -6,6 +6,7 @@ import { RoutePath } from "./utils/routes";
 import './styles/index.scss';
 import { ThemeContext } from "./theme/context";
 import { useTheme } from "./theme/use-theme";
+import { classNames } from "./utils/class-names";
 
 
 
@@ -13,7 +14,7 @@ export const App = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames(`app`, {}, [theme])}>
       <Link to={RoutePath.MAIN}>Главная</Link>
       <Link to={RoutePath.ABOUT}>О сайте</Link>
       <button onClick={toggleTheme}>{theme}</button>
