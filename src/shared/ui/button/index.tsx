@@ -18,7 +18,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FC<Props> = ({ theme = ThemeButton.CLEAR, className, children, ...props }) => {
   return (
     <button
-      className={cn(s.navbar, {}, [className, s[theme]])}
+      className={cn(s.root, {}, [className, s[theme]])}
       {...props}
     >
       {children}

@@ -1,9 +1,12 @@
-import './styles/index.scss';
-import { useTheme } from "./providers/theme";
-import { cn } from "shared/lib";
+import { Suspense } from 'react';
 import { AppRouter } from "./providers/router";
+// Components
 import { Navbar } from "widgets/navbar";
 import { SideBar } from 'widgets/sidebar';
+// Functions
+import { useTheme } from "./providers/theme";
+import { cn } from "shared/lib";
+import './styles/index.scss';
 
 
 
@@ -12,11 +15,13 @@ export const App = () => {
 
   return (
     <div className={cn(`app`, {}, [theme])}>
-      <Navbar />
-      <div className='content-page'>
-        <SideBar />
-        <AppRouter />
-      </div>
+      <Suspense fallback="">
+        <Navbar />
+        <div className='content-page'>
+          <SideBar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   )
 };

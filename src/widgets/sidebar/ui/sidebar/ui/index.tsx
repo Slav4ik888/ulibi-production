@@ -1,6 +1,7 @@
 import { FC, useReducer } from 'react';
 import { cn } from 'shared/lib';
-import { ThemeSwitcher } from 'shared/ui';
+import { LangSwitcher } from 'widgets/lang-switcher';
+import { ThemeSwitcher } from 'widgets/theme-switsher';
 import s from './index.module.scss';
 
 
@@ -21,7 +22,7 @@ export const SideBar: FC<Props> = ({ className }) => {
       <button onClick={toggle}>toggle</button>
       <div className={s.switcher}>
         <ThemeSwitcher />
-        {/* LangugeSwitcher */}
+        <LangSwitcher className={s.lang} />
       </div>
     </div>
   )
