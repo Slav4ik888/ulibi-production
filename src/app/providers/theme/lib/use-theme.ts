@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { Theme, ThemeContext } from "./context";
+import { useContext } from 'react';
+import { Theme, ThemeContext } from './context';
 import * as LS from 'shared/lib';
 
 

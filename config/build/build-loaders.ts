@@ -1,9 +1,8 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[]  {
-
   const typescriptLoader = {
     test    : /\.tsx?$/,
     use     : 'ts-loader',
@@ -19,7 +18,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[]  {
         presets: ['@babel/preset-env'],
         plugins: [
           [
-            "i18next-extract",
+            'i18next-extract',
             {
               locales           : ['ru', 'en'],
               keyAsDefaultValue : true
@@ -30,7 +29,7 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[]  {
     }
   };
 
-  
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [

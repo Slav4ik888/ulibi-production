@@ -1,5 +1,5 @@
-import { FC, useMemo, useReducer, useState } from 'react';
-import { ThemeContext, Theme } from "../lib/context";
+import { FC, useMemo, useState } from 'react';
+import { ThemeContext, Theme } from '../lib/context';
 import * as LS from 'shared/lib';
 
 
@@ -11,7 +11,6 @@ export const ThemeProvider: FC = ({ children }) => {
     [theme, setTheme] = useState<Theme>(defaultTheme),
     defaultProps = useMemo(() => ({ theme, setTheme }), [theme]);
 
-  
   return (
     <ThemeContext.Provider value={defaultProps}>
       {

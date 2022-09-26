@@ -1,12 +1,11 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import webpack, { WebpackPluginInstance, ProgressPlugin } from "webpack";
-import { BuildOptions } from "./types/config";
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack, { WebpackPluginInstance, ProgressPlugin } from 'webpack';
+import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 
 export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
-
   const plugins = [
     new ProgressPlugin(),
     new HtmlWebpackPlugin({

@@ -9,12 +9,15 @@ interface Props {
 }
 
 
-export const PageWrapper: FC<Props> = ({ className, children }) => {
-  return (
-    <div className={cn(s.root, {}, [className])}>
-      {
-        children
-      }
-    </div>
-  )
+export const PageWrapper: FC<Props> = ({ className, children }) => (
+  <div className={cn(s.root, {}, [className])}>
+    {
+      children
+    }
+  </div>
+);
+
+
+PageWrapper.defaultProps = {
+  className: ''
 };

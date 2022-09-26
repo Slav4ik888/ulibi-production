@@ -13,12 +13,11 @@ interface Props {
 
 export const LangSwitcher: FC<Props> = ({ className }) => {
   const
-    { t, i18n } = useTranslation(),
-    isEn        = i18n.language === 'ru',
-    label       = isEn ? 'EN' : 'RUS',
-    toggle      = () => i18n.changeLanguage(isEn ? 'en' : 'ru');
+    { i18n } = useTranslation(),
+    isEn     = i18n.language === 'ru',
+    label    = isEn ? 'EN' : 'RUS',
+    toggle   = () => i18n.changeLanguage(isEn ? 'en' : 'ru');
 
-  
   return (
     <Button
       className = {cn(s.root, {}, [className])}
@@ -27,4 +26,8 @@ export const LangSwitcher: FC<Props> = ({ className }) => {
       {label}
     </Button>
   )
+};
+
+LangSwitcher.defaultProps = {
+  className: ''
 };

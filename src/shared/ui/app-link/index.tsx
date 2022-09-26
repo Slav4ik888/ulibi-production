@@ -15,14 +15,17 @@ interface Props extends LinkProps {
 }
 
 
-export const AppLink: FC<Props> = ({ to, className, theme = AppLinkTheme.PRIMARY, children, ...otherProps }) => {
-  return (
-    <Link
-      to={to}
-      className={cn(s.navbar, {}, [className, s[theme]])}
-      {...otherProps}
-    >
-      {children}
-    </Link>
-  );
-};
+export const AppLink: FC<Props> = ({ to, className, theme, children, ...otherProps }) => (
+  <Link
+    to={to}
+    className={cn(s.navbar, {}, [className, s[theme]])}
+    {...otherProps}
+  >
+    {children}
+  </Link>
+);
+
+AppLink.defaultProps = {
+  className : '',
+  theme     : AppLinkTheme.PRIMARY
+}

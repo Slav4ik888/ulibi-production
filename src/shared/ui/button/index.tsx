@@ -5,7 +5,7 @@ import s from './index.module.scss';
 
 
 export enum ThemeButton {
-  CLEAR = `clear`,
+  CLEAR = 'clear',
 }
 
 
@@ -15,13 +15,17 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 
-export const Button: FC<Props> = ({ theme = ThemeButton.CLEAR, className, children, ...props }) => {
-  return (
-    <button
-      className={cn(s.root, {}, [className, s[theme]])}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
+export const Button: FC<Props> = ({ theme, className, children, ...props }) => (
+  <button
+    type      = 'button'
+    className = {cn(s.root, {}, [className, s[theme]])}
+    {...props}
+  >
+    {children}
+  </button>
+);
+
+Button.defaultProps = {
+  className : '',
+  theme     : ThemeButton.CLEAR
+}
