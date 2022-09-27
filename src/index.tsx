@@ -14,4 +14,4 @@ render(
   document.getElementById('root')
 );
 
-// git add . && git commit -m "end lesson 17 refact eslint" && git push -u origin main
+// git add . && git commit -m "end lesson 20" && git push -u origin main

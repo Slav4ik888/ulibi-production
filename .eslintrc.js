@@ -1,14 +1,16 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true
+    browser : true,
+    es2021  : true,
+    jest    : true
   },
   extends: [
     'airbnb',
     'airbnb/hooks',
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:i18next/recommended'
   ],
   overrides: [
   ],
@@ -22,7 +24,8 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'i18next'
   ],
   rules: {
     semi                                            : 0,
@@ -46,7 +49,7 @@ module.exports = {
     'no-multiple-empty-lines'                       : ['error', { max: 3, maxEOF: 1, maxBOF: 1 }],
     'no-unneeded-ternary'                           : 0,
     'arrow-parens'                                  : 0,
-
+    'max-len'                                       : ['error', { code: 110, ignoreComments: true }],
     '@typescript-eslint/semi'                       : 0,
     '@typescript-eslint/type-annotation-spacing'    : 0,
     '@typescript-eslint/brace-style'                : 0,
@@ -54,6 +57,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions' : 0,
     '@typescript-eslint/no-misused-promises'        : 0,
     '@typescript-eslint/ban-ts-comment'             : 0,
+    '@typescript-eslint/no-empty-function'          : 0,
 
     'react/react-in-jsx-scope'                      : 0,
     'react/function-component-definition'           : 0,
@@ -61,7 +65,8 @@ module.exports = {
     'react/jsx-wrap-multilines'                     : 0,
     'react/jsx-props-no-spreading'                  : 0,
     'react/no-children-prop'                        : 0,
-    'jsx-quotes'                                    : ['error', 'prefer-single']
+    'jsx-quotes'                                    : ['error', 'prefer-single'],
+    'i18next/no-literal-string'                     : ['error', { markupOnly: true }]
   },
   globals: {
     __IS_DEV__: true

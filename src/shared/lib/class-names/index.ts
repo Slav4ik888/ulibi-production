@@ -5,10 +5,11 @@ export function cn(cls: string, mods: Mods = {}, additional: string[] = []): str
   return [
     cls,
     ...additional.filter(Boolean),
-    Object
+    ...Object
       .entries(mods)
       .filter(([_, value]) => Boolean(value))
       .map(([classname]) => classname)
   ]
     .join(' ')
+    .trim()
 }
