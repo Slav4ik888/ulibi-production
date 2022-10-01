@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { Suspense } from 'react';
+import { Suspense, FC } from 'react';
 import { AppRouter } from './providers/router';
 // Components
 import { Navbar } from 'widgets/navbar';
-import { SideBar } from 'widgets/sidebar';
+import { SideBar } from 'widgets/side-bar';
 // Functions
 import { useTheme } from './providers/theme';
 import { cn } from 'shared/lib';
@@ -11,8 +10,9 @@ import './styles/index.scss';
 
 
 
-export const App: React.FC = () => {
+export const App: FC = () => {
   const { theme } = useTheme();
+
 
   return (
     <div className={cn('app', {}, [theme])}>

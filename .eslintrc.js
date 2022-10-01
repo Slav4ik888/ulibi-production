@@ -12,8 +12,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:i18next/recommended'
   ],
-  overrides: [
-  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -50,6 +48,8 @@ module.exports = {
     'no-unneeded-ternary'                           : 0,
     'arrow-parens'                                  : 0,
     'max-len'                                       : ['error', { code: 110, ignoreComments: true }],
+    'no-restricted-globals'                         : 0,
+
     '@typescript-eslint/semi'                       : 0,
     '@typescript-eslint/type-annotation-spacing'    : 0,
     '@typescript-eslint/brace-style'                : 0,
@@ -66,9 +66,21 @@ module.exports = {
     'react/jsx-props-no-spreading'                  : 0,
     'react/no-children-prop'                        : 0,
     'jsx-quotes'                                    : ['error', 'prefer-single'],
-    'i18next/no-literal-string'                     : ['error', { markupOnly: true }]
+    'i18next/no-literal-string'                     : ['error',
+      {
+        markupOnly      : true,
+        ignoreAttribute : ['data-testid']
+      }]
   },
   globals: {
     __IS_DEV__: true
-  }
+  },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 0
+      }
+    }
+  ]
 };

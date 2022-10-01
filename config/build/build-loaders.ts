@@ -38,10 +38,11 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[]  {
         loader: 'css-loader',
         options: {
           modules: {
-            auto           : (resPath: string) => resPath.includes('.module.scss'),
-            localIdentName : isDev
+            auto                   : (resPath: string) => resPath.includes('.module.scss'),
+            exportLocalsConvention : 'camelCase',
+            localIdentName         : isDev
               ? '[path][name]__[local]--[hash:base64:5]'
-              : '[hash:base64:8]'
+              : '[hash:base64:8]',
           }
         }
       },

@@ -1,4 +1,5 @@
 import type { Config } from 'jest';
+import path from 'path';
 
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
@@ -20,6 +21,10 @@ const config: Config = {
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: [
     'node_modules', 'src'
+  ],
+
+  modulePaths: [
+    '<rootDir>src'
   ],
 
   // An array of file extensions your modules use
@@ -53,6 +58,19 @@ const config: Config = {
   testPathIgnorePatterns: [
     '/node_modules/'
   ],
+
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  collectCoverageFrom: undefined,
+
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test
+  setupFilesAfterEnv: ['<rootDir>setup-tests.ts'],
+
+  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
+  moduleNameMapper: {
+    '\\.(scss|css)$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx')
+  }
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -64,9 +82,6 @@ const config: Config = {
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
-
-  // An array of glob patterns indicating a set of files for which coverage information should be collected
-  collectCoverageFrom: undefined,
 
   // The directory where Jest should output its coverage files
   // coverageDirectory: undefined,
@@ -112,9 +127,6 @@ const config: Config = {
   // The maximum amount of workers used to run your tests. Can be specified as % or a number. E.g.maxWorkers: 10% will use 10% of your CPU amount + 1 as the maximum worker number.maxWorkers: 2 will use a maximum of 2 workers.
   // maxWorkers: "50%",
 
-  // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
-
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
 
@@ -153,9 +165,6 @@ const config: Config = {
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
-
-  // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,

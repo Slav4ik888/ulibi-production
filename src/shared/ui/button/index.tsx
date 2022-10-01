@@ -5,7 +5,8 @@ import s from './index.module.scss';
 
 
 export enum ThemeButton {
-  CLEAR = 'clear',
+  CLEAR  = 'clear',
+  SIMPLE = 'simple'
 }
 
 

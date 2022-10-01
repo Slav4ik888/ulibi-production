@@ -1,5 +1,7 @@
+import { BugButton } from 'app/providers/error-boundary';
 import { FC, useReducer } from 'react';
 import { cn } from 'shared/lib';
+import { Button } from 'shared/ui';
 import { LangSwitcher } from 'widgets/lang-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switsher';
 import s from './index.module.scss';
@@ -17,10 +19,19 @@ export const SideBar: FC<Props> = ({ className }) => {
 
   return (
     <div
-      className={cn(s.root, { [s.collapsed]: collapsed }, [className])}
+      data-testid = 'sidebar'
+      className   = {cn(s.root, { [s.collapsed]: collapsed }, [className])}
     >
-      <button type='button' onClick={toggle}>{collapsed ? '>' : '<'}</button>
+      <Button
+        type        = 'button'
+        data-testid = 'side-bar-toggle'
+        onClick     = {toggle}
+      >
+        {collapsed ? '>' : '<'}
+      </Button>
+
       <div className={s.switcher}>
+        <BugButton />
         <ThemeSwitcher />
         <LangSwitcher className={s.lang} />
       </div>
@@ -30,4 +41,4 @@ export const SideBar: FC<Props> = ({ className }) => {
 
 SideBar.defaultProps = {
   className: ''
-}
+};
