@@ -1,6 +1,7 @@
 .root {
   cursor: pointer;
   color: var(--inverted-primary-color);
+  padding: 4px 8px;
 }
 
 .clear {
@@ -11,8 +12,8 @@
 
 .simple {
   border-width: 1px;
+  border-color: var(--primary-color);
   border-radius: 4px;
-  padding: 4px 8px;
   color: var(--primary-color);
-  background: var(--bg-color);
+  background: none;
 }

@@ -17,4 +17,11 @@ render(
   document.getElementById('root')
 );
 
-// git add . && git commit -m "end lesson 24" && git push -u origin main
+//
+// npx sb init --builder webpack5
+// 
+// npm i -D loki
+// npx loki init --config ./config/storybook
+// npx loki test
+// 
+// git add . && git commit -m "start 27 CI pipeline" && git push -u origin main

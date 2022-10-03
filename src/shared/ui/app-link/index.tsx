@@ -6,7 +6,8 @@ import s from './index.module.scss';
 
 export enum AppLinkTheme {
   PRIMARY   = 'primary',
-  SECONDARY = 'secondary'
+  SECONDARY = 'secondary',
+  RED       = 'red'
 }
 
 interface Props extends LinkProps {

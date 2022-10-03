@@ -1,7 +1,7 @@
-import { FC } from 'react'
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config'
-import { cn } from 'shared/lib'
+import { RoutePath } from 'shared/config/routes';
+import { cn } from 'shared/lib';
 import { AppLink, AppLinkTheme } from 'shared/ui';
 import s from './index.module.scss';
 
@@ -12,10 +12,7 @@ interface Props {
 
 
 export const Navbar: FC<Props> = ({ classNames }) => {
-  const
-    { t } = useTranslation(),
-    main  = t('Главная'),
-    about = t('О сайте');
+  const { t } = useTranslation();
 
   return (
     <div className={cn(s.root, {}, [classNames])}>
@@ -23,13 +20,13 @@ export const Navbar: FC<Props> = ({ classNames }) => {
         <AppLink
           to        = {RoutePath.MAIN}
           theme     = {AppLinkTheme.SECONDARY}
-          children  = {main}
+          children  = {t('Главная')}
           className = {s.mainLink}
         />
         <AppLink
           to        = {RoutePath.ABOUT}
           theme     = {AppLinkTheme.SECONDARY}
-          children  = {about}
+          children  = {t('О сайте')}
         />
       </div>
     </div>
