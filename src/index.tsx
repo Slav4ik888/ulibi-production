@@ -24,4 +24,4 @@ render(
 // npx loki init --config ./config/storybook
 // npx loki test
 // 
-// git add . && git commit -m "start 27 CI pipeline" && git push -u origin main
+// git add . && git commit -m "start 27 CI pipeline 2" && git push -u origin main
