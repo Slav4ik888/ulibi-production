@@ -26,4 +26,4 @@ render(
 //
 // git remote set-url origin https://username:token@github.com/username/repository.git
 //
-// git add . && git commit -m "start 27 CI pipeline fix yaml" && git push -u origin main
+// git add . && git commit -m "start 27 CI pipeline test pull_request" && git push -u origin test_pipeline_pull_request
