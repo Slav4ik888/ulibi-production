@@ -24,4 +24,6 @@ render(
 // npx loki init --config ./config/storybook
 // npx loki test
 //
-// git add . && git commit -m "start 27 CI pipeline fix" && git push -u origin main
+// git remote set-url origin https://username:token@github.com/username/repository.git
+//
+// git add . && git commit -m "start 27 CI pipeline fix scss" && git push -u origin main

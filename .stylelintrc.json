@@ -6,6 +6,7 @@
     "declaration-empty-line-before": null,
     "selector-class-pattern": null,
     "block-no-empty": null,
-    "indentation": [2]
+    "indentation": [2],
+    "no-descending-specificity": null
   }
 }
