@@ -38,7 +38,7 @@ module.exports = {
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }],
-    'no-unused-vars': 1,
+    'no-unused-vars': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
     'import/extensions': 0,
@@ -62,6 +62,8 @@ module.exports = {
       ignoreComments: true
     }],
     'no-restricted-globals': 0,
+    'react/display-name': 0,
+    '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,
     '@typescript-eslint/brace-style': 0,

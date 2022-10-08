@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui';
+import { Button } from 'shared/ui';
 import s from './index.module.scss';
 
 

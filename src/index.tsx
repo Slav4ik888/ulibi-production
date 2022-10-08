@@ -19,9 +19,9 @@ render(
 
 //
 // npx sb init --builder webpack5
-// 
+//
 // npm i -D loki
 // npx loki init --config ./config/storybook
 // npx loki test
-// 
-// git add . && git commit -m "start 27 CI pipeline start setup" && git push -u origin main
+//
+// git add . && git commit -m "start 27 CI pipeline fix" && git push -u origin main

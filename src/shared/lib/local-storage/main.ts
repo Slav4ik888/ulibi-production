@@ -1,5 +1,6 @@
 
 /** Вывод ошибки в консоль */
+// eslint-disable-next-line no-console
 const showError = (text: string, fieldName: string) => console.log(`${text}: ${fieldName}`);
 
 
@@ -8,7 +9,7 @@ const showError = (text: string, fieldName: string) => console.log(`${text}: ${f
  * Вывод ошибки
  * Ответ есть ли ошибка - true при наличии
  */
-const checkError = (data: any, fieldName: string) => {
+const checkError = (data: unknown, fieldName: string) => {
   if (!data) {
     showError('Не указано значение', fieldName);
     return true;
@@ -20,7 +21,7 @@ const checkError = (data: any, fieldName: string) => {
 const PREFIX = 'UlibiProd-';
 
 /** Сохраняем в LocalStorage */
-export const setStorageData = (storageName: string, data: any) => {
+export const setStorageData = (storageName: string, data: unknown) => {
   if (checkError(storageName, '"Имя хранилища"')) return;
   if (checkError(data, '"Данные для сохранения"')) return;
 
