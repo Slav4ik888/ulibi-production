@@ -60,5 +60,5 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
 );
 
 Header.defaultProps = {
-  user: { name: '' }
+  user: null
 }
