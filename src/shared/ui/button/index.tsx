@@ -5,8 +5,10 @@ import s from './index.module.scss';
 
 
 export enum ThemeButton {
-  CLEAR  = 'clear',
-  SIMPLE = 'simple'
+  CLEAR          = 'clear',
+  SIMPLE         = 'simple',
+  BACKGROUND     = 'background',
+  BACKGROUND_INV = 'background-inverted'
 }
 
 

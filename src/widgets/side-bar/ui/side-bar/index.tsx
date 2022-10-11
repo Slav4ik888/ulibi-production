@@ -1,7 +1,7 @@
 import { BugButton } from 'app/providers/error-boundary';
 import { FC, useReducer } from 'react';
 import { cn } from 'shared/lib';
-import { Button } from 'shared/ui';
+import { Button, ThemeButton } from 'shared/ui';
 import { LangSwitcher } from 'widgets/lang-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switsher';
 import s from './index.module.scss';
@@ -25,6 +25,8 @@ export const SideBar: FC<Props> = ({ className }) => {
       <Button
         type        = 'button'
         data-testid = 'side-bar-toggle'
+        className   = {s.collapseBtn}
+        theme       = {ThemeButton.BACKGROUND_INV}
         onClick     = {toggle}
       >
         {collapsed ? '>' : '<'}

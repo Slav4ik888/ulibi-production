@@ -8,7 +8,17 @@
 }
 
 .collapsed {
-  width      : var(--sidebar-width-collapsed);
+  width: var(--sidebar-width-collapsed);
+}
+
+.collapse-btn {
+  position : absolute;
+  top: 4px;
+  right: -28px;
+  border: 1px solid #000;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+  padding: 9px;
 }
 
 .switcher {
