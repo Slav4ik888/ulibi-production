@@ -72,6 +72,7 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-empty-function': 0,
+    'react/jsx-props-no-multi-spaces': 0,
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
     'react/jsx-equals-spacing': 0,

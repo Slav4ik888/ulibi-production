@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
-import { Button, ThemeButton } from 'shared/ui';
+import { Button, ButtonTheme } from 'shared/ui';
 import s from './index.module.scss';
 
 
@@ -22,7 +22,7 @@ export const PageError: FC<Props> = ({ className }) => {
     <div className={cn(s.root, {}, [className])}>
       <p>{t('Прошла непредвиденная ошибка')}</p>
       <Button
-        theme   = {ThemeButton.SIMPLE}
+        theme   = {ButtonTheme.SIMPLE}
         onClick = {handlerReloadPage}
       >
         {t('Обновить страницу')}

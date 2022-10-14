@@ -1,13 +1,20 @@
 import { FC, useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { cn } from 'shared/lib';
 import { Button } from 'shared/ui';
 import s from './index.module.scss';
 
 
+interface Props {
+  className? : string;
+  short?     : boolean;
+}
+
 /** For development testing */
-export const BugButton: FC = () => {
+export const BugButton: FC<Props> = ({ short, className }) => {
   const
-    { t } = useTranslation(),
+    { t } = useTranslation('errors'),
+    label = t(short ? 'Err' : 'Бросить ошибку'),
     [error, setError] = useState(false);
 
   const onThrow = () => setError(true);
@@ -18,10 +25,15 @@ export const BugButton: FC = () => {
 
   return (
     <Button
-      className = {s.root}
+      className = {cn(s.root, {}, [className])}
       onClick   = {onThrow}
     >
-      {t('Бросить ошибку')}
+      {label}
     </Button>
   )
+};
+
+BugButton.defaultProps = {
+  className : '',
+  short     : false
 };

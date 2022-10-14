@@ -4,31 +4,51 @@ import s from './index.module.scss';
 
 
 
-export enum ThemeButton {
+export enum ButtonTheme {
   CLEAR          = 'clear',
   SIMPLE         = 'simple',
   BACKGROUND     = 'background',
   BACKGROUND_INV = 'background-inverted'
 }
 
+export enum ButtonSize {
+  M  = 'size_m',
+  L  = 'size_l',
+  XL = 'size_xl'
+}
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   className? : string;
-  theme?     : ThemeButton;
+  theme?     : ButtonTheme;
+  square?    : boolean;
+  size?      : ButtonSize;
 }
 
 
-export const Button: FC<Props> = ({ theme, className, children, ...props }) => (
-  <button
-    type      = 'button'
-    className = {cn(s.root, {}, [className, s[theme]])}
-    {...props}
-  >
-    {children}
-  </button>
-);
+export const Button: FC<Props> = ({ theme, square, size, className, children, ...props }) => {
+  const mods = {
+    [s.square]: square
+  };
+
+  const additional = [
+    s[theme], s[size], className
+  ]
+
+  return (
+    <button
+      type      = 'button'
+      className = {cn(s.root, mods, additional)}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+
 
 Button.defaultProps = {
   className : '',
-  theme     : ThemeButton.CLEAR
-}
+  theme     : ButtonTheme.CLEAR,
+  square    : false,
+  size      : ButtonSize.M
+};
