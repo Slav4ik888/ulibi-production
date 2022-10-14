@@ -26,4 +26,4 @@ render(
 //
 // git remote set-url origin https://username:token@github.com/username/repository.git
 //
-// git add . && git commit -m "start 28 fix test" && git push -u origin main
+// git add . && git commit -m "start 28 fix test 2" && git push -u origin main
