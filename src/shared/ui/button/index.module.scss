@@ -1,13 +1,18 @@
 .root {
   cursor: pointer;
-  color: var(--inverted-primary-color);
+  color: var(--primary-color);
   padding: 4px 8px;
 }
 
-.clear {
+.clear,
+.clear-inverted {
   border: none;
   outline: none;
   background: none;
+}
+
+.clear-inverted {
+  color: var(--inverted-primary-color);
 }
 
 .simple {

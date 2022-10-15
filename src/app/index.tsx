@@ -6,13 +6,11 @@ import { SideBar } from 'widgets/side-bar';
 // Functions
 import { useTheme } from './providers/theme';
 import { cn } from 'shared/lib';
-import './styles/index.scss';
 
 
 
 export const App: FC = () => {
   const { theme } = useTheme();
-
 
   return (
     <div className={cn('app', {}, [theme])}>

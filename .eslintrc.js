@@ -21,11 +21,12 @@ module.exports = {
     sourceType: 'module'
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['react', '@typescript-eslint', 'i18next'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   overrides: [{
-    files: ['**/src/**/*.test.{ts,tsx}'],
+    files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
     rules: {
-      'i18next/no-literal-string': 0
+      'i18next/no-literal-string': 0,
+      'max-len': 0
     }
   }],
   ignorePatterns: ['main.*.css', '**/build/css/*.css'],
@@ -78,6 +79,8 @@ module.exports = {
     'react/jsx-equals-spacing': 0,
     'react/jsx-wrap-multilines': 0,
     'react/jsx-props-no-spreading': 0,
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'react/no-children-prop': 0,
     'jsx-quotes': ['error', 'prefer-single'],
     'i18next/no-literal-string': ['error', {

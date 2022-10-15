@@ -21,6 +21,12 @@ Clear.args = {
   children : 'Text'
 };
 
+export const ClearInv = Template.bind({});
+ClearInv.args = {
+  children : 'Text',
+  theme    : ButtonTheme.CLEAR_INV
+};
+
 export const Simple = Template.bind({});
 Simple.args = {
   children : 'Text',
@@ -84,6 +90,13 @@ ClearDark.args = {
   children: 'Text'
 };
 ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const ClearInvDark = Template.bind({});
+ClearInvDark.args = {
+  children : 'Text',
+  theme    : ButtonTheme.CLEAR_INV
+};
+ClearInvDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const SimpleDark = Template.bind({});
 SimpleDark.args = {
