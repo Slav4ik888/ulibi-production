@@ -1,5 +1,5 @@
 import { screen, fireEvent } from '@testing-library/react';
-import { renderWithTranslation, componentRender } from '../../../../../../config/tests';
+import { componentRender } from '../../../../../../config/tests';
 import { SideBar } from '..';
 
 
