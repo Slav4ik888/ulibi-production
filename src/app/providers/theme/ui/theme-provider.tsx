@@ -4,6 +4,7 @@ import * as LS from 'shared/lib';
 
 
 const defaultTheme = LS.getTheme() as Theme || Theme.LIGHT;
+console.log('defaultTheme: ', defaultTheme);
 
 interface Props {
   initial?: Theme;
@@ -12,7 +13,11 @@ interface Props {
 export const ThemeProvider: FC<Props> = ({ initial, children }) => {
   const
     [theme, setTheme] = useState<Theme>(() => initial || defaultTheme),
-    defaultProps = useMemo(() => ({ theme, setTheme }), [theme]);
+    defaultProps = useMemo(() => {
+      document.body.className = theme;
+      return { theme, setTheme }
+    }, [theme]);
+
 
   return (
     <ThemeContext.Provider value={defaultProps}>

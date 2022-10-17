@@ -15,6 +15,7 @@ export const useTheme = (): UseTheme => {
     const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
     LS.setTheme(newTheme);
     setTheme(newTheme);
+    document.body.className = newTheme;
   };
 
   return { theme, toggleTheme }

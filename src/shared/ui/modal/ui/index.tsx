@@ -19,8 +19,7 @@ const ANIMATION_DELAY = 300;
 export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
   const
     [isClosing, setIsClosing] = useState(false),
-    timerRef = useRef<ReturnType<typeof setTimeout>>(),
-    { theme } = useTheme()
+    timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const handlerContentClick = (e: React.MouseEvent) => e.stopPropagation();
 
@@ -52,8 +51,7 @@ export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
 
   const mods: Record<string, boolean> = {
     [s.opened]    : isOpen,
-    [s.isClosing] : isClosing,
-    [s[theme]]    : true
+    [s.isClosing] : isClosing
   };
 
 

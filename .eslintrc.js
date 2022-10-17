@@ -40,6 +40,7 @@ module.exports = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }],
     'no-unused-vars': 0,
+    'brace-style': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
     'import/extensions': 0,
