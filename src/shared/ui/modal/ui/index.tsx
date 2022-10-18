@@ -10,15 +10,17 @@ interface Props {
   className? : string
   isOpen     : boolean
   children   : ReactNode
+  lazy?      : boolean
   onClose?   : () => void
 }
 
 const ANIMATION_DELAY = 300;
 
 
-export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
+export const Modal: FC<Props> = ({ className, lazy, isOpen, children, onClose }) => {
   const
     [isClosing, setIsClosing] = useState(false),
+    [isMounted, setIsMounted] = useState(false),
     timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const handlerContentClick = (e: React.MouseEvent) => e.stopPropagation();
@@ -40,7 +42,7 @@ export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      window.addEventListener('keydown', (e) => handlerKeyDown(e))
+      window.addEventListener('keydown', (e) => handlerKeyDown(e));
     }
     return () => {
       clearTimeout(timerRef.current);
@@ -53,6 +55,17 @@ export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
     [s.opened]    : isOpen,
     [s.isClosing] : isClosing
   };
+
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMounted(true);
+    }
+
+    return () => setIsMounted(false)
+  }, [isOpen]);
+
+  if (lazy && !isMounted) return null;
 
 
   return (
@@ -82,5 +95,6 @@ export const Modal: FC<Props> = ({ className, isOpen, children, onClose }) => {
 
 Modal.defaultProps = {
   className : '',
+  lazy      : false,
   onClose   : () => {}
 };

@@ -40,6 +40,7 @@ module.exports = {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }],
     'no-unused-vars': 0,
+    'no-unused-expressions': 0,
     'brace-style': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
@@ -48,6 +49,7 @@ module.exports = {
     'import/order': 0,
     'no-multi-spaces': 0,
     'one-var': 0,
+    'no-plusplus': 0,
     'no-whitespace-before-property': 0,
     'no-irregular-whitespace': 0,
     'object-curly-newline': 0,

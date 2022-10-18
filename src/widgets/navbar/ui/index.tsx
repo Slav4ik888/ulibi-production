@@ -1,3 +1,4 @@
+import { LoginModal } from 'features/auth-by-username';
 import { FC, useReducer, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RoutePath } from 'shared/config/routes';
@@ -36,16 +37,14 @@ export const Navbar: FC<Props> = ({ classNames }) => {
       </div>
 
       <Button
-        theme={ButtonTheme.CLEAR_INV}
-        onClick={toggle}
+        theme   = {ButtonTheme.CLEAR_INV}
+        onClick = {toggle}
       >
         {t('Войти')}
       </Button>
 
-      <Modal
+      <LoginModal
         isOpen   = {isOpen}
-        // eslint-disable-next-line max-len, i18next/no-literal-string
-        children = {<div style={{ width: '400px', height: '100px' }}>themadsasdasda sdase themadsasdasda sdase</div>}
         onClose  = {toggle}
       />
     </div>
