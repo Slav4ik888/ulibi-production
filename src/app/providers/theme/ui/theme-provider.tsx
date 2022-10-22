@@ -4,7 +4,6 @@ import * as LS from 'shared/lib';
 
 
 const defaultTheme = LS.getTheme() as Theme || Theme.LIGHT;
-console.log('defaultTheme: ', defaultTheme);
 
 interface Props {
   initial?: Theme;
