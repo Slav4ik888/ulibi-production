@@ -32,9 +32,8 @@ module.exports = {
   ignorePatterns: ['main.*.css', '**/build/css/*.css'],
   rules: {
     semi: 0,
-    indent: [2, 2],
+    indent: 0,
     'comma-dangle': 0,
-    'react/jsx-indent': [2, 2],
     'key-spacing': 0,
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
@@ -66,7 +65,6 @@ module.exports = {
       ignoreComments: true
     }],
     'no-restricted-globals': 0,
-    'react/display-name': 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,
@@ -76,6 +74,8 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-empty-function': 0,
+    'react/jsx-indent': 0,
+    'react/display-name': 0,
     'react/jsx-props-no-multi-spaces': 0,
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
@@ -85,6 +85,9 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
     'react/no-children-prop': 0,
+    'react/require-default-props': 0,
+    'react/jsx-closing-tag-location': 0,
+    'react/jsx-closing-bracket-location': 0,
     'jsx-quotes': ['error', 'prefer-single'],
     'i18next/no-literal-string': ['error', {
       markupOnly: true,

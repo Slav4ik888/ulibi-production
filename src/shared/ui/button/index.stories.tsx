@@ -145,3 +145,22 @@ SquareDarkXL.args = {
   square   : true
 };
 SquareDarkXL.decorators = [ThemeDecorator(Theme.DARK)];
+
+
+// DISABLED
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children : 'Text',
+  theme    : ButtonTheme.BACKGROUND_INV,
+  disabled : true
+};
+
+
+export const DisabledDark = Template.bind({});
+DisabledDark.args = {
+  children : 'Text',
+  theme    : ButtonTheme.BACKGROUND_INV,
+  disabled : true
+};
+DisabledDark.decorators = [ThemeDecorator(Theme.DARK)];

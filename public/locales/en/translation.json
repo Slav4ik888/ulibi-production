@@ -1,8 +1,11 @@
 {
-  "Язык"    : "Language",
-  "Главная" : "Main",
-  "О сайте" : "About us",
-  "Войти"   : "Log in",
-  "Введите username": "Enter username",
-  "Введите пароль": "Enter password"
+  "Язык"              : "Language",
+  "Главная"           : "Main",
+  "О сайте"           : "About us",
+  "Форма авторизации" : "Authorization form",
+  "Войти"             : "Log in",
+  "Введите username"  : "Enter username",
+  "Введите пароль"    : "Enter password",
+  "Ввели не верный логин или пароль": "Incorrect username or password entered",
+  "Выйти"             : "Exit"
 }

@@ -20,12 +20,15 @@ const checkError = (data: unknown, fieldName: string) => {
 
 const PREFIX = 'UlibiProd-';
 
+const getStorage = (storageName: string) => PREFIX + storageName;
+
+
 /** Сохраняем в LocalStorage */
 export const setStorageData = (storageName: string, data: unknown) => {
   if (checkError(storageName, '"Имя хранилища"')) return;
   if (checkError(data, '"Данные для сохранения"')) return;
 
-  localStorage.setItem(PREFIX + storageName, JSON.stringify(data));
+  localStorage.setItem(getStorage(storageName), JSON.stringify(data));
 };
 
 
@@ -33,7 +36,7 @@ export const setStorageData = (storageName: string, data: unknown) => {
 export function getStorageData(storageName: string): unknown {
   if (checkError(storageName, '"Имя хранилища"')) return undefined;
 
-  const data = localStorage.getItem(PREFIX + storageName);
+  const data = localStorage.getItem(getStorage(storageName));
   if (data) return JSON.parse(data);
   return undefined;
 }
@@ -42,5 +45,5 @@ export function getStorageData(storageName: string): unknown {
 export const removeStorageData = (storageName: string) => {
   if (checkError(storageName, '"Имя хранилища"')) return;
 
-  localStorage.removeItem(PREFIX + storageName);
+  localStorage.removeItem(getStorage(storageName));
 };
