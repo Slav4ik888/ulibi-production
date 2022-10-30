@@ -65,6 +65,7 @@ module.exports = {
       ignoreComments: true
     }],
     'no-restricted-globals': 0,
+    'no-param-reassign': 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,
@@ -77,6 +78,7 @@ module.exports = {
     'react/jsx-indent': 0,
     'react/display-name': 0,
     'react/jsx-props-no-multi-spaces': 0,
+    'react/jsx-no-useless-fragment': 0,
     'react/react-in-jsx-scope': 0,
     'react/function-component-definition': 0,
     'react/jsx-equals-spacing': 0,

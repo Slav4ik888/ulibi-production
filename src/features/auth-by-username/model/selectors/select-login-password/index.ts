@@ -5,5 +5,5 @@ import { selectLoginState } from '../select-login-state';
 
 export const selectLoginPassword = createSelector(
   selectLoginState,
-  (login: StateLogin) => login.password
+  (login: StateLogin) => login?.password
 );

@@ -5,5 +5,5 @@ import { selectLoginState } from '../select-login-state';
 
 export const selectLoginError = createSelector(
   selectLoginState,
-  (login: StateLogin) => login.error
+  (login: StateLogin) => login?.error
 );

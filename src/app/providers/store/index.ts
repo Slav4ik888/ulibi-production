@@ -1,3 +1,3 @@
-export * from './config/store';
-export * from './config/state';
-export * from './ui';
+export { createReduxStore } from './config/store';
+export { ReduxStoreWithManager, State } from './config/state';
+export { StoreProvider } from './ui';
