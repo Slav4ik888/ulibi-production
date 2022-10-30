@@ -17,7 +17,11 @@ describe('selectLoginError', () => {
       };
 
     expect(selectLoginError(state as State)).toEqual('fuck');
-  })
+  });
+
+  test('State is undefined', () => {
+    expect(selectLoginError(undefined)).toEqual(undefined);
+  });
 });
 
 // npm run test:unit select-login-loading.test.ts

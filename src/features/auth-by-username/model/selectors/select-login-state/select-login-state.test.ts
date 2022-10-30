@@ -17,7 +17,17 @@ describe('selectLoginState', () => {
       };
 
     expect(selectLoginState(state as State)).toEqual(login);
-  })
+  });
+
+  test('State is undefined', () => {
+    expect(selectLoginState(undefined)).toEqual(undefined);
+  });
+
+  test('State is default', () => {
+    const state: DeepPartial<State> = {};
+
+    expect(selectLoginState(state as State)).toEqual(undefined);
+  });
 });
 
 // npm run test:unit select-login-state.test.ts

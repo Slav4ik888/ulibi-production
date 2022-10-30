@@ -61,11 +61,12 @@ module.exports = {
     'no-unneeded-ternary': 0,
     'arrow-parens': 0,
     'max-len': ['error', {
-      code: 110,
+      code: 120,
       ignoreComments: true
     }],
     'no-restricted-globals': 0,
     'no-param-reassign': 0,
+    'lines-between-class-members': 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,

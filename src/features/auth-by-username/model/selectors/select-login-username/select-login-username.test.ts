@@ -17,7 +17,17 @@ describe('selectLoginUsername', () => {
       };
 
     expect(selectLoginUsername(state as State)).toEqual('slava');
-  })
+  });
+
+  test('State is undefined', () => {
+    expect(selectLoginUsername(undefined)).toEqual(undefined);
+  });
+
+  test('State is default', () => {
+    const state: DeepPartial<State> = {};
+
+    expect(selectLoginUsername(state as State)).toEqual(undefined);
+  });
 });
 
 // npm run test:unit select-login-username.test.ts
