@@ -28,6 +28,6 @@ render(
 // npx loki init --config ./config/storybook
 // npx loki test
 //
-// git remote set-url origin https://username:token@github.com/username/repository.git
+// git remote set-url origin https://slav4ik888:token@github.com/slav4ik888/ulibi-production.git
 //
-// git add . && git commit -m "start 37 add profileReducer" && git push -u origin main
+// git add . && git commit -m "start 37 fix token" && git push -u origin main

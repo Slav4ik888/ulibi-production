@@ -1,10 +1,12 @@
 import { State, StoreProvider } from 'app/providers/store';
 import { DeepPartial, ReducersMapObject } from '@reduxjs/toolkit';
 import { loginReducer } from 'features/auth-by-username/model';
+import { profileReducer } from 'entities/profile';
 
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<State>> = {
-  login: loginReducer
+  login   : loginReducer,
+  profile : profileReducer
 };
 
 
