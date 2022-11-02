@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { memo } from 'react';
 import { cn } from 'shared/lib';
 import s from './index.module.scss';
 
@@ -16,7 +16,7 @@ interface Props {
 }
 
 
-export const Text: FC<Props> = (props) => {
+export const Text = memo((props: Props) => {
   const {
     title,
     text,
@@ -35,4 +35,4 @@ export const Text: FC<Props> = (props) => {
       }
     </div>
   )
-};
+});

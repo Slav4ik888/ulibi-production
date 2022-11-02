@@ -1,23 +1,19 @@
-import { FC } from 'react';
+import { memo, ReactNode } from 'react';
 import { cn } from 'shared/lib';
 import s from './index.module.scss';
 
 
 
 interface Props {
-  className?: string;
+  className? : string;
+  children   : ReactNode
 }
 
 
-export const PageWrapper: FC<Props> = ({ className, children }) => (
+export const PageWrapper = memo(({ className, children }: Props) => (
   <div className={cn(s.root, {}, [className])}>
     {
       children
     }
   </div>
-);
-
-
-PageWrapper.defaultProps = {
-  className: ''
-};
+));

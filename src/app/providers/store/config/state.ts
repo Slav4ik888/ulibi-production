@@ -1,14 +1,16 @@
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import type { StateCounter } from 'entities/counter';
+import { StateProfile } from 'entities/profile';
 import { StateUser } from 'entities/user/model';
 import { StateLogin } from 'features/auth-by-username/model';
 
 export interface State {
-  counter : StateCounter
-  user    : StateUser
+  counter  : StateCounter
+  user     : StateUser
 
   // Async reducers
-  login?  : StateLogin
+  login?   : StateLogin
+  profile? : StateProfile
 }
 
 export type StateKey = keyof State;

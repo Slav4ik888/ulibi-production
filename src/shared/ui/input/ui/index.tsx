@@ -15,15 +15,18 @@ interface Props extends HTMLInputProps {
 }
 
 
-export const Input: FC<Props> = memo((props: Props) => {
+export const Input = memo((props: Props) => {
   const {
-    id = getRandom5Letters(), value, autofocus, type, label, placeholder, className, onChange, ...rest
+    id   = getRandom5Letters(),
+    type = 'text',
+    value, autofocus, label, placeholder, className, onChange, ...rest
   } = props;
 
-  const ref = useRef<HTMLInputElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
-  const handlerBlur = () => setIsFocused(false);
-  const handlerFocus = () => setIsFocused(true);
+  const
+    ref                       = useRef<HTMLInputElement>(null),
+    [isFocused, setIsFocused] = useState(false),
+    handlerBlur               = () => setIsFocused(false),
+    handlerFocus              = () => setIsFocused(true);
 
   useEffect(() => {
     if (autofocus) {
@@ -70,14 +73,3 @@ export const Input: FC<Props> = memo((props: Props) => {
     </div>
   )
 });
-
-Input.defaultProps = {
-  id        : getRandom5Letters(),
-  className : '',
-  value     : '',
-  label     : '',
-  autofocus : false,
-  // eslint-disable-next-line react/default-props-match-prop-types
-  type      : 'text',
-  onChange  : () => {}
-};

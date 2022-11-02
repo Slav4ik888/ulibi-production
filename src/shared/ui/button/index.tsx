@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC } from 'react';
+import { ButtonHTMLAttributes, memo } from 'react';
 import { cn } from 'shared/lib';
 import s from './index.module.scss';
 
@@ -27,32 +27,32 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 
-export const Button: FC<Props> = ({ theme, square, size, className, disabled, children, ...props }) => {
-  const mods = {
-    [s.square]   : square,
-    [s.disabled] : disabled
-  };
+export const Button = memo((props: Props) => {
+  const
+    {
+      theme  = ButtonTheme.CLEAR,
+      square = false,
+      size   = ButtonSize.M,
+      className, disabled, children, ...rest
+    } = props,
 
-  const additional = [
-    s[theme], s[size], className
-  ]
+    mods = {
+      [s.square]   : square,
+      [s.disabled] : disabled
+    },
+    additional = [
+      s[theme], s[size], className
+    ];
+
 
   return (
     <button
       type      = 'button'
       disabled  = {disabled}
       className = {cn(s.root, mods, additional)}
-      {...props}
+      {...rest}
     >
       {children}
     </button>
   );
-};
-
-
-Button.defaultProps = {
-  className : '',
-  theme     : ButtonTheme.CLEAR,
-  square    : false,
-  size      : ButtonSize.M
-};
+});

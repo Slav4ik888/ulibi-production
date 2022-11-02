@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 import { Button } from 'shared/ui';
@@ -11,7 +11,7 @@ interface Props {
 }
 
 /** For development testing */
-export const BugButton: FC<Props> = ({ short, className }) => {
+export const BugButton = memo(({ short, className }: Props) => {
   const
     { t } = useTranslation('errors'),
     label = t(short ? 'Err' : 'Бросить ошибку'),
@@ -31,9 +31,4 @@ export const BugButton: FC<Props> = ({ short, className }) => {
       {label}
     </Button>
   )
-};
-
-BugButton.defaultProps = {
-  className : '',
-  short     : false
-};
+});

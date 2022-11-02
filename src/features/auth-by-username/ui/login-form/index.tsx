@@ -7,14 +7,16 @@ import {
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, ButtonTheme, Text, TextTheme } from 'shared/ui';
 import { Input } from 'shared/ui/input';
+import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
+import { useAppDispatch } from 'shared/lib/hooks';
 import { cn } from 'shared/lib';
 import s from './index.module.scss';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 
 
 
 export interface Props {
-  className?: string
+  className? : string
+  onSuccess  : () => void
 }
 
 const initialReducers: ReducersList = {
@@ -22,10 +24,10 @@ const initialReducers: ReducersList = {
 };
 
 
-const LoginForm = memo(({ className }: Props) => {
+const LoginForm = memo(({ className, onSuccess }: Props) => {
   const
-    { t } = useTranslation(),
-    dispatch = useDispatch(),
+    { t }    = useTranslation(),
+    dispatch = useAppDispatch(),
     username = useSelector(selectLoginUsername),
     password = useSelector(selectLoginPassword),
     loading  = useSelector(selectLoginLoading),
@@ -40,9 +42,10 @@ const LoginForm = memo(({ className }: Props) => {
     dispatch(loginActions.setPassword(value));
   }, [dispatch]);
 
-  const handlerSubmit = useCallback(() => {
-    dispatch(loginByUsername({ username, password }));
-  }, [dispatch, username, password]);
+  const handlerSubmit = useCallback(async () => {
+    const result = await dispatch(loginByUsername({ username, password }));
+    if (result.meta.requestStatus === 'fulfilled') onSuccess();
+  }, [dispatch, username, password, onSuccess]);
 
 
   return (

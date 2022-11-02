@@ -1,7 +1,7 @@
 import { selectUserAuthData, userActions } from 'entities/user';
 import { LoginModal } from 'features/auth-by-username';
 import { loginActions } from 'features/auth-by-username/model';
-import { FC, useCallback, useReducer } from 'react';
+import { FC, memo, useCallback, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { RoutePath } from 'shared/config/routes';
@@ -15,7 +15,7 @@ interface Props {
 }
 
 
-export const Navbar: FC<Props> = ({ classNames }) => {
+export const Navbar = memo(({ classNames }: Props) => {
   const
     { t }            = useTranslation(),
     [isOpen, toggle] = useReducer(s => !s, false),
@@ -68,4 +68,4 @@ export const Navbar: FC<Props> = ({ classNames }) => {
       }
     </div>
   )
-};
+});

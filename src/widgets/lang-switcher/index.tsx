@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 import { Button } from 'shared/ui';
@@ -11,7 +11,7 @@ interface Props {
 }
 
 
-export const LangSwitcher: FC<Props> = ({ className }) => {
+export const LangSwitcher = memo(({ className }: Props) => {
   const
     { i18n } = useTranslation(),
     isEn     = i18n.language === 'ru',
@@ -26,8 +26,4 @@ export const LangSwitcher: FC<Props> = ({ className }) => {
       {label}
     </Button>
   )
-};
-
-LangSwitcher.defaultProps = {
-  className: ''
-};
+});
