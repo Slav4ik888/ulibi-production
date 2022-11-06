@@ -4,7 +4,7 @@ import { counterReducer, StateCounter } from '..';
 
 describe('counterSlice', () => {
   test('Empty state', () => {
-    const state: StateCounter = undefined;
+    const state = undefined as unknown as StateCounter;
     expect(counterReducer(state, increment)).toEqual({ value: 1 });
   });
 

@@ -4,8 +4,8 @@ import * as LS from 'shared/lib';
 
 
 interface UseTheme {
-  toggleTheme: () => void;
-  theme: Theme;
+  toggleTheme : () => void;
+  theme       : Theme;
 }
 
 export const useTheme = (): UseTheme => {
@@ -14,9 +14,12 @@ export const useTheme = (): UseTheme => {
   const toggleTheme = () => {
     const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
     LS.setTheme(newTheme);
-    setTheme(newTheme);
+    setTheme?.(newTheme);
     document.body.className = newTheme;
   };
 
-  return { theme, toggleTheme }
+  return {
+    theme: theme || Theme.LIGHT,
+    toggleTheme
+  }
 };

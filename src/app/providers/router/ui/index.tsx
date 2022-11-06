@@ -5,6 +5,7 @@ import { PageLoader } from 'widgets/page-loader';
 import { routeConfig } from '../config';
 
 
+
 export const AppRouter = () => (
   <Routes>
     {

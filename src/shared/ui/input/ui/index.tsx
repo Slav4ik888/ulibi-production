@@ -17,9 +17,10 @@ interface Props extends HTMLInputProps {
 
 export const Input = memo((props: Props) => {
   const {
-    id   = getRandom5Letters(),
-    type = 'text',
-    value, autofocus, label, placeholder, className, onChange, ...rest
+    id    = getRandom5Letters(),
+    type  = 'text',
+    value = '',
+    autofocus, label, placeholder, className, onChange, ...rest
   } = props;
 
   const
@@ -65,8 +66,8 @@ export const Input = memo((props: Props) => {
         />
         {
           isFocused && <span
-            className={s.caret}
-            style = {{ left: `${caretPposition * 8}px` }}
+            className = {s.caret}
+            style     = {{ left: `${caretPposition * 7.2}px` }}
           />
         }
       </div>

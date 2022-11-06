@@ -10,8 +10,6 @@ export type ReducersList = {
   [name in StateKey]?: Reducer
 }
 
-type ReducerStringEntry = [StateKey, Reducer]
-
 
 interface Props {
   reducers               : ReducersList
@@ -25,15 +23,15 @@ export const DynamicModuleLoader: FC<Props> = ({ children, notRemoveAfterUnmount
 
 
   useEffect(() => {
-    Object.entries(reducers).forEach(([key, reducer]: ReducerStringEntry) => {
-      store.reducerManager.add(key, reducer);
+    Object.entries(reducers).forEach(([key, reducer]) => {
+      store.reducerManager.add(key as StateKey, reducer);
       dispatch({ type: `@INIT ${key} reducer` });
     });
 
     return () => {
       if (!notRemoveAfterUnmount) {
-        Object.entries(reducers).forEach(([key, reducer]: ReducerStringEntry) => {
-          store.reducerManager.remove(key);
+        Object.entries(reducers).forEach(([key, reducer]) => {
+          store.reducerManager.remove(key as StateKey);
           dispatch({ type: `@DESTROY ${key} reducer` });
         });
       }

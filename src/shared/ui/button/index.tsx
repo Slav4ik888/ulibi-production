@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, memo } from 'react';
-import { cn } from 'shared/lib';
+import { cn, Mods } from 'shared/lib';
 import s from './index.module.scss';
 
 
@@ -30,13 +30,14 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = memo((props: Props) => {
   const
     {
-      theme  = ButtonTheme.CLEAR,
-      square = false,
-      size   = ButtonSize.M,
-      className, disabled, children, ...rest
+      theme    = ButtonTheme.CLEAR,
+      square   = false,
+      size     = ButtonSize.M,
+      disabled = false,
+      className, children, ...rest
     } = props,
 
-    mods = {
+    mods: Mods = {
       [s.square]   : square,
       [s.disabled] : disabled
     },

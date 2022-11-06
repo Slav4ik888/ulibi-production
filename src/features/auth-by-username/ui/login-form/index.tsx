@@ -4,7 +4,7 @@ import {
   loginActions, loginReducer, loginByUsername, selectLoginUsername,
   selectLoginPassword, selectLoginLoading, selectLoginError
 } from '../../model';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Button, ButtonTheme, Text, TextTheme } from 'shared/ui';
 import { Input } from 'shared/ui/input';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';

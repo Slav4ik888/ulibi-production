@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { StateProfile, Profile } from '../types';
-import * as LS from 'shared/lib';
+import { fetchProfileData } from '..';
 
 
 const initialState: StateProfile = {
@@ -15,7 +15,22 @@ const initialState: StateProfile = {
 export const slice = createSlice({
   name: 'profile',
   initialState,
-  reducers: {
+  reducers: {},
+  extraReducers: builder => {
+    builder
+      .addCase(fetchProfileData.pending, (state, actions) => {
+        state.error = undefined;
+        state.loading = true;
+      })
+      .addCase(fetchProfileData.fulfilled, (state, { payload }: PayloadAction<Profile>) => {
+        state.data    = payload;
+        state.error   = undefined;
+        state.loading = false;
+      })
+      .addCase(fetchProfileData.rejected, (state, { payload }) => {
+        state.error = payload;
+        state.loading = false;
+      })
   }
 })
 

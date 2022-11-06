@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { State } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';

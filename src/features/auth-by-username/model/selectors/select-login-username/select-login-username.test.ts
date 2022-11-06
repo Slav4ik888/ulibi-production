@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { State } from 'app/providers/store';
 import { selectLoginUsername } from '.';
 
@@ -20,13 +19,13 @@ describe('selectLoginUsername', () => {
   });
 
   test('State is undefined', () => {
-    expect(selectLoginUsername(undefined)).toEqual(undefined);
+    expect(selectLoginUsername(undefined as unknown as State)).toEqual('');
   });
 
   test('State is default', () => {
     const state: DeepPartial<State> = {};
 
-    expect(selectLoginUsername(state as State)).toEqual(undefined);
+    expect(selectLoginUsername(state as State)).toEqual('');
   });
 });
 

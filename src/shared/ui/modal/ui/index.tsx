@@ -1,6 +1,6 @@
 import { useTheme } from 'app/providers/theme';
-import React, { FC, ReactNode, useEffect, useRef, useState, useCallback } from 'react';
-import { cn } from 'shared/lib';
+import React, { FC, ReactNode, useEffect, useRef, useState, useCallback, MutableRefObject } from 'react';
+import { cn, Mods } from 'shared/lib';
 import { Portal } from 'shared/ui';
 import s from './index.module.scss';
 
@@ -21,7 +21,7 @@ export const Modal: FC<Props> = ({ className, lazy, isOpen, children, onClose })
   const
     [isClosing, setIsClosing] = useState(false),
     [isMounted, setIsMounted] = useState(false),
-    timerRef = useRef<ReturnType<typeof setTimeout>>();
+    timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
   const handlerContentClick = (e: React.MouseEvent) => e.stopPropagation();
 
@@ -51,7 +51,7 @@ export const Modal: FC<Props> = ({ className, lazy, isOpen, children, onClose })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [s.opened]    : isOpen,
     [s.isClosing] : isClosing
   };
@@ -91,10 +91,4 @@ export const Modal: FC<Props> = ({ className, lazy, isOpen, children, onClose })
       </div>
     </Portal>
   );
-};
-
-Modal.defaultProps = {
-  className : '',
-  lazy      : false,
-  onClose   : () => {}
 };

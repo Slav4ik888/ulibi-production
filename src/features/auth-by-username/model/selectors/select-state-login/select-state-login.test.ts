@@ -1,9 +1,8 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { State } from 'app/providers/store';
-import { selectLoginState } from '..';
+import { selectStateLogin } from '..';
 
 
-describe('selectLoginState', () => {
+describe('selectStateLogin', () => {
   test('Return state login', () => {
     const
       login = {
@@ -16,18 +15,18 @@ describe('selectLoginState', () => {
         login
       };
 
-    expect(selectLoginState(state as State)).toEqual(login);
+    expect(selectStateLogin(state as State)).toEqual(login);
   });
 
   test('State is undefined', () => {
-    expect(selectLoginState(undefined)).toEqual(undefined);
+    expect(selectStateLogin(undefined as unknown as State)).toEqual({});
   });
 
   test('State is default', () => {
     const state: DeepPartial<State> = {};
 
-    expect(selectLoginState(state as State)).toEqual(undefined);
+    expect(selectStateLogin(state as State)).toEqual({});
   });
 });
 
-// npm run test:unit select-login-state.test.ts
+// npm run test:unit select-state-login.test.ts

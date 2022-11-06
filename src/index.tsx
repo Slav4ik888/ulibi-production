@@ -9,15 +9,15 @@ import './app/styles/index.scss';
 
 
 render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary>
         <ThemeProvider>
           <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
@@ -30,4 +30,4 @@ render(
 //
 // git remote set-url origin https://slav4ik888:token@github.com/slav4ik888/ulibi-production.git
 //
-// git add . && git commit -m "start 37 fix token" && git push -u origin main
+// git add . && git commit -m "lesson 40" && git push -u origin main

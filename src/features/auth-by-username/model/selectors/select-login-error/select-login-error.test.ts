@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { State } from 'app/providers/store';
 import { selectLoginError } from '.';
 
@@ -20,8 +19,8 @@ describe('selectLoginError', () => {
   });
 
   test('State is undefined', () => {
-    expect(selectLoginError(undefined)).toEqual(undefined);
+    expect(selectLoginError(undefined as unknown as State)).toEqual('');
   });
 });
 
-// npm run test:unit select-login-loading.test.ts
+// npm run test:unit select-login-error.test.ts

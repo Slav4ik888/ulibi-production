@@ -9,8 +9,4 @@ interface Props {
 }
 
 
-export const Portal: FC<Props> = ({ children, element }) => createPortal(children, element);
-
-Portal.defaultProps = {
-  element: document.body
-}
+export const Portal: FC<Props> = ({ children, element = document.body }) => createPortal(children, element);

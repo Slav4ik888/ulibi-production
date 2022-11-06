@@ -46,7 +46,9 @@ module.exports = {
     'import/extensions': 0,
     'import/prefer-default-export': 0,
     'import/order': 0,
+    'no-undef': 0,
     'no-multi-spaces': 0,
+    'no-underscore-dangle': 0,
     'one-var': 0,
     'no-plusplus': 0,
     'no-whitespace-before-property': 0,
@@ -98,6 +100,7 @@ module.exports = {
     }]
   },
   globals: {
-    __IS_DEV__: true
+    __IS_DEV__  : true,
+    __API_URL__ : true
   }
 };

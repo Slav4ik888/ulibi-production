@@ -1,4 +1,3 @@
-import { DeepPartial } from '@reduxjs/toolkit';
 import { State } from 'app/providers/store';
 import { selectUserAuthData } from '.';
 import { User } from '../..';

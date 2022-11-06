@@ -9,9 +9,10 @@ export interface BuildPaths {
 }
 
 export interface BuildEnv {
-  mode : BuildMode
-  port : number
-  anal : boolean
+  mode   : BuildMode
+  port   : number
+  anal   : boolean
+  apiUrl : string
 }
 
 export interface BuildOptions {
@@ -20,4 +21,5 @@ export interface BuildOptions {
   isDev  : boolean
   isAnal : boolean
   port   : number
+  apiUrl : string
 }

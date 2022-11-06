@@ -26,7 +26,3 @@ export const ThemeProvider: FC<Props> = ({ initial, children }) => {
     </ThemeContext.Provider>
   )
 };
-
-ThemeProvider.defaultProps = {
-  initial: null
-}

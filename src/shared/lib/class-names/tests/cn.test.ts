@@ -32,7 +32,7 @@ describe('cn', () => {
     const expected = 'anyClass secondClass thirdClass scrollabled';
     expect(cn(
       'anyClass',
-      { hovered: undefined, scrollabled: true },
+      { hovered: false, scrollabled: true },
       ['secondClass', 'thirdClass']
     )).toBe(expected)
   });
