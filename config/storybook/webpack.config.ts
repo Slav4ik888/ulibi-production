@@ -13,19 +13,19 @@ export default ({ config }: { config: Configuration}) => {
     src   : path.resolve(__dirname, '..', '..', 'src')
   };
 
-  config.resolve?.modules?.push(paths.src);
+  config!.resolve!.modules!.push(paths.src);
   // config.resolve.extensions.push('.ts', '.tsx');
   // @ts-ignore
   // eslint-disable-next-line no-param-reassign
-  config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
+  config!.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/i }
     }
     return rule;
   });
 
-  config.module?.rules?.push(buildSvgLoader());
-  config.module?.rules?.push(buildCssLoaders(true));
+  config!.module!.rules.push(buildSvgLoader());
+  config!.module!.rules.push(buildCssLoaders(true));
   config.plugins?.push(new DefinePlugin({
     __IS_DEV__  : JSON.stringify(true),
     __API_URL__ : JSON.stringify('')

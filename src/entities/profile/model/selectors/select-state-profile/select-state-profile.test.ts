@@ -15,13 +15,13 @@ describe('selectStateProfile', () => {
   });
 
   test('State is undefined', () => {
-    expect(selectStateProfile(undefined as unknown as State)).toEqual(undefined);
+    expect(selectStateProfile(undefined as unknown as State)).toEqual({});
   });
 
   test('State is default', () => {
     const state: DeepPartial<State> = {};
 
-    expect(selectStateProfile(state as State)).toEqual(undefined);
+    expect(selectStateProfile(state as State)).toEqual({});
   });
 });
 

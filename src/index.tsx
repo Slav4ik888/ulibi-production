@@ -30,4 +30,4 @@ render(
 //
 // git remote set-url origin https://slav4ik888:token@github.com/slav4ik888/ulibi-production.git
 //
-// git add . && git commit -m "lesson 40" && git push -u origin main
+// git add . && git commit -m "lesson 40 fix tests" && git push -u origin main
