@@ -30,6 +30,7 @@ export const SideBar = memo(({ className }: Props) => {
         theme       = {ButtonTheme.BACKGROUND_INV}
         size        = {ButtonSize. L}
         square
+        notHoverColor
         onClick     = {toggle}
       >
         {collapsed ? '>' : '<'}

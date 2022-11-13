@@ -8,6 +8,7 @@ export enum ButtonTheme {
   CLEAR          = 'clear',
   CLEAR_INV      = 'clear-inverted',
   SIMPLE         = 'simple',
+  SIMPLE_RED     = 'simple-red',
   BACKGROUND     = 'background',
   BACKGROUND_INV = 'background-inverted'
 }
@@ -19,11 +20,12 @@ export enum ButtonSize {
 }
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className? : string
-  theme?     : ButtonTheme
-  square?    : boolean
-  size?      : ButtonSize
-  disabled?  : boolean
+  className?     : string
+  theme?         : ButtonTheme
+  square?        : boolean
+  size?          : ButtonSize
+  disabled?      : boolean
+  notHoverColor? : boolean
 }
 
 
@@ -34,12 +36,13 @@ export const Button = memo((props: Props) => {
       square   = false,
       size     = ButtonSize.M,
       disabled = false,
-      className, children, ...rest
+      notHoverColor, className, children, ...rest
     } = props,
 
     mods: Mods = {
       [s.square]   : square,
-      [s.disabled] : disabled
+      [s.disabled] : disabled,
+      [s.hover]    : !notHoverColor
     },
     additional = [
       s[theme], s[size], className

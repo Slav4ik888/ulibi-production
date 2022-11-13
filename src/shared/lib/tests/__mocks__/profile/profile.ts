@@ -1,5 +1,6 @@
+import { Country } from 'entities/country';
+import { Currency } from 'entities/currency';
 import { Profile } from 'entities/profile';
-import { Country, Currency } from 'shared/consts';
 
 
 export const PROFILE: Profile = {

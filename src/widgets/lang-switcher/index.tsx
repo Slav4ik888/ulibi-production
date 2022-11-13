@@ -15,7 +15,7 @@ export const LangSwitcher = memo(({ className }: Props) => {
   const
     { i18n } = useTranslation(),
     isEn     = i18n.language === 'ru',
-    label    = isEn ? 'En' : 'Rus',
+    label    = isEn ? 'En' : 'Ru',
     toggle   = () => i18n.changeLanguage(isEn ? 'en' : 'ru');
 
   return (

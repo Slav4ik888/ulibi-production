@@ -1,7 +1,13 @@
 {
   "Профиль пользователя" : "User profile",
   "Профиль"              : "Profile",
-  "Редактировать"        : "Edit",
   "Имя"                  : "Firstname",
-  "Фамилия"              : "Lastname"
+  "Фамилия"              : "Lastname",
+  "Возраст"              : "Age",
+  "Валюта"               : "Currency",
+  "Страна"               : "Country",
+  "Город"                : "City",
+  "Ник"                  : "Username",
+  "Аватарка"             : "Avatar",
+  "Ссылка на аватар"     : "Avatar url"
 }

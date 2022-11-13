@@ -1,10 +1,10 @@
+import { RoutePath } from 'app/providers/router/config';
 import { selectUserAuthData, userActions } from 'entities/user';
 import { LoginModal } from 'features/auth-by-username';
 import { loginActions } from 'features/auth-by-username/model';
-import { FC, memo, useCallback, useReducer } from 'react';
+import { memo, useCallback, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { RoutePath } from 'shared/config/routes';
 import { cn } from 'shared/lib';
 import { AppLink, AppLinkTheme, Button, ButtonTheme } from 'shared/ui';
 import s from './index.module.scss';

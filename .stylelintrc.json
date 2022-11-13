@@ -7,6 +7,8 @@
     "selector-class-pattern": null,
     "block-no-empty": null,
     "indentation": [2],
-    "no-descending-specificity": null
+    "no-descending-specificity": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null
   }
 }

@@ -40,6 +40,7 @@ module.exports = {
     }],
     'no-unused-vars': 0,
     'no-unused-expressions': 0,
+    'function-paren-newline': 0,
     'brace-style': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-unresolved': 0,
@@ -62,6 +63,7 @@ module.exports = {
     }],
     'no-unneeded-ternary': 0,
     'arrow-parens': 0,
+    'no-confusing-arrow': 0,
     'max-len': ['error', {
       code: 120,
       ignoreComments: true
@@ -69,6 +71,7 @@ module.exports = {
     'no-restricted-globals': 0,
     'no-param-reassign': 0,
     'lines-between-class-members': 0,
+    curly: 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,
@@ -96,7 +99,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to']
+      ignoreAttribute: ['data-testid', 'to', 'name']
     }]
   },
   globals: {

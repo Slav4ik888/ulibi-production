@@ -6,10 +6,13 @@ import { selectProfileError } from '.';
 describe('selectProfileError', () => {
   test('Return error', () => {
     const state: DeepPartial<State> = {
-      profile: STATE_PROFILE
+      profile: {
+        ...STATE_PROFILE,
+        error: 'Error nuh'
+      }
     };
 
-    expect(selectProfileError(state as State)).toEqual('');
+    expect(selectProfileError(state as State)).toEqual('Error nuh');
   });
 
   test('State is undefined', () => {

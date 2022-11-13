@@ -1,20 +1,22 @@
-import { Country, Currency } from 'shared/consts';
+import { Country } from 'entities/country';
+import { Currency } from 'entities/currency';
 
 
 export interface Profile {
-  id        : string,
-  firstname : string,
-  lastname  : string,
-  age       : number,
-  currency  : Currency,
-  country   : Country,
-  city      : string,
-  username  : string,
-  avatar    : string
+  id         : string,
+  firstname? : string,
+  lastname?  : string,
+  age?       : number,
+  currency?  : Currency,
+  country?   : Country,
+  city?      : string,
+  username?  : string,
+  avatar?    : string
 }
 
 export interface StateProfile {
-  data?    : Profile
+  data?    : Profile // From server
+  form?    : Profile // User changes
   loading  : boolean
   error?   : string
   readonly : boolean

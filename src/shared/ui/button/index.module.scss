@@ -1,7 +1,13 @@
 .root {
   cursor: pointer;
   color: var(--primary-color);
-  padding: 4px 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.hover:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .disabled {
@@ -20,10 +26,14 @@
 }
 
 .simple {
-  border-width: 1px;
-  border-color: var(--primary-color);
-  border-radius: 4px;
+  border: 1px solid var(--primary-color);
   color: var(--primary-color);
+  background: none;
+}
+
+.simple-red {
+  border: 1px solid var(--error-color-light);
+  color: var(--error-color-light);
   background: none;
 }
 

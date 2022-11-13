@@ -1,5 +1,7 @@
 {
   "Прошла непредвиденная ошибка": "Uncaught error",
+  "Произошла ошибка при загрузке": "An error occurred while loading",
+  "Error in fetchProfileData": "Error in fetchProfileData",
   "Бросить ошибку": "Throw error",
   "Обновить страницу": "Update page"
 }

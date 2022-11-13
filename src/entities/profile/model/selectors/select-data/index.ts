@@ -1,5 +1,5 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { Profile, StateProfile } from '../..';
+import { Profile, StateProfile } from '../../types';
 import { selectStateProfile } from '../select-state-profile';
 
 

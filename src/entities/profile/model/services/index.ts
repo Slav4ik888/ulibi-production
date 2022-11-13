@@ -1,1 +1,2 @@
-export { fetchProfileData } from './fetch-profile-data'
+export * from './fetch-profile-data'
+export * from './update-profile-data'

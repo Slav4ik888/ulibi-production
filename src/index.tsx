@@ -30,4 +30,17 @@ render(
 //
 // git remote set-url origin https://slav4ik888:token@github.com/slav4ik888/ulibi-production.git
 //
-// git add . && git commit -m "lesson 40 fix tests" && git push -u origin main
+
+// Чтобы test:ui проходил без доступа к json-server, не ломаясь на ошибке
+// FAIL chrome.docker/chrome.iphone7/Pages/ProfilePage
+// Light
+// 2 requests failed to load; http://192.168.100.19:8000/profile, http://192.168.100.19:8000/profile
+// в package.json добавляем игнор на ошибки при запросах
+// https://loki.js.org/configuration.html#fetchfailignore
+// https://github.com/oblador/loki/blob/master/examples/react/loki.config.js
+// "loki": {
+// "fetchFailIgnore": ".*",
+// "configurations": {
+
+
+// git add . && git commit -m "lesson 41" && git push -u origin main

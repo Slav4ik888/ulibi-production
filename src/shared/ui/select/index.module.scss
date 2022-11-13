@@ -1,0 +1,21 @@
+.root {
+  display: flex;
+}
+
+.label {
+  margin-right: 4px;
+}
+
+.select {
+  background: none;
+  outline: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 2px 12px 2px 2px;
+}
+
+.option {
+  color: var(--inverted-primary-color);
+  background: var(--inverted-bg-color);
+}
