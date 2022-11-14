@@ -4,10 +4,11 @@ import { StateProfile, Profile } from '../types';
 
 
 const initialState: StateProfile = {
-  data     : undefined,
-  readonly : true,
-  loading  : false,
-  error    : undefined
+  data          : undefined,
+  readonly      : true,
+  loading       : false,
+  error         : undefined,
+  validateError : []
 };
 
 
@@ -25,8 +26,9 @@ export const slice = createSlice({
       }
     },
     cancelEdit: (state) => {
-      state.readonly = true;
-      state.form     = state.data;
+      state.readonly      = true;
+      state.validateError = [];
+      state.form          = state.data;
     }
   },
   extraReducers: builder => {
@@ -48,8 +50,9 @@ export const slice = createSlice({
       })
       // updateProfileData
       .addCase(updateProfileData.pending, (state) => {
-        state.error   = '';
-        state.loading = true;
+        state.error         = '';
+        state.validateError = [];
+        state.loading       = true;
       })
       .addCase(updateProfileData.fulfilled, (state, { payload }: PayloadAction<Profile>) => {
         state.data     = payload;
@@ -59,7 +62,7 @@ export const slice = createSlice({
         state.readonly = true;
       })
       .addCase(updateProfileData.rejected, (state, { payload }) => {
-        state.error    = payload;
+        state.validateError = payload;
         state.loading  = false;
         state.readonly = true;
       })

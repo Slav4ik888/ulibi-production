@@ -1,7 +1,12 @@
 {
-  "Прошла непредвиденная ошибка": "Uncaught error",
-  "Произошла ошибка при загрузке": "An error occurred while loading",
-  "Error in fetchProfileData": "Error in fetchProfileData",
-  "Бросить ошибку": "Throw error",
-  "Обновить страницу": "Update page"
+  "Прошла непредвиденная ошибка"  : "Uncaught error",
+  "Произошла ошибка при загрузке" : "An error occurred while loading",
+  "Error in fetchProfileData"     : "Error in fetchProfileData",
+  "Бросить ошибку"                : "Throw error",
+  "Обновить страницу"             : "Update page",
+  "Некорректные данные"           : "Invalid data",
+  "Некорректное имя или фамилия"  : "Invalid user firstname or lastname",
+  "Некорректный возраст"          : "Invalid user age",
+  "Некорректная страна"           : "Invalid user country",
+  "Серверная ошибка"              : "Server error"
 }

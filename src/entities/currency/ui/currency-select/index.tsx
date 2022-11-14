@@ -4,7 +4,7 @@ import { Select } from 'shared/ui';
 import { Currency } from '../../model/types';
 
 
-const options = Object.values(Currency).map(cur => ({ value: Currency[cur], content: Currency[cur] }))
+const options = Object.entries(Currency).map(cur => ({ value: cur[0], content: cur[1] }));
 
 
 export interface Props {

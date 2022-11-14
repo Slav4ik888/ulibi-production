@@ -4,8 +4,8 @@ import { Select } from 'shared/ui';
 import { Country } from '../../model/types';
 
 
-const options = Object.values(Country)
-  .map(country => ({ value: country, content: country }));
+const options = Object.entries(Country)
+  .map(country => ({ value: country[0], content: country[1] }));
 
 
 export interface CountryProps {
