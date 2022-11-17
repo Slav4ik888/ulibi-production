@@ -27,7 +27,7 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
     { t } = useTranslation('profile'),
     { t: e } = useTranslation('errors'),
     readonly = useSelector(selectProfileReadonly),
-    { firstname, lastname, age, city, country, currency, avatar = '', username } = profile;
+    { firstname, lastname, age, city, country, currency, avatar = '' } = profile;
 
   const mods: Mods = {
     [s.editing] : !readonly,
@@ -38,7 +38,8 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
   const handlerChange = (value: string, name: string) => {
     if (name === 'Age') onChange(Number(value || 0), name);
     else onChange(value || '', name);
-  }
+  };
+
 
   if (error) return (
     <div className={cn(s.root, mods, [className])}>
@@ -50,6 +51,7 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
       />
     </div>
   )
+
 
   return (
     <div className={cn(s.root, mods, [className])}>

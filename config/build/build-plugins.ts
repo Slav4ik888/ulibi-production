@@ -7,7 +7,7 @@ import { BuildOptions } from './types/config';
 
 
 
-export function buildPlugins({ paths, isDev, isAnal, apiUrl }: BuildOptions): WebpackPluginInstance[] {
+export function buildPlugins({ paths, isDev, isAnal, apiUrl, project }: BuildOptions): WebpackPluginInstance[] {
   const plugins = [
     new ProgressPlugin(),
     new HtmlWebpackPlugin({
@@ -19,7 +19,8 @@ export function buildPlugins({ paths, isDev, isAnal, apiUrl }: BuildOptions): We
     }),
     new DefinePlugin({
       __IS_DEV__  : JSON.stringify(isDev),
-      __API_URL__ : JSON.stringify(apiUrl)
+      __API_URL__ : JSON.stringify(apiUrl),
+      __PROJECT__ : JSON.stringify(project)
     })
   ];
 

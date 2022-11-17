@@ -10,7 +10,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { profileActions } from 'entities/profile/model/slice';
 import { Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
-
+import { BuildProject } from '../../../../../config/build/types/config';
 
 
 const reducers: ReducersList = {
@@ -37,7 +37,7 @@ const ProfilePage = memo(() => {
   }
 
   useEffect(() => {
-    dispatch(fetchProfileData());
+    if (__PROJECT__ !== BuildProject.STORYBOOK) dispatch(fetchProfileData());
   }, [dispatch]);
 
   const handlerChange = useCallback((value: string | number, name: string) => dispatch(

@@ -1,5 +1,6 @@
 import type { Config } from 'jest';
 import path from 'path';
+import { BuildProject } from '../build/types/config';
 
 /*
  * For a detailed explanation regarding each configuration property and type check, visit:
@@ -67,14 +68,15 @@ const config: Config = {
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    '\\.(scss|css)$': 'identity-obj-proxy',
+    '\\.(scss|css|png|jpe?g|gif)$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jest-empty-component.tsx')
   },
 
   // A set of global variables that need to be available in all test environments
   globals: {
     __IS_DEV__  : true,
-    __API_URL__ : ''
+    __API_URL__ : '',
+    __PROJECT__ : BuildProject.JEST
   }
 
   // All imported modules in your tests should be mocked automatically

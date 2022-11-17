@@ -5,6 +5,7 @@ import { StateProfile, Profile } from '../types';
 
 const initialState: StateProfile = {
   data          : undefined,
+  form          : undefined,
   readonly      : true,
   loading       : false,
   error         : undefined,
@@ -48,6 +49,7 @@ export const slice = createSlice({
         state.error   = payload;
         state.loading = false;
       })
+
       // updateProfileData
       .addCase(updateProfileData.pending, (state) => {
         state.error         = '';

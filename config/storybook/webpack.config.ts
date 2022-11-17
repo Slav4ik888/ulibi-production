@@ -1,5 +1,5 @@
 import path from 'path';
-import { BuildPaths } from '../build/types/config';
+import { BuildPaths, BuildProject } from '../build/types/config';
 import { DefinePlugin, Configuration, RuleSetRule } from 'webpack';
 import { buildSvgLoader, buildCssLoaders } from '../build/loaders';
 
@@ -28,7 +28,8 @@ export default ({ config }: { config: Configuration}) => {
   config!.module!.rules.push(buildCssLoaders(true));
   config.plugins?.push(new DefinePlugin({
     __IS_DEV__  : JSON.stringify(true),
-    __API_URL__ : JSON.stringify('')
+    __API_URL__ : JSON.stringify(''),
+    __PROJECT__ : JSON.stringify(BuildProject.STORYBOOK)
   }));
 
   return config;

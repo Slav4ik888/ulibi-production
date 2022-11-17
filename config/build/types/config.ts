@@ -1,5 +1,11 @@
 
 export type BuildMode = 'production' | 'development'
+export enum BuildProject {
+  STORYBOOK = 'storybook',
+  FRONTEND  = 'frontend',
+  JEST      = 'jest'
+}
+
 
 export interface BuildPaths {
   entry : string
@@ -8,6 +14,7 @@ export interface BuildPaths {
   src   : string
 }
 
+
 export interface BuildEnv {
   mode   : BuildMode
   port   : number
@@ -15,11 +22,13 @@ export interface BuildEnv {
   apiUrl : string
 }
 
+
 export interface BuildOptions {
-  mode   : BuildMode
-  paths  : BuildPaths
-  isDev  : boolean
-  isAnal : boolean
-  port   : number
-  apiUrl : string
+  mode    : BuildMode
+  paths   : BuildPaths
+  isDev   : boolean
+  isAnal  : boolean
+  port    : number
+  apiUrl  : string
+  project : BuildProject
 }

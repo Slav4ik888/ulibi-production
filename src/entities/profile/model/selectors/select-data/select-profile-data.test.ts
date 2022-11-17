@@ -4,7 +4,7 @@ import { selectProfileData } from '.';
 
 
 describe('selectProfileData', () => {
-  test('Return error', () => {
+  test('Shoul return profile data', () => {
     const state: DeepPartial<State> = {
       profile: STATE_PROFILE
     };
@@ -12,8 +12,12 @@ describe('selectProfileData', () => {
     expect(selectProfileData(state as State)).toEqual(PROFILE);
   });
 
-  test('State is undefined', () => {
+  test('Shoul work with undefined State', () => {
     expect(selectProfileData(undefined as unknown as State)).toEqual({});
+  });
+
+  test('Shoul work with empty State', () => {
+    expect(selectProfileData({} as unknown as State)).toEqual({});
   });
 });
 

@@ -1,7 +1,7 @@
 import path from 'path';
 import { Configuration } from 'webpack';
 import { buildWebpackConfig } from './config/build/build-webpack-config';
-import { BuildEnv, BuildPaths } from './config/build/types/config';
+import { BuildEnv, BuildPaths, BuildProject } from './config/build/types/config';
 
 
 export default (env: BuildEnv) => {
@@ -13,11 +13,12 @@ export default (env: BuildEnv) => {
   };
 
   const
-    mode   = env.mode || 'development',
-    isDev  = mode === 'development',
-    port   = env.port || 3010,
-    isAnal = env.anal,
-    apiUrl = env.apiUrl || 'http://localhost:8000';
+    mode    = env.mode || 'development',
+    isDev   = mode === 'development',
+    port    = env.port || 3010,
+    isAnal  = env.anal,
+    apiUrl  = env.apiUrl || 'http://localhost:8000',
+    project = BuildProject.FRONTEND;
 
 
   const config: Configuration = buildWebpackConfig({
@@ -26,7 +27,8 @@ export default (env: BuildEnv) => {
     isDev,
     isAnal,
     port,
-    apiUrl
+    apiUrl,
+    project
   });
 
   return config;
