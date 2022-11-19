@@ -5,12 +5,14 @@ import s from './index.module.scss';
 
 
 export enum ButtonTheme {
-  CLEAR          = 'clear',
-  CLEAR_INV      = 'clear-inverted',
-  SIMPLE         = 'simple',
-  SIMPLE_RED     = 'simple-red',
-  BACKGROUND     = 'background',
-  BACKGROUND_INV = 'background-inverted'
+  CLEAR           = 'clear',
+  CLEAR_INV       = 'clear-inverted',
+  CLEAR_SEC       = 'clear-sec',
+  CLEAR_SEC_INV   = 'clear-sec-inv',
+  SIMPLE          = 'simple',
+  SIMPLE_RED      = 'simple-red',
+  BACKGROUND      = 'background',
+  BACKGROUND_INV  = 'background-inverted'
 }
 
 export enum ButtonSize {

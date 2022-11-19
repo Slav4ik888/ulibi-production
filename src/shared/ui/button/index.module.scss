@@ -15,7 +15,9 @@
 }
 
 .clear,
-.clear-inverted {
+.clear-inverted,
+.clear-sec,
+.clear-sec-inv {
   border: none;
   outline: none;
   background: none;
@@ -23,6 +25,14 @@
 
 .clear-inverted {
   color: var(--inverted-primary-color);
+}
+
+.clear-sec {
+  color: var(--secondary-color);
+}
+
+.clear-sec-inv {
+  color: var(--inverted-secondary-color);
 }
 
 .simple {

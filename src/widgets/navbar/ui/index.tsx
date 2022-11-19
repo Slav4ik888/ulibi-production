@@ -47,7 +47,7 @@ export const Navbar = memo(({ classNames }: Props) => {
       {
         authData
           ? <Button
-              theme   = {ButtonTheme.CLEAR_INV}
+              theme   = {ButtonTheme.CLEAR_SEC}
               onClick = {handlerLogout}
             >
               {t('Выйти')}
