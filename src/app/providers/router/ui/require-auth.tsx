@@ -1,15 +1,18 @@
+import { useAuth } from 'entities/user';
 import { Navigate, useLocation } from 'react-router-dom';
+import { RoutePath } from '../config';
 
-function RequireAuth({ children }: { children: JSX.Element }) {
-  // let auth = useAuth();
-  // let location = useLocation();
 
-  // if (!auth) {
+export function RequireAuth({ children }: { children: JSX.Element }): JSX.Element {
+  const
+    { authData } = useAuth(),
+    location = useLocation();
 
-  //   return <Navigate
-  //     to={ }
-  //     state={{ from: location }}
-  //     replace
-  //   />
-  // }
+  if (!authData) return <Navigate
+    to    = {RoutePath.MAIN}
+    state = {{ from: location }}
+    replace
+  />
+
+  return children
 }

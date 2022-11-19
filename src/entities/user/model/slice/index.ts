@@ -5,7 +5,8 @@ import * as LS from 'shared/lib';
 
 
 const initialState: StateUser = {
-  authData: null
+  authData : null,
+  _inited  : false
 };
 
 
@@ -19,6 +20,7 @@ export const slice = createSlice({
     initAuthData: (state) => {
       const user = LS.getAuth();
       state.authData = user;
+      state._inited  = true;
     },
     logout: (state) => {
       LS.clearAuth();

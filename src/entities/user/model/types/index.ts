@@ -4,5 +4,6 @@ export interface User {
 }
 
 export interface StateUser {
-  authData?: User | null
+  authData? : User | null
+  _inited?  : boolean
 }
