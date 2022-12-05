@@ -20,7 +20,7 @@ interface Props extends LinkProps {
 export const AppLink = ({ to, className, theme = AppLinkTheme.PRIMARY, children, ...otherProps }: Props) => (
   <Link
     to={to}
-    className={cn(s.navbar, {}, [className, s[theme]])}
+    className={cn(s.root, {}, [className, s[theme]])}
     {...otherProps}
   >
     {children}

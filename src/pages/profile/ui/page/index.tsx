@@ -46,7 +46,7 @@ const ProfilePage = memo(() => {
 
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div>
         <ProfileHeader />
         {

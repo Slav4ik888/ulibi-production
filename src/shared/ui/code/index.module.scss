@@ -1,0 +1,19 @@
+.root {
+  position: relative;
+  border: 1px solid var(--primary-color);
+  padding: 24px;
+  background-color: var(--code-bg);
+  overflow: auto;
+  max-height: 300px;
+}
+
+.copy-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.copy-icon {
+  stroke: var(--primary-color);
+  fill: none;
+}
