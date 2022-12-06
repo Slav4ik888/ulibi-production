@@ -6,7 +6,7 @@ export const ARTICLE: Article = {
   id: '1',
   title: 'JS - news',
   subtitle: 'What news in JS in 2022',
-  img: 'https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png',
+  img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
   views: 1022,
   createdAt: '26.03.2022',
   type: [ArticleType.IT, ArticleType.DESING],
@@ -30,7 +30,7 @@ export const ARTICLE: Article = {
       id: '9',
       type: ArticleBlockType.IMAGE,
       title: 'Image title nuh',
-      src: 'https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg'
+      src: '' // 'js.png '  // 'https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg'
     }
   ]
 };

@@ -1,8 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { State } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';
-import { Article } from 'entities/article';
-import { ArticleBlockType, ArticleType } from 'entities/article/model/types';
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { ARTICLE } from 'shared/lib/tests/__mocks__';
 import { ArticleDetails } from '.';
