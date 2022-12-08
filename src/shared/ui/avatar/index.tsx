@@ -7,13 +7,13 @@ import s from './index.module.scss';
 
 export interface Props {
   src        : string
-  alt        : string
+  alt?       : string
   size?      : number
   className? : string
 }
 
 
-export const Avatar: FC<Props> = ({ className, size, src, alt }) => {
+export const Avatar: FC<Props> = ({ className, size, src, alt = 'Avatar' }) => {
   const
     { t } = useTranslation(),
     style = useMemo<CSSProperties>(() => ({

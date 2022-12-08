@@ -129,8 +129,8 @@
             "Some paragraph nuh... ",
             "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
             "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
-            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
-            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
           ]
         }
       ]
@@ -172,19 +172,22 @@
       "id": "1",
       "username": "slav4ik888",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://img.magic.ly/avatar/33547eb38887821615b356ba7c886643.webp?1640654585098"
     },
     {
       "id": "2",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://sketchub.in/storage/project_files/7101/7019393.png"
     },
     {
       "id": "3",
       "username": "user_nuh",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
     }
   ]
 }

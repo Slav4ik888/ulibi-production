@@ -5,17 +5,19 @@ import type { StateCounter } from 'entities/counter';
 import { StateProfile } from 'entities/profile';
 import { StateUser } from 'entities/user/model';
 import { StateLogin } from 'features/auth-by-username/model';
+import { StateArticleDetailsComments } from 'pages';
 import { NavigateOptions, To } from 'react-router-dom';
 
 
 export interface State {
-  counter         : StateCounter
-  user            : StateUser
+  counter : StateCounter
+  user    : StateUser
 
   // Async reducers
-  login?          : StateLogin
-  profile?        : StateProfile
-  articleDetails? : StateArticleDetails
+  login?                  : StateLogin
+  profile?                : StateProfile
+  articleDetails?         : StateArticleDetails
+  articleDetailsComments? : StateArticleDetailsComments
 }
 
 export type StateKey = keyof State;

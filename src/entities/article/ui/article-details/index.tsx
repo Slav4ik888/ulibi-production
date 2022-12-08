@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect } from 'react';
-import { useAppDispatch } from 'shared/lib/hooks';
+import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { articleDetailsReducer } from '../../model/slice';
 import { fetchArticleById } from '../../model/services';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 import {
   selectArticleDetailsData, selectArticleDetailsError, selectArticleDetailsLoading
 } from '../../model/selectors';
-import s from './index.module.scss';
 import { Avatar, IconWrapper, Skeleton, Text, TextAlign, TextSize } from 'shared/ui';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
@@ -17,6 +16,7 @@ import { ArticleBlock, ArticleBlockType } from '../../model/types';
 import { ArticleImageBlockComponent } from '../article-image-block';
 import { ArticleCodeBlockComponent } from '../article-code-block';
 import { ArticleTextBlockComponent } from '../article-text-block';
+import s from './index.module.scss';
 
 
 
@@ -55,11 +55,7 @@ export const ArticleDetails = memo(({ id, className }: Props) => {
     }
   }, []);
 
-  useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchArticleById(id));
-    }
-  }, [dispatch, id]);
+  useInitialEffect(() => dispatch(fetchArticleById(id)));
 
   let content;
 
@@ -115,7 +111,7 @@ export const ArticleDetails = memo(({ id, className }: Props) => {
           />
         </div>
         {
-          article?.blocks.map(renderBlock)
+          article?.blocks?.length && article.blocks.map(renderBlock)
         }
       </>
     )

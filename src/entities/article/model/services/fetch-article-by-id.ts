@@ -19,6 +19,6 @@ export const fetchArticleById = createAsyncThunk<
     }
     catch (e) {
       console.log('e: ', e);
-      return rejectWithValue('Error in fetchProfileData');
+      return rejectWithValue('Error in fetchArticleById');
     }
 });
