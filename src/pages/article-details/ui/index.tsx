@@ -1,6 +1,7 @@
 import { ArticleDetails } from 'entities/article';
 import { CommentsList } from 'entities/comment';
-import { memo } from 'react';
+import { AddCommentForm } from 'features/add-comment-form';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -8,7 +9,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { Text } from 'shared/ui';
 import { selectArticleDetailsCommentsLoading } from '../model/selectors';
-import { fetchCommentsByArticleId } from '../model/services/fetch-comments-by-article-id';
+import { addCommentForArticle, fetchCommentsByArticleId } from '../model/services';
 import { articleDetailsCommentsReducer, selectArticleComments } from '../model/slice';
 import s from './index.module.scss';
 
@@ -31,6 +32,11 @@ const ArticlePageDetails = memo(() => {
   useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)));
 
 
+  const handlerSendComment = useCallback((text: string) => {
+    dispatch(addCommentForArticle(text));
+  }, [dispatch]);
+
+
   if (!id) return (
     <div>{t('Статья не найдена')}</div>
   );
@@ -41,6 +47,7 @@ const ArticlePageDetails = memo(() => {
       <div>
         <ArticleDetails id={id} />
         <Text className={s.commentTitle} title={c('Комментарии')} />
+        <AddCommentForm onSendComment={handlerSendComment} />
         <CommentsList
           comments = {comments}
           loading  = {loading}

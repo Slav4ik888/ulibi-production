@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { STATE_PROFILE } from 'shared/lib/tests/__mocks__';
 import { selectStateProfile } from '.';
 
@@ -7,21 +7,21 @@ describe('selectStateProfile', () => {
   test('Return state profile', () => {
     const
       profile = STATE_PROFILE,
-      state: DeepPartial<State> = {
+      state: DeepPartial<StateSchema> = {
         profile
       };
 
-    expect(selectStateProfile(state as State)).toEqual(profile);
+    expect(selectStateProfile(state as StateSchema)).toEqual(profile);
   });
 
   test('State is undefined', () => {
-    expect(selectStateProfile(undefined as unknown as State)).toEqual({});
+    expect(selectStateProfile(undefined as unknown as StateSchema)).toEqual({});
   });
 
   test('State is default', () => {
-    const state: DeepPartial<State> = {};
+    const state: DeepPartial<StateSchema> = {};
 
-    expect(selectStateProfile(state as State)).toEqual({});
+    expect(selectStateProfile(state as StateSchema)).toEqual({});
   });
 });
 

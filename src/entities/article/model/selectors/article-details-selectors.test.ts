@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { ARTICLE, STATE_ARTICLE } from 'shared/lib/tests/__mocks__';
 import { selectArticleDetailsData, selectArticleDetailsError, selectArticleDetailsLoading } from '.';
 
@@ -6,19 +6,19 @@ import { selectArticleDetailsData, selectArticleDetailsError, selectArticleDetai
 // selectArticleDetailsData
 describe('selectArticleDetailsData', () => {
   test('Should return article data', () => {
-    const state: DeepPartial<State> = {
+    const state: DeepPartial<StateSchema> = {
       articleDetails: STATE_ARTICLE
     };
 
-    expect(selectArticleDetailsData(state as State)).toEqual(ARTICLE);
+    expect(selectArticleDetailsData(state as StateSchema)).toEqual(ARTICLE);
   });
 
-  test('Shoul work with undefined State', () => {
-    expect(selectArticleDetailsData(undefined as unknown as State)).toEqual({});
+  test('Shoul work with undefined StateSchema', () => {
+    expect(selectArticleDetailsData(undefined as unknown as StateSchema)).toEqual({});
   });
 
-  test('Shoul work with empty State', () => {
-    expect(selectArticleDetailsData({} as unknown as State)).toEqual({});
+  test('Shoul work with empty StateSchema', () => {
+    expect(selectArticleDetailsData({} as unknown as StateSchema)).toEqual({});
   });
 });
 
@@ -26,19 +26,19 @@ describe('selectArticleDetailsData', () => {
 // selectArticleDetailsError
 describe('selectArticleDetailsError', () => {
   test('Should return article error', () => {
-    const state: DeepPartial<State> = {
+    const state: DeepPartial<StateSchema> = {
       articleDetails: { ...STATE_ARTICLE, error: 'Error' }
     };
 
-    expect(selectArticleDetailsError(state as State)).toEqual('Error');
+    expect(selectArticleDetailsError(state as StateSchema)).toEqual('Error');
   });
 
-  test('Shoul work with undefined State', () => {
-    expect(selectArticleDetailsError(undefined as unknown as State)).toEqual(undefined);
+  test('Shoul work with undefined StateSchema', () => {
+    expect(selectArticleDetailsError(undefined as unknown as StateSchema)).toEqual(undefined);
   });
 
-  test('Shoul work with empty State', () => {
-    expect(selectArticleDetailsError({} as unknown as State)).toEqual(undefined);
+  test('Shoul work with empty StateSchema', () => {
+    expect(selectArticleDetailsError({} as unknown as StateSchema)).toEqual(undefined);
   });
 });
 
@@ -47,19 +47,19 @@ describe('selectArticleDetailsError', () => {
 // selectArticleDetailsLoading
 describe('selectArticleDetailsLoading', () => {
   test('Should return article loading', () => {
-    const state: DeepPartial<State> = {
+    const state: DeepPartial<StateSchema> = {
       articleDetails: { ...STATE_ARTICLE, loading: true }
     };
 
-    expect(selectArticleDetailsLoading(state as State)).toEqual(true);
+    expect(selectArticleDetailsLoading(state as StateSchema)).toEqual(true);
   });
 
-  test('Shoul work with undefined State', () => {
-    expect(selectArticleDetailsLoading(undefined as unknown as State)).toEqual(undefined);
+  test('Shoul work with undefined StateSchema', () => {
+    expect(selectArticleDetailsLoading(undefined as unknown as StateSchema)).toEqual(undefined);
   });
 
-  test('Shoul work with empty State', () => {
-    expect(selectArticleDetailsLoading({} as unknown as State)).toEqual(undefined);
+  test('Shoul work with empty StateSchema', () => {
+    expect(selectArticleDetailsLoading({} as unknown as StateSchema)).toEqual(undefined);
   });
 });
 

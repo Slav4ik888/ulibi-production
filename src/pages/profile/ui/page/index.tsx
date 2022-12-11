@@ -1,6 +1,6 @@
 import { memo, useCallback, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useAppDispatch } from 'shared/lib/hooks';
+import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { ProfileHeader } from '../header';
 import {
   fetchProfileData, Profile, ProfileCard, profileReducer,
@@ -11,6 +11,7 @@ import { profileActions } from 'entities/profile/model/slice';
 import { Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { BuildProject } from '../../../../../config/build/types/config';
+import { useParams } from 'react-router-dom';
 
 
 const reducers: ReducersList = {
@@ -21,6 +22,7 @@ const reducers: ReducersList = {
 const ProfilePage = memo(() => {
   const
     { t }          = useTranslation('profile'),
+    { id }         = useParams<{ id: string }>(),
     dispatch       = useAppDispatch(),
     formData       = useSelector(selectProfileForm),
     readOnly       = useSelector(selectProfileReadonly),
@@ -36,9 +38,9 @@ const ProfilePage = memo(() => {
     SERVER_ERROR      : t('Серверная ошибка')
   }
 
-  useEffect(() => {
-    if (__PROJECT__ !== BuildProject.STORYBOOK) dispatch(fetchProfileData());
-  }, [dispatch]);
+  useInitialEffect(() => {
+    id && dispatch(fetchProfileData(id));
+  });
 
   const handlerChange = useCallback((value: string | number, name: string) => dispatch(
     profileActions.updateProfile({ [name]: value } as unknown as Profile)
@@ -46,7 +48,7 @@ const ProfilePage = memo(() => {
 
 
   return (
-    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+    <DynamicModuleLoader reducers={reducers}>
       <div>
         <ProfileHeader />
         {

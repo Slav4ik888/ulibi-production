@@ -37,7 +37,10 @@
       "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
       "views": 1022,
       "createdAt": "26.03.2022",
-      "type": ["IT", "Desing"],
+      "type": [
+        "IT",
+        "Desing"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -139,34 +142,94 @@
   "comments": [
     {
       "id": "1",
-      "text": "some comment from user 1",
+      "message": "some message from user 1",
       "articleId": "1",
       "userId": "1"
     },
     {
       "id": "2",
-      "text": "some comment from user 2",
+      "message": "some message from user 2",
       "articleId": "1",
       "userId": "2"
     },
     {
       "id": "3",
-      "text": "some comment from user 3",
+      "message": "some message from user 3",
       "articleId": "1",
       "userId": "3"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "message": "Hello nuh",
+      "id": "eUEqMDH"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "message": "Hy buhay!",
+      "id": "UikCX73"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "message": "Tyani tolkay",
+      "id": "ywY3Zd6"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "message": "Zanovo  Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+      "id": "YFoj92d"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "message": "add",
+      "id": "EgWmopZ"
+    },
+    {
+      "articleId": "1",
+      "userId": "3",
+      "message": "anal",
+      "id": "7AfP0zh"
     }
   ],
-  "profile": {
-    "id": "1",
-    "firstname": "Slava",
-    "lastname": "Korzan",
-    "age": "41",
-    "currency": "USD",
-    "country": "Russia",
-    "city": "Moscow",
-    "username": "slav4ik888",
-    "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
-  },
+  "profiles": [
+    {
+      "id": "1",
+      "firstname": "Slava2",
+      "lastname": "Korzan",
+      "age": 23,
+      "currency": "USD",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "slav4ik888",
+      "avatar": "https://img.magic.ly/avatar/33547eb38887821615b356ba7c886643.webp?1640654585098"
+    },
+    {
+      "id": "2",
+      "firstname": "Dariya",
+      "lastname": "Vasina",
+      "age": "35",
+      "currency": "USD",
+      "country": "USA",
+      "city": "New York",
+      "username": "admin",
+      "avatar": "https://sketchub.in/storage/project_files/7101/7019393.png"
+    },
+    {
+      "id": "3",
+      "firstname": "Dariya",
+      "lastname": "Vasina",
+      "age": "35",
+      "currency": "USD",
+      "country": "USA",
+      "city": "New York",
+      "username": "user_nuh",
+      "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+    }
+  ],
   "users": [
     {
       "id": "1",

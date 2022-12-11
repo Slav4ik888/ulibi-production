@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { selectUserAuthData } from '.';
 import { User } from '../..';
 
@@ -10,11 +10,11 @@ describe('selectUserAuthData', () => {
         id: '1',
         username: 'Slava'
       },
-      state: DeepPartial<State> = {
+      state: DeepPartial<StateSchema> = {
         user: { authData }
       };
 
-    expect(selectUserAuthData(state as State)).toEqual(authData);
+    expect(selectUserAuthData(state as StateSchema)).toEqual(authData);
   });
 });
 

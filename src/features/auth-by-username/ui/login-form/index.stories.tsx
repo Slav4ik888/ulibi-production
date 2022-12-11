@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import LoginForm from '.';
@@ -17,20 +17,20 @@ export default {
 const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
 
 const
-  state: DeepPartial<State> = {
+  state: DeepPartial<StateSchema> = {
     login: {
       username : 'Slava',
       password : '123'
     }
   },
-  stateWithError: DeepPartial<State> = {
+  stateWithError: DeepPartial<StateSchema> = {
     login: {
       username : 'Slava',
       password : '321',
       error    : 'Wrong password'
     }
   },
-  stateWithLoading: DeepPartial<State> = {
+  stateWithLoading: DeepPartial<StateSchema> = {
     login: {
       username : 'Slava',
       password : '321',

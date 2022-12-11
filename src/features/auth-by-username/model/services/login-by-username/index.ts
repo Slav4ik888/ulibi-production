@@ -16,16 +16,16 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
     const { extra, dispatch, rejectWithValue } = thunkApi;
 
     try {
-      const res = await extra.api.post<User>('/login', authData);
+      const { data } = await extra.api.post<User>('/login', authData);
 
-      if (!res.data) throw new Error('Empty response');
+      if (!data) throw new Error('Empty response');
 
-      LS.setAuth(res.data);
-      dispatch(userActions.setAuthData(res.data));
+      LS.setAuth(data);
+      dispatch(userActions.setAuthData(data));
       // @ts-ignore
       extra?.navigate('/about');
 
-      return res.data;
+      return data;
     }
     catch (e) {
       console.log('e: ', e);

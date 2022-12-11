@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { selectLoginLoading } from '.';
 
 
@@ -11,21 +11,21 @@ describe('selectLoginLoading', () => {
         loading  : false,
         error    : ''
       },
-      state: DeepPartial<State> = {
+      state: DeepPartial<StateSchema> = {
         login
       };
 
-    expect(selectLoginLoading(state as State)).toEqual(false);
+    expect(selectLoginLoading(state as StateSchema)).toEqual(false);
   });
 
   test('State is undefined', () => {
-    expect(selectLoginLoading(undefined as unknown as State)).toEqual(false);
+    expect(selectLoginLoading(undefined as unknown as StateSchema)).toEqual(false);
   });
 
   test('State is default', () => {
-    const state: DeepPartial<State> = {};
+    const state: DeepPartial<StateSchema> = {};
 
-    expect(selectLoginLoading(state as State)).toEqual(false);
+    expect(selectLoginLoading(state as StateSchema)).toEqual(false);
   });
 });
 

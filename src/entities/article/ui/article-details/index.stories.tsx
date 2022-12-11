@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { ARTICLE } from 'shared/lib/tests/__mocks__';
@@ -17,7 +17,7 @@ export default {
 
 const
   Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />,
-  store: Partial<State> = {
+  store: Partial<StateSchema> = {
     articleDetails: {
       data: ARTICLE,
       loading: false

@@ -1,23 +1,23 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { PROFILE, STATE_PROFILE } from 'shared/lib/tests/__mocks__';
 import { selectProfileData } from '.';
 
 
 describe('selectProfileData', () => {
   test('Shoul return profile data', () => {
-    const state: DeepPartial<State> = {
+    const state: DeepPartial<StateSchema> = {
       profile: STATE_PROFILE
     };
 
-    expect(selectProfileData(state as State)).toEqual(PROFILE);
+    expect(selectProfileData(state as StateSchema)).toEqual(PROFILE);
   });
 
   test('Shoul work with undefined State', () => {
-    expect(selectProfileData(undefined as unknown as State)).toEqual({});
+    expect(selectProfileData(undefined as unknown as StateSchema)).toEqual({});
   });
 
   test('Shoul work with empty State', () => {
-    expect(selectProfileData({} as unknown as State)).toEqual({});
+    expect(selectProfileData({} as unknown as StateSchema)).toEqual({});
   });
 });
 

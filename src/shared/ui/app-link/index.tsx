@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 import { cn } from 'shared/lib';
 import s from './index.module.scss';

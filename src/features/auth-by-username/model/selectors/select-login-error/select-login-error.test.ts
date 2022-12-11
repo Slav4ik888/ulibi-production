@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { selectLoginError } from '.';
 
 
@@ -11,15 +11,15 @@ describe('selectLoginError', () => {
         loading  : false,
         error    : 'fuck'
       },
-      state: DeepPartial<State> = {
+      state: DeepPartial<StateSchema> = {
         login
       };
 
-    expect(selectLoginError(state as State)).toEqual('fuck');
+    expect(selectLoginError(state as StateSchema)).toEqual('fuck');
   });
 
   test('State is undefined', () => {
-    expect(selectLoginError(undefined as unknown as State)).toEqual('');
+    expect(selectLoginError(undefined as unknown as StateSchema)).toEqual('');
   });
 });
 

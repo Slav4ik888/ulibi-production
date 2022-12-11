@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { selectLoginUsername } from '.';
 
 
@@ -11,21 +11,21 @@ describe('selectLoginUsername', () => {
         loading  : false,
         error    : ''
       },
-      state: DeepPartial<State> = {
+      state: DeepPartial<StateSchema> = {
         login
       };
 
-    expect(selectLoginUsername(state as State)).toEqual('slava');
+    expect(selectLoginUsername(state as StateSchema)).toEqual('slava');
   });
 
   test('State is undefined', () => {
-    expect(selectLoginUsername(undefined as unknown as State)).toEqual('');
+    expect(selectLoginUsername(undefined as unknown as StateSchema)).toEqual('');
   });
 
   test('State is default', () => {
-    const state: DeepPartial<State> = {};
+    const state: DeepPartial<StateSchema> = {};
 
-    expect(selectLoginUsername(state as State)).toEqual('');
+    expect(selectLoginUsername(state as StateSchema)).toEqual('');
   });
 });
 

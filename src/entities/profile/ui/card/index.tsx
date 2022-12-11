@@ -36,7 +36,7 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
   };
 
   const handlerChange = (value: string, name: string) => {
-    if (name === 'Age') onChange(Number(value || 0), name);
+    if (name === 'age') onChange(Number(value || 0), name);
     else onChange(value || '', name);
   };
 

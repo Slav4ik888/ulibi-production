@@ -72,6 +72,7 @@ module.exports = {
     'no-param-reassign': 0,
     'lines-between-class-members': 0,
     curly: 0,
+    'implicit-arrow-linebreak': 0,
     '@typescript-eslint/no-unused-vars': 0,
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/type-annotation-spacing': 0,

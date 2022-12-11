@@ -4,17 +4,17 @@ import { userReducer } from 'entities/user'
 import { NavigateOptions, To } from 'react-router-dom'
 import { api } from 'shared/api'
 import { createReducerManager } from './reducer-manager'
-import { State } from './state'
+import { StateSchema } from './state'
 
 
 
 export function createReduxStore(
-  initialState?  : State,
-  asyncReducers? : ReducersMapObject<State>,
+  initialState?  : StateSchema,
+  asyncReducers? : ReducersMapObject<StateSchema>,
   navigate?      : (to: To, options?: NavigateOptions) => void
 ) {
   const
-    rootReducers: ReducersMapObject<State> = {
+    rootReducers: ReducersMapObject<StateSchema> = {
       ...asyncReducers,
       counter : counterReducer,
       user    : userReducer
@@ -26,7 +26,7 @@ export function createReduxStore(
     };
 
   const store = configureStore({
-    reducer        : reducerManager.reduce as Reducer<CombinedState<State>>,
+    reducer        : reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools       : __IS_DEV__,
     preloadedState : initialState || {},
     middleware     : getDefaultMiddleware => getDefaultMiddleware({

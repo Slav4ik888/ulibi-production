@@ -1,14 +1,14 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { selectCounterValue } from '..';
 
 
 describe('selectCounterValue', () => {
   test('Return state counter value', () => {
-    const state: DeepPartial<State> = {
+    const state: DeepPartial<StateSchema> = {
       counter: { value: 10 }
     };
 
-    expect(selectCounterValue(state as State)).toEqual(10);
+    expect(selectCounterValue(state as StateSchema)).toEqual(10);
   })
 });
 

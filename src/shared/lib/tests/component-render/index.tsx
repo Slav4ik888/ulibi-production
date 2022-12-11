@@ -3,14 +3,14 @@ import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import i18nForTests from '../../../config/i18n/i18n-for-tests';
 import { MemoryRouter } from 'react-router-dom';
-import { State, StoreProvider } from 'app/providers/store';
+import { StateSchema, StoreProvider } from 'app/providers/store';
 import { RoutePath } from 'app/providers/router/config';
 
 
 
 export interface ComponentRenderOptions {
   route?        : string
-  initialState? : DeepPartial<State>
+  initialState? : DeepPartial<StateSchema>
 }
 
 

@@ -18,6 +18,14 @@ interface Props {
 export const CommentsList: FC<Props> = ({ className, comments, loading }) => {
   const { t } = useTranslation('comments');
 
+  if (loading) return (
+    <>
+      <CommentCard loading />
+      <CommentCard loading />
+      <CommentCard loading />
+    </>
+  )
+
   return (
     <div className={cn(s.root, {}, [className])}>
       {

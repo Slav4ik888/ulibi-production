@@ -1,4 +1,4 @@
-import { State } from 'app/providers/store';
+import { StateSchema } from 'app/providers/store';
 import { StateProfile } from '../../types';
 
-export const selectStateProfile = (state: State) => state?.profile || {} as StateProfile;
+export const selectStateProfile = (state: StateSchema) => state?.profile || {} as StateProfile;
