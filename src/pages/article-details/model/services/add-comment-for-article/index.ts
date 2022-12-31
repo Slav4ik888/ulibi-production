@@ -9,7 +9,7 @@ import { fetchCommentsByArticleId } from '../fetch-comments-by-article-id';
 
 export const addCommentForArticle = createAsyncThunk<
   CommentType, // Return
-  string,        // Enter
+  string,      // Enter
   ThunkConfig<string>
 >(
   'articleDetails/addCommentForArticle',

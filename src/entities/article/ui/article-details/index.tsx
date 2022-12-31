@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { articleDetailsReducer } from '../../model/slice';
 import { fetchArticleById } from '../../model/services';

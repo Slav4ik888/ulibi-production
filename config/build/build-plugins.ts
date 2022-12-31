@@ -11,7 +11,7 @@ export function buildPlugins({ paths, isDev, isAnal, apiUrl, project }: BuildOpt
   const plugins = [
     new ProgressPlugin(),
     new HtmlWebpackPlugin({
-      template: paths.html,
+      template: paths.html
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',

@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/theme';
 import React, { FC, ReactNode, useEffect, useRef, useState, useCallback, MutableRefObject } from 'react';
 import { cn, Mods } from 'shared/lib';
 import { Portal } from 'shared/ui';
