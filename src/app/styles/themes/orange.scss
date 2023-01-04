@@ -1,8 +1,8 @@
 .app_theme_orange_dark {
-  --bg-color                 : #02343f;
+  --bg-color                 : #2e5a64;
   --inverted-bg-color        : #05242a;
 
-  --primary-color            : #f0edcc;
+  --primary-color            : #81a7b0;
   --secondary-color          : #bababa;
   --error-color-light        : #ff7878;
   --error-color-dark         : #ff4d4d;
@@ -21,4 +21,7 @@
 
   // Code
   --code-bg                  : #215e6b;
+
+  // Card
+  --card-bg                  : #1a444d;
 }

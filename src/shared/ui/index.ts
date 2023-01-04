@@ -1,6 +1,7 @@
 export * from './app-link';
 export * from './avatar';
 export * from './button';
+export * from './card';
 export * from './code';
 export * from './icon-wrapper';
 export * from './loader';

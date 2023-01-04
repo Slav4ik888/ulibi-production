@@ -100,7 +100,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-single'],
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'name']
+      ignoreAttribute: ['data-testid', 'to', 'name', 'alt']
     }]
   },
   globals: {

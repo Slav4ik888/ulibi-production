@@ -36,7 +36,7 @@ export type ArticleBlock = ArticleTextBlock | ArticleCodeBlock | ArticleImageBlo
 
 export enum ArticleType {
   IT         = 'IT',
-  DESING     = 'Desing',
+  DESING     = 'DESING',
   SCIENCE    = 'SCINCE',
   ECOMNOMICS = 'ECOMNOMICS'
 }
