@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StateSchema } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
-import { ARTICLE } from 'shared/lib/tests/__mocks__';
+import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
 import { ArticleDetails } from '.';
 
 
@@ -19,7 +19,7 @@ const
   Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />,
   store: Partial<StateSchema> = {
     articleDetails: {
-      data: ARTICLE,
+      data: MOCK_ARTICLE,
       loading: false
     }
   }

@@ -90,6 +90,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/jsx-equals-spacing': 0,
     'react/jsx-wrap-multilines': 0,
+    'react/no-array-index-key': 0,
     'react/jsx-props-no-spreading': 0,
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies

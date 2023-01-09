@@ -1,9 +1,9 @@
 import { Article, StateArticleDetails } from 'entities/article';
-import { ARTICLE } from '.';
+import { MOCK_ARTICLE } from '.';
 
 
 export const STATE_ARTICLE: StateArticleDetails = {
-  data     : ARTICLE,
+  data     : MOCK_ARTICLE,
   loading  : false,
   error    : ''
 };

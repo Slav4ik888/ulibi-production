@@ -1,5 +1,5 @@
 import { StateSchema } from 'app/providers/store';
-import { ARTICLE, STATE_ARTICLE } from 'shared/lib/tests/__mocks__';
+import { MOCK_ARTICLE, STATE_ARTICLE } from 'shared/lib/tests/__mocks__';
 import { selectArticleDetailsData, selectArticleDetailsError, selectArticleDetailsLoading } from '.';
 
 
@@ -10,7 +10,7 @@ describe('selectArticleDetailsData', () => {
       articleDetails: STATE_ARTICLE
     };
 
-    expect(selectArticleDetailsData(state as StateSchema)).toEqual(ARTICLE);
+    expect(selectArticleDetailsData(state as StateSchema)).toEqual(MOCK_ARTICLE);
   });
 
   test('Shoul work with undefined StateSchema', () => {

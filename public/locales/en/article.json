@@ -2,5 +2,7 @@
   "Статья"                     : "Article",
   "Статья не найдена"          : "Article not found",
   "Ошибка при загрузке статьи" : "Error loading article",
-  "Аватарка"                   : "Avatar"
+  "Аватарка"                   : "Avatar",
+  "Читать далее..."            : "Read more...",
+  "Назад к списку"             : "Back to list"
 }

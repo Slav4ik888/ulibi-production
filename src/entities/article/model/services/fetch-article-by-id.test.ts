@@ -1,6 +1,6 @@
 import { TestAsyncThunk } from 'shared/lib/tests';
 import { fetchArticleById } from '.';
-import { ARTICLE } from 'shared/lib/tests/__mocks__';
+import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
 
 
 
@@ -8,13 +8,13 @@ describe('fetchArticleById', () => {
   test('Succes fetch', async () => {
     const thunk = new TestAsyncThunk(fetchArticleById);
     // @ts-ignore
-    thunk.api.get.mockReturnValue(Promise.resolve({ data: ARTICLE }));
+    thunk.api.get.mockReturnValue(Promise.resolve({ data: MOCK_ARTICLE }));
 
     const result = await thunk.callThunk('1');
 
     expect(thunk.api.get).toHaveBeenCalled();
     expect(result.meta.requestStatus).toBe('fulfilled');
-    expect(result.payload).toEqual(ARTICLE);
+    expect(result.payload).toEqual(MOCK_ARTICLE);
   });
 
 

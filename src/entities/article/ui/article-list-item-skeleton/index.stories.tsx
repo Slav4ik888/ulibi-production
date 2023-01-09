@@ -2,54 +2,54 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/theme';
 import { ArticleView } from '../../model/types';
 import { ThemeDecorator } from 'shared/config/storybook';
-import { ArticleListItem } from '.';
-import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
+import { ArticleListItemSkeleton } from '.';
 
 
 export default {
-  title     : 'article/ArticleListItem',
-  component : ArticleListItem,
+  title     : 'article/ArticleListItemSkeleton',
+  component : ArticleListItemSkeleton,
   argTypes  : {
     backgroundColor: { control: 'color' }
   }
-} as ComponentMeta<typeof ArticleListItem>;
+} as ComponentMeta<typeof ArticleListItemSkeleton>;
 
 
-const
-  Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />,
-  article = MOCK_ARTICLE,
-  small = {
-    article,
-    view: ArticleView.SMALL
-  },
-  big = {
-    article,
-    view: ArticleView.BIG
-  };
-
+const Template: ComponentStory<typeof ArticleListItemSkeleton> = (args) => <ArticleListItemSkeleton {...args} />;
 
 // LIGHT THEME
 export const ViewSmall = Template.bind({});
-ViewSmall.args = small;
+ViewSmall.args = {
+  view: ArticleView.SMALL
+};
 
 export const ViewBig = Template.bind({});
-ViewBig.args = big;
+ViewBig.args = {
+  view: ArticleView.BIG
+};
 
 // DARK THEME
 export const ViewSmallDark = Template.bind({});
-ViewSmallDark.args = small;
+ViewSmallDark.args = {
+  view: ArticleView.SMALL
+};
 ViewSmallDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ViewBigDark = Template.bind({});
-ViewBigDark.args = big;
+ViewBigDark.args = {
+  view: ArticleView.BIG
+};
 ViewBigDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 
 // ORANGE THEME
 export const ViewSmallOrange = Template.bind({});
-ViewSmallOrange.args = small;
+ViewSmallOrange.args = {
+  view: ArticleView.SMALL
+};
 ViewSmallOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];
 
 export const ViewBigOrange = Template.bind({});
-ViewBigOrange.args = big;
+ViewBigOrange.args = {
+  view: ArticleView.BIG
+};
 ViewBigOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];

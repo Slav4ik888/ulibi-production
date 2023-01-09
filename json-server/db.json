@@ -37,6 +37,11 @@
       "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
       "views": 1022,
       "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
       "type": [
         "IT",
         "Desing"
