@@ -1,10 +1,10 @@
 import { PROFILE } from 'shared/lib/tests/__mocks__';
 import { profileReducer, profileActions } from '.';
 import { updateProfileData } from '../services';
-import { Profile, StateProfile, ValidateProfileError } from '../types';
+import { Profile, ProfileSchema, ValidateProfileError } from '../types';
 
 
-const state: DeepPartial<StateProfile> = {
+const state: DeepPartial<ProfileSchema> = {
   loading  : false,
   readonly : false,
   data     : {},
@@ -18,7 +18,7 @@ const state: DeepPartial<StateProfile> = {
 describe('profileSlice', () => {
   test('setReadonly', () => {
     expect(profileReducer(
-      state as StateProfile,
+      state as ProfileSchema,
       profileActions.setReadonly(true)
     ))
       .toEqual({ ...state, readonly: true });
@@ -27,7 +27,7 @@ describe('profileSlice', () => {
 
   test('updateProfile', () => {
     expect(profileReducer(
-      state as StateProfile,
+      state as ProfileSchema,
       profileActions.updateProfile({ firstname: 'Slava' } as Profile)
     ))
       .toEqual({
@@ -42,7 +42,7 @@ describe('profileSlice', () => {
 
   test('cancelEdit', () => {
     expect(profileReducer(
-      state as StateProfile,
+      state as ProfileSchema,
       profileActions.cancelEdit()
     ))
       .toEqual({
@@ -56,7 +56,7 @@ describe('profileSlice', () => {
 
   test('test updae profile service pending', () => {
     expect(profileReducer(
-      state as StateProfile,
+      state as ProfileSchema,
       updateProfileData.pending
     ))
       .toEqual({
@@ -71,7 +71,7 @@ describe('profileSlice', () => {
   test('test updae profile service fulfilled', () => {
     expect(profileReducer(
       {
-        ...state as StateProfile,
+        ...state as ProfileSchema,
         loading: true
       },
       updateProfileData.fulfilled(PROFILE, '')

@@ -1,4 +1,4 @@
-export interface StateLogin {
+export interface LoginSchema {
   username : string
   password : string
   loading  : boolean

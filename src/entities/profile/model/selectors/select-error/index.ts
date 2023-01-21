@@ -1,9 +1,9 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { StateProfile } from '../../types';
+import { ProfileSchema } from '../../types';
 import { selectStateProfile } from '../select-state-profile';
 
 
 export const selectProfileError = createSelector(
   selectStateProfile,
-  (stateProfile: StateProfile) => stateProfile?.error || ''
+  (stateProfile: ProfileSchema) => stateProfile?.error || ''
 );

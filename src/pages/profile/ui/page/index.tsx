@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { ProfileHeader } from '../header';
@@ -10,7 +10,6 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { profileActions } from 'entities/profile/model/slice';
 import { Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
-import { BuildProject } from '../../../../../config/build/types/config';
 import { useParams } from 'react-router-dom';
 
 

@@ -25,7 +25,7 @@ export interface Profile {
 }
 
 
-export interface StateProfile {
+export interface ProfileSchema {
   data?          : Profile // From server
   form?          : Profile // User changes
   loading        : boolean

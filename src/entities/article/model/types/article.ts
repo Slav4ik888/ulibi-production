@@ -1,5 +1,12 @@
 import { User } from 'entities/user/model';
 
+
+export enum ArticlesView {
+  LIST = 'LIST',
+  TILE = 'TILE'
+}
+
+
 export enum ArticleBlockType {
   TEXT  = 'TEXT',
   CODE  = 'CODE',

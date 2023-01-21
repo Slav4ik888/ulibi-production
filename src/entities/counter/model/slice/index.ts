@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit'
-import { StateCounter } from '../types'
+import { CounterSchema } from '../types'
 
-const initialState: StateCounter = {
+const initialState: CounterSchema = {
   value: 0
 };
 

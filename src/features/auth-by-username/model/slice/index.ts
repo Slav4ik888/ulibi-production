@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { loginByUsername } from '../services';
-import { StateLogin } from '../types';
+import { LoginSchema } from '../types';
 
 
-const initialState: StateLogin = {
+const initialState: LoginSchema = {
   username : '',
   password : '',
   loading  : false

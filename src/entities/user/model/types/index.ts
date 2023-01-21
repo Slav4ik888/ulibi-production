@@ -4,7 +4,7 @@ export interface User {
   avatar?  : string
 }
 
-export interface StateUser {
+export interface UserSchema {
   authData? : User | null
   _inited?  : boolean
 }

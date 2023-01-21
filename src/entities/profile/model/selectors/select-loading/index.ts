@@ -1,9 +1,9 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { StateProfile } from '../../types';
+import { ProfileSchema } from '../../types';
 import { selectStateProfile } from '../select-state-profile';
 
 
 export const selectProfileLoading = createSelector(
   selectStateProfile,
-  (stateProfile: StateProfile) => stateProfile?.loading || false
+  (stateProfile: ProfileSchema) => stateProfile?.loading || false
 );

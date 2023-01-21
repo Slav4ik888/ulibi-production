@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/theme';
-import { ArticleView } from '../../model/types';
+import { ArticlesView } from '../../model/types';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { ArticleListItemSkeleton } from '.';
 
@@ -19,24 +19,24 @@ const Template: ComponentStory<typeof ArticleListItemSkeleton> = (args) => <Arti
 // LIGHT THEME
 export const ViewSmall = Template.bind({});
 ViewSmall.args = {
-  view: ArticleView.SMALL
+  view: ArticlesView.TILE
 };
 
 export const ViewBig = Template.bind({});
 ViewBig.args = {
-  view: ArticleView.BIG
+  view: ArticlesView.LIST
 };
 
 // DARK THEME
 export const ViewSmallDark = Template.bind({});
 ViewSmallDark.args = {
-  view: ArticleView.SMALL
+  view: ArticlesView.TILE
 };
 ViewSmallDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ViewBigDark = Template.bind({});
 ViewBigDark.args = {
-  view: ArticleView.BIG
+  view: ArticlesView.LIST
 };
 ViewBigDark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -44,12 +44,12 @@ ViewBigDark.decorators = [ThemeDecorator(Theme.DARK)];
 // ORANGE THEME
 export const ViewSmallOrange = Template.bind({});
 ViewSmallOrange.args = {
-  view: ArticleView.SMALL
+  view: ArticlesView.TILE
 };
 ViewSmallOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];
 
 export const ViewBigOrange = Template.bind({});
 ViewBigOrange.args = {
-  view: ArticleView.BIG
+  view: ArticlesView.LIST
 };
 ViewBigOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];

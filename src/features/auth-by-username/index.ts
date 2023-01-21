@@ -1,2 +1,2 @@
 export { LoginModal } from './ui/login-modal'
-export { StateLogin } from './model/types'
+export { LoginSchema } from './model/types'

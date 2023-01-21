@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/theme';
-import { ArticleView } from '../../model/types';
+import { ArticlesView } from '../../model/types';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
 import { ArticleList } from '.';
@@ -23,14 +23,14 @@ const
   },
   big = {
     articles,
-    view: ArticleView.BIG
+    view: ArticlesView.LIST
   },
   withLoadingSmall = {
     loading: true
   },
   withLoadingBig = {
     loading: true,
-    view: ArticleView.BIG
+    view: ArticlesView.LIST
   }
 
 

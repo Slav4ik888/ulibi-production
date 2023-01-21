@@ -4,5 +4,5 @@ export {
   selectProfileData, selectProfileForm, selectProfileError, selectProfileLoading,
   selectProfileReadonly, selectProfileValidateErrors
 } from './model/selectors';
-export type { StateProfile, Profile } from './model/types';
+export type { ProfileSchema, Profile } from './model/types';
 export { ProfileCard } from './ui/card';

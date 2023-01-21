@@ -1,8 +1,8 @@
-import { StateArticleDetailsComments } from 'pages';
+import { ArticleDetailsCommentsSchema } from 'pages';
 import { COMMENTS, COMMENT_ONE, COMMENT_TWO } from '.';
 
 
-export const STATE_ARTICLE_COMMENTS: StateArticleDetailsComments = {
+export const STATE_ARTICLE_COMMENTS: ArticleDetailsCommentsSchema = {
   loading  : false,
   error    : '',
   ids      : [...COMMENTS.map(c => c.id)],
@@ -13,7 +13,7 @@ export const STATE_ARTICLE_COMMENTS: StateArticleDetailsComments = {
 };
 
 
-export const STATE_ARTICLE_COMMENTS_EMPTY_DATA: StateArticleDetailsComments = {
+export const STATE_ARTICLE_COMMENTS_EMPTY_DATA: ArticleDetailsCommentsSchema = {
   loading  : false,
   error    : '',
   ids      : [],

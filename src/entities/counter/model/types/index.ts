@@ -1,3 +1,3 @@
-export interface StateCounter {
+export interface CounterSchema {
   value: number
 }

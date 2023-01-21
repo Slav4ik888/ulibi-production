@@ -1,4 +1,4 @@
 import { StateSchema } from 'app/providers/store';
-import { StateLogin } from '../..';
+import { LoginSchema } from '../..';
 
-export const selectStateLogin = (state: StateSchema) => state?.login || {} as StateLogin;
+export const selectStateLogin = (state: StateSchema) => state?.login || {} as LoginSchema;

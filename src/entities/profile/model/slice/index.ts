@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { fetchProfileData, updateProfileData } from '../services';
-import { StateProfile, Profile } from '../types';
+import { ProfileSchema, Profile } from '../types';
 
 
-const initialState: StateProfile = {
+const initialState: ProfileSchema = {
   data          : undefined,
   form          : undefined,
   readonly      : true,

@@ -1,19 +1,19 @@
 import { FC } from 'react';
 import { cn } from 'shared/lib';
 import { Card, Skeleton } from 'shared/ui';
-import { ArticleView } from '../../model/types';
+import { ArticlesView } from '../../model/types';
 import s from './index.module.scss';
 
 
 
 interface Props {
   className? : string
-  view?      : ArticleView
+  view?      : ArticlesView
 }
 
 
 export const ArticleListItemSkeleton: FC<Props> = ({ className, view }) => {
-  if (view === ArticleView.BIG) {
+  if (view === ArticlesView.LIST) {
     return (
       <Card className={cn(s.root, {}, [s.BIG, className])}>
         <div className={s.header}>

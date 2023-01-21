@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --env port=3010 --open",
     "start-dev": "webpack serve --env port=3010",
-    "start-dev-server": "./json-server/index.js",
+    "start-dev-server": "json-server ./json-server/db.json --port 8000",
     "server-last": "json-server --watch ./json-server/db.json --port 8000",
     "dev": "concurrently \"npm run start-dev\" \"npm run start-dev-server\"",
     "build:dev": "webpack --env mode=development",

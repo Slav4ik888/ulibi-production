@@ -1,10 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { StateUser, User } from '../types';
+import { UserSchema, User } from '../types';
 import * as LS from 'shared/lib';
 
 
-const initialState: StateUser = {
+const initialState: UserSchema = {
   authData : null,
   _inited  : false
 };

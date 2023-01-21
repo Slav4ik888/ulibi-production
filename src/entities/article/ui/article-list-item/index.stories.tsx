@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Theme } from 'app/providers/theme';
-import { ArticleView } from '../../model/types';
+import { ArticlesView } from '../../model/types';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { ArticleListItem } from '.';
 import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
@@ -20,11 +20,11 @@ const
   article = MOCK_ARTICLE,
   small = {
     article,
-    view: ArticleView.SMALL
+    view: ArticlesView.TILE
   },
   big = {
     article,
-    view: ArticleView.BIG
+    view: ArticlesView.LIST
   };
 
 

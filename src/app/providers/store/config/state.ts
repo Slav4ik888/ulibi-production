@@ -1,25 +1,26 @@
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { StateArticleDetails } from 'entities/article';
-import type { StateCounter } from 'entities/counter';
-import { StateProfile } from 'entities/profile';
-import { StateUser } from 'entities/user/model';
+import { ArticleDetailsSchema } from 'entities/article';
+import { CounterSchema } from 'entities/counter';
+import { ProfileSchema } from 'entities/profile';
+import { UserSchema } from 'entities/user';
 import { AddCommentFormSchema } from 'features/add-comment-form';
-import { StateLogin } from 'features/auth-by-username/model';
-import { StateArticleDetailsComments } from 'pages';
+import { LoginSchema } from 'features/auth-by-username';
+import { ArticlesPageSchema, ArticleDetailsCommentsSchema } from 'pages';
 import { NavigateOptions, To } from 'react-router-dom';
 
 
 export interface StateSchema {
-  counter : StateCounter
-  user    : StateUser
+  counter : CounterSchema
+  user    : UserSchema
 
   // Async reducers
-  login?                  : StateLogin
-  profile?                : StateProfile
-  articleDetails?         : StateArticleDetails
-  articleDetailsComments? : StateArticleDetailsComments
+  login?                  : LoginSchema
+  profile?                : ProfileSchema
+  articleDetails?         : ArticleDetailsSchema
+  articleDetailsComments? : ArticleDetailsCommentsSchema
   addCommentForm?         : AddCommentFormSchema
+  articlesPage?           : ArticlesPageSchema
 }
 
 export type StateKey = keyof StateSchema;
