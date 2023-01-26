@@ -28,8 +28,10 @@ const ArticlePage = memo(() => {
 
 
   useInitialEffect(() => {
-    dispatch(fetchArticlesList());
     dispatch(actionsArticlesPage.initState());
+    dispatch(fetchArticlesList({
+      page: 1
+    }));
   });
 
   const handlerToggleView = useCallback((view: ArticlesView) => {

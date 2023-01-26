@@ -483,6 +483,914 @@
           ]
         }
       ]
+    },
+    {
+      "id": "5",
+      "title": "JS - news",
+      "subtitle": "What news in JS in 2022",
+      "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Как новичку разработать опенсорс-библиотеку",
+      "subtitle": "опыт фронтенд-разработчика",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/547/233/397/547233397b1627fe03f613501a902b67.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "В DWH только Python",
+      "subtitle": "What news in JS in 2022",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/836/660/16b/83666016b89578e4df409c726b553cd0.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Мы их решали и продолжаем решать",
+          "paragraphs": [
+            "Вопреки названию, мы используем далеко не только Python. Но большой проект на любом языке требует к себе вдумчивый подход, особенно в плане учета особенностей языка и технологий.",
+            "Пройдя все стадии от отрицания до принятия в программировании на Python, могу сказать, что он нам подошел. Но будет неправдой сказать, что нас обошли стороной трудности и проблемы, связанные с особенностями разработки.",
+            "Про жизненные неурядицы и то, как мы их решали и продолжаем решать — об этом и немного об устройстве DWH в inDrive я и расскажу. А еще на примере кейсов разберу, что в проекте может пойти не так.",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "Feature-Sliced Design",
+      "subtitle": "эволюция фронтенда для быстрых экспериментов",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f0d/6a3/5b6/f0d6a35b68c28f0f559b9c691164f997.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "JS - news",
+      "subtitle": "What news in JS in 2022",
+      "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Как новичку разработать опенсорс-библиотеку",
+      "subtitle": "опыт фронтенд-разработчика",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/547/233/397/547233397b1627fe03f613501a902b67.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "В DWH только Python",
+      "subtitle": "What news in JS in 2022",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/836/660/16b/83666016b89578e4df409c726b553cd0.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Мы их решали и продолжаем решать",
+          "paragraphs": [
+            "Вопреки названию, мы используем далеко не только Python. Но большой проект на любом языке требует к себе вдумчивый подход, особенно в плане учета особенностей языка и технологий.",
+            "Пройдя все стадии от отрицания до принятия в программировании на Python, могу сказать, что он нам подошел. Но будет неправдой сказать, что нас обошли стороной трудности и проблемы, связанные с особенностями разработки.",
+            "Про жизненные неурядицы и то, как мы их решали и продолжаем решать — об этом и немного об устройстве DWH в inDrive я и расскажу. А еще на примере кейсов разберу, что в проекте может пойти не так.",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "Feature-Sliced Design",
+      "subtitle": "эволюция фронтенда для быстрых экспериментов",
+      "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f0d/6a3/5b6/f0d6a35b68c28f0f559b9c691164f997.png",
+      "views": 1022,
+      "createdAt": "26.03.2022",
+      "user": {
+        "id": "3",
+        "username": "user_nuh",
+        "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+      },
+      "type": [
+        "IT",
+        "Desing"
+      ],
+      "blocks": [
+        {
+          "id": "1",
+          "type": "TEXT",
+          "title": "Header this block 111",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "2",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "3",
+          "type": "TEXT",
+          "title": "Header this block 333",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "4",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "9",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "5",
+          "type": "TEXT",
+          "title": "Header this block 555",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "6",
+          "type": "CODE",
+          "code": "import { render } from 'react-dom';\n import { BrowserRouter } from 'react-router-dom';\n import { ErrorBoundary } from 'app/providers/error-boundary';\n import { StoreProvider } from 'app/providers/store';\n import { ThemeProvider } from 'app/providers/theme';\n import { App } from './app';\n import 'shared/config/i18n';\n import './app/styles/index.scss';\n \n\n render(\n  <BrowserRouter>\n    <StoreProvider>\n\n      <ErrorBoundary>\n\n        <ThemeProvider>\n\n          <App />\n\n        </ThemeProvider>\n\n      </ErrorBoundary>\n\n    </StoreProvider>\n\n  </BrowserRouter>,\n\n  document.getElementById('root')\n\n);\n\n"
+        },
+        {
+          "id": "7",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "8",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "10",
+          "type": "IMAGE",
+          "title": "Image title nuh",
+          "src": "https://insights.dice.com/wp-content/uploads/2018/12/shutterstock_701467699.jpg"
+        },
+        {
+          "id": "11",
+          "type": "TEXT",
+          "title": "Header this block 888",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        },
+        {
+          "id": "12",
+          "type": "TEXT",
+          "paragraphs": [
+            "Some paragraph nuh... ",
+            "Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats.",
+            "Sds Download 298 Javascript Vector Icons for commercial and personal use. Available for free or premium in line, flat, gradient, isometric, glyph, sticker & more design styles.",
+            "Asxr Free Javascript icons in various UI design styles for web, mobile. Download static and animated Javascript vector icons for free in PNG, SVG, GIF formats."
+          ]
+        }
+      ]
     }
   ],
   "comments": [

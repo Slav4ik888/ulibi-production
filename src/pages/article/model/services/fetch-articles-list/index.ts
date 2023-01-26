@@ -1,22 +1,32 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/store';
 import { Article } from 'entities/article';
+import { selectArticlesPageLimit } from '../../selectors';
 
+
+interface FetchArticlesListProps {
+  page?: number
+}
 
 export const fetchArticlesList = createAsyncThunk<
   Article[], // Response
-  void,      // То что потом будем передавать на сервер
+  FetchArticlesListProps, // То что принимает, а потом будем передавать на сервер
   ThunkConfig<string>
 >(
   'articlesPage/fetchArticlesList',
-  async (_, thunkApi) => {
-    const { extra, rejectWithValue } = thunkApi;
+  async (props, thunkApi) => {
+    const
+      { page = 1 } = props,
+      { extra, rejectWithValue, getState } = thunkApi,
+      limit = selectArticlesPageLimit(getState());
 
     try {
       const { data } = await extra.api.get<Article[]>('/articles', {
-        // params: {
-        //   _expand: 'user' // Чтобы запросить полную сущность пользователя, для отрисовки аватара
-        // }
+        params: {
+          // _expand: 'user' // Чтобы запросить полную сущность пользователя, для отрисовки аватара,
+          _limit : limit,
+          _page  : page
+        }
       })
 
       if (!data) throw new Error()

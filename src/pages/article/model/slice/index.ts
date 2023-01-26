@@ -23,15 +23,22 @@ export const slice = createSlice({
     error    : undefined,
     ids      : [],
     entities : {},
-    view     : ArticlesView.TILE
+    view     : ArticlesView.TILE,
+    page     : 1,
+    hasMore  : true
   }),
   reducers: {
     initState: (state) => {
-      state.view = LS.getArticlesView() || ArticlesView.TILE;
+      const view = LS.getArticlesView() || ArticlesView.TILE;
+      state.view = view;
+      state.limit = view === ArticlesView.LIST ? 2 : 4;
     },
     setView: (state, { payload }: PayloadAction<ArticlesView>) => {
       state.view = payload;
       LS.setArticlesView(payload);
+    },
+    setPage: (state, { payload }: PayloadAction<number>) => {
+      state.page = payload;
     }
   },
   extraReducers: builder => {

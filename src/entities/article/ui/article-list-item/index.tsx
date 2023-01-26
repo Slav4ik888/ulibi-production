@@ -40,7 +40,7 @@ export const ArticleListItem: FC<Props> = ({ className, article, view }) => {
     const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
 
     return (
-      <Card className={cn(s.root, {}, [s.big, className])}>
+      <Card className={cn(s.root, {}, [s.LIST, className])}>
         <div className={s.header}>
           <Avatar size={30} src={article.user?.avatar || ''} />
           <Text text={article.user?.username} className={s.username} />
@@ -70,7 +70,7 @@ export const ArticleListItem: FC<Props> = ({ className, article, view }) => {
   return (
     <Card
       {...bindHover}
-      className = {cn(s.root, {}, [s.small, className])}
+      className = {cn(s.root, {}, [s.TILE, className])}
       onClick   = {handlerOpenArticle}
     >
       <div className={s.imageWrapper}>

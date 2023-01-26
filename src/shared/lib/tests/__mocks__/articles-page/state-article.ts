@@ -10,7 +10,10 @@ export const STATE_ARTICLES_PAGE: ArticlesPageSchema = {
   ids      : [MOCK_ARTICLE.id],
   loading  : false,
   error    : '',
-  view     : ArticlesView.LIST
+  view     : ArticlesView.LIST,
+  page     : 1,
+  limit    : 2,
+  hasMore  : true
 };
 
 export const STATE_ARTICLES_PAGE_EMPTY_DATA: ArticlesPageSchema = {
@@ -18,5 +21,8 @@ export const STATE_ARTICLES_PAGE_EMPTY_DATA: ArticlesPageSchema = {
   ids      : [],
   loading  : false,
   error    : '',
-  view     : ArticlesView.LIST
+  view     : ArticlesView.LIST,
+  page     : 1,
+  limit    : 2,
+  hasMore  : true
 };
