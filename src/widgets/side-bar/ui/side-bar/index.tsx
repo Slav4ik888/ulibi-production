@@ -32,7 +32,7 @@ export const SideBar = memo(({ className }: Props) => {
 
 
   return (
-    <div
+    <menu
       data-testid = 'sidebar'
       className   = {cn(s.root, { [s.collapsed]: collapsed }, [className])}
     >
@@ -58,6 +58,6 @@ export const SideBar = memo(({ className }: Props) => {
         <LangSwitcher className={s.lang} />
         <BugButton    className={s.lang} short={collapsed} />
       </div>
-    </div>
+    </menu>
   )
 });

@@ -29,7 +29,7 @@ export const Navbar = memo(({ classNames }: Props) => {
 
 
   return (
-    <div className={cn(s.root, {}, [classNames])}>
+    <header className={cn(s.root, {}, [classNames])}>
       <div className={s.links}>
         <AppLink
           to        = {RoutePath.MAIN}
@@ -66,6 +66,6 @@ export const Navbar = memo(({ classNames }: Props) => {
             />
           </>
       }
-    </div>
+    </header>
   )
 });

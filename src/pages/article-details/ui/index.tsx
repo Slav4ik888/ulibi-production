@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
-import { Button, ButtonTheme, Text } from 'shared/ui';
+import { Button, ButtonTheme, PageWrapper, Text } from 'shared/ui';
 import { selectArticleDetailsCommentsLoading } from '../model/selectors';
 import { addCommentForArticle, fetchCommentsByArticleId } from '../model/services';
 import { articleDetailsCommentsReducer, selectArticleComments } from '../model/slice';
@@ -50,7 +50,7 @@ const ArticlePageDetails = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div>
+      <PageWrapper>
         <Button theme={ButtonTheme.SIMPLE} onClick={handlerBackToList}>
           {t('Назад к списку')}
         </Button>
@@ -61,7 +61,7 @@ const ArticlePageDetails = memo(() => {
           comments = {comments}
           loading  = {loading}
         />
-      </div>
+      </PageWrapper>
     </DynamicModuleLoader>
   )
 });

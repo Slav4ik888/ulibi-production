@@ -51,7 +51,8 @@ export const slice = createSlice({
       .addCase(fetchArticlesList.fulfilled, (state, { payload }: PayloadAction<Article[]>) => {
         state.error   = '';
         state.loading = false;
-        articlesAdapter.setAll(state, payload);
+        articlesAdapter.setMany(state, payload);
+        state.hasMore = payload.length > 0;
       })
       .addCase(fetchArticlesList.rejected, (state, { payload }) => {
         state.error   = payload;

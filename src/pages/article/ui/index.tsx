@@ -8,8 +8,10 @@ import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { fetchArticlesList } from '../model/services/fetch-articles-list';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../model/slice';
-import { selectArticlesPageError, selectArticlesPageLoading, selectArticlesPageView } from '../model/selectors';
+import { selectArticlesPageLoading, selectArticlesPageView } from '../model/selectors';
 import { ArticleToggleViewSelector } from 'features/article-toggle-view-selector';
+import { PageWrapper } from 'shared/ui';
+import { fetchNextArticlesPage } from '../model/services';
 
 
 const reducers: ReducersList = {
@@ -22,9 +24,13 @@ const ArticlePage = memo(() => {
     { t } = useTranslation('article'),
     dispatch = useAppDispatch(),
     articles = useSelector(selectArticles.selectAll),
-    loading = useSelector(selectArticlesPageLoading),
-    error = useSelector(selectArticlesPageError),
-    view = useSelector(selectArticlesPageView);
+    loading  = useSelector(selectArticlesPageLoading),
+    view     = useSelector(selectArticlesPageView);
+
+
+  const onLoadNextPart = useCallback(() => {
+    dispatch(fetchNextArticlesPage());
+  }, [dispatch]);
 
 
   useInitialEffect(() => {
@@ -41,7 +47,7 @@ const ArticlePage = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div>
+      <PageWrapper onScrollEnd={onLoadNextPart}>
         <ArticleToggleViewSelector
           view     = {view}
           onToggle = {handlerToggleView}
@@ -51,7 +57,7 @@ const ArticlePage = memo(() => {
           view     = {view}
           articles = {articles}
         />
-      </div>
+      </PageWrapper>
     </DynamicModuleLoader>
   )
 });

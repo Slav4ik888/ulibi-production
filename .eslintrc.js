@@ -38,6 +38,7 @@ module.exports = {
     'react/jsx-filename-extension': [2, {
       extensions: ['.js', '.jsx', '.ts', '.tsx']
     }],
+    'space-unary-ops': 0,
     'no-unused-vars': 0,
     'no-unused-expressions': 0,
     'function-paren-newline': 0,

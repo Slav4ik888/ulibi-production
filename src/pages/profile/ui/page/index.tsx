@@ -8,7 +8,7 @@ import {
 } from 'entities/profile';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { profileActions } from 'entities/profile/model/slice';
-import { Text, TextTheme } from 'shared/ui';
+import { PageWrapper, Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ const ProfilePage = memo(() => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div>
+      <PageWrapper>
         <ProfileHeader />
         {
           validateErrors?.map(err => (
@@ -66,7 +66,7 @@ const ProfilePage = memo(() => {
           readOnly = {readOnly}
           onChange = {handlerChange}
         />
-      </div>
+      </PageWrapper>
     </DynamicModuleLoader>
   )
 });

@@ -28,10 +28,6 @@ export const ArticleList: FC<Props> = ({
   className, articles, loading,
   view = ArticlesView.TILE
 }) => {
-  if (loading) return <div className = {cn(s.root, {}, [s.small, className])}>
-    {getSkeletons(view)}
-  </div>;
-
   const renderArticle = (article: Article) => <ArticleListItem
     key       = {article.id}
     article   = {article}
@@ -45,6 +41,9 @@ export const ArticleList: FC<Props> = ({
         articles?.length > 0
           ? articles.map(renderArticle)
           : null
+      }
+      {
+        loading && getSkeletons(view)
       }
     </div>
   )
