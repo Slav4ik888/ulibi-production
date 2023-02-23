@@ -1,6 +1,5 @@
 import { TestAsyncThunk } from 'shared/lib/tests';
 import { fetchNextArticlesPage } from '.';
-import { COMMENTS } from 'shared/lib/tests/__mocks__';
 import { fetchArticlesList } from '../fetch-articles-list';
 
 

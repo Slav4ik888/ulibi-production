@@ -24,12 +24,14 @@ export interface StateSchema {
 }
 
 export type StateKey = keyof StateSchema;
+export type MountedReducers = OptionalRecord<StateKey, boolean> // True - mounted, false - not mounted
 
 export interface ReducerManager {
-  getReducerMap : () => ReducersMapObject<StateSchema>
-  reduce        : (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
-  add           : (key: StateKey, reducer: Reducer) => void
-  remove        : (key: StateKey) => void
+  getReducerMap      : () => ReducersMapObject<StateSchema>
+  reduce             : (state: StateSchema, action: AnyAction) => CombinedState<StateSchema>
+  add                : (key: StateKey, reducer: Reducer) => void
+  remove             : (key: StateKey) => void
+  getMountedReducers : () => MountedReducers
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {

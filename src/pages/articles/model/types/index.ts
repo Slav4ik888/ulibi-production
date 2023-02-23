@@ -6,6 +6,7 @@ export interface ArticlesPageSchema extends EntityState<Article> {
   loading? : boolean
   error?   : string
 
+  _inited? : boolean
   view?    : ArticlesView
 
   // Pagination

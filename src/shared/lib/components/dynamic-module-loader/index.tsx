@@ -16,16 +16,23 @@ interface Props {
   removeAfterUnmount? : boolean
 }
 
-export const DynamicModuleLoader: FC<Props> = ({ children, removeAfterUnmount = true, reducers }) => {
+export const DynamicModuleLoader: FC<Props> = ({ children, removeAfterUnmount = false, reducers }) => {
   const
     store    = useStore() as ReduxStoreWithManager,
     dispatch = useDispatch();
 
 
   useEffect(() => {
+    const mountedReducers = store.reducerManager.getMountedReducers();
+
     Object.entries(reducers).forEach(([key, reducer]) => {
-      store.reducerManager.add(key as StateKey, reducer);
-      dispatch({ type: `@INIT ${key} reducer` });
+      const mounted = mountedReducers[key as StateKey];
+
+      // Add new reducer if not mounted
+      if (! mounted) {
+        store.reducerManager.add(key as StateKey, reducer);
+        dispatch({ type: `@INIT ${key} reducer` });
+      }
     });
 
     return () => {

@@ -5,13 +5,12 @@ import { ArticleList, ArticlesView } from 'entities/article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { actionsArticlesPage, reducerArticlesPage } from '..';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
-import { fetchArticlesList } from '../model/services/fetch-articles-list';
 import { useSelector } from 'react-redux';
 import { selectArticles } from '../model/slice';
 import { selectArticlesPageLoading, selectArticlesPageView } from '../model/selectors';
 import { ArticleToggleViewSelector } from 'features/article-toggle-view-selector';
 import { PageWrapper } from 'shared/ui';
-import { fetchNextArticlesPage } from '../model/services';
+import { fetchNextArticlesPage, initArticlesPage } from '../model/services';
 
 
 const reducers: ReducersList = {
@@ -19,7 +18,7 @@ const reducers: ReducersList = {
 };
 
 
-const ArticlePage = memo(() => {
+const ArticlesPage = memo(() => {
   const
     { t } = useTranslation('article'),
     dispatch = useAppDispatch(),
@@ -34,10 +33,7 @@ const ArticlePage = memo(() => {
 
 
   useInitialEffect(() => {
-    dispatch(actionsArticlesPage.initState());
-    dispatch(fetchArticlesList({
-      page: 1
-    }));
+    dispatch(initArticlesPage());
   });
 
   const handlerToggleView = useCallback((view: ArticlesView) => {
@@ -62,4 +58,4 @@ const ArticlePage = memo(() => {
   )
 });
 
-export default ArticlePage;
+export default ArticlesPage;
