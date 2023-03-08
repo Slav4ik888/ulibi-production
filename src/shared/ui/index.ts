@@ -6,7 +6,6 @@ export * from './code';
 export * from './icon-wrapper';
 export * from './loader';
 export * from './modal';
-export * from './page-wrapper';
 export * from './portal';
 export * from './select';
 export * from './skeleton';

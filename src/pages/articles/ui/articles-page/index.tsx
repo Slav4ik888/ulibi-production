@@ -1,16 +1,19 @@
 /* eslint-disable max-len */
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArticleList, ArticlesView } from 'entities/article';
+import { ArticleList } from 'entities/article';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
-import { actionsArticlesPage, reducerArticlesPage } from '..';
+import { reducerArticlesPage } from '../..';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { useSelector } from 'react-redux';
-import { selectArticles } from '../model/slice';
-import { selectArticlesPageLoading, selectArticlesPageView } from '../model/selectors';
-import { ArticleToggleViewSelector } from 'features/article-toggle-view-selector';
-import { PageWrapper } from 'shared/ui';
-import { fetchNextArticlesPage, initArticlesPage } from '../model/services';
+import { selectArticles } from '../../model/slice';
+import { selectArticlesPageLoading, selectArticlesPageView } from '../../model/selectors';
+import { fetchNextArticlesPage, initArticlesPage } from '../../model/services';
+import { PageWrapper } from 'widgets/page-wrapper';
+import { ArticlePageFilters } from '../articles-page-filters';
+import s from './index.module.scss';
+import { useSearchParams } from 'react-router-dom';
+
 
 
 const reducers: ReducersList = {
@@ -24,8 +27,9 @@ const ArticlesPage = memo(() => {
     dispatch = useAppDispatch(),
     articles = useSelector(selectArticles.selectAll),
     loading  = useSelector(selectArticlesPageLoading),
-    view     = useSelector(selectArticlesPageView);
-
+    view     = useSelector(selectArticlesPageView),
+    [searchParams] = useSearchParams();
+    console.log('searchParams: ', searchParams);
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
@@ -33,25 +37,19 @@ const ArticlesPage = memo(() => {
 
 
   useInitialEffect(() => {
-    dispatch(initArticlesPage());
+    dispatch(initArticlesPage(searchParams));
   });
-
-  const handlerToggleView = useCallback((view: ArticlesView) => {
-    dispatch(actionsArticlesPage.setView(view));
-  }, [dispatch]);
 
 
   return (
     <DynamicModuleLoader reducers={reducers}>
       <PageWrapper onScrollEnd={onLoadNextPart}>
-        <ArticleToggleViewSelector
-          view     = {view}
-          onToggle = {handlerToggleView}
-        />
+        <ArticlePageFilters />
         <ArticleList
-          loading  = {loading}
-          view     = {view}
-          articles = {articles}
+          loading   = {loading}
+          view      = {view}
+          articles  = {articles}
+          className = {s.list}
         />
       </PageWrapper>
     </DynamicModuleLoader>

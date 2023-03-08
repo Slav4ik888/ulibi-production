@@ -148,8 +148,8 @@
       "title": "Как новичку разработать опенсорс-библиотеку",
       "subtitle": "опыт фронтенд-разработчика",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/547/233/397/547233397b1627fe03f613501a902b67.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 324,
+      "createdAt": "20.04.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -261,8 +261,8 @@
       "title": "В DWH только Python",
       "subtitle": "What news in JS in 2022",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/836/660/16b/83666016b89578e4df409c726b553cd0.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 2088,
+      "createdAt": "17.08.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -376,8 +376,8 @@
       "title": "Feature-Sliced Design",
       "subtitle": "эволюция фронтенда для быстрых экспериментов",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f0d/6a3/5b6/f0d6a35b68c28f0f559b9c691164f997.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 1902,
+      "createdAt": "10.01.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -486,11 +486,11 @@
     },
     {
       "id": "5",
-      "title": "JS - news",
+      "title": "JS - news Foraver",
       "subtitle": "What news in JS in 2022",
       "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 19823,
+      "createdAt": "26.12.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -599,11 +599,11 @@
     },
     {
       "id": "6",
-      "title": "Как новичку разработать опенсорс-библиотеку",
+      "title": "Как и зачем новичку разработать опенсорс-библиотеку",
       "subtitle": "опыт фронтенд-разработчика",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/547/233/397/547233397b1627fe03f613501a902b67.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 3422,
+      "createdAt": "06.05.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -715,8 +715,8 @@
       "title": "В DWH только Python",
       "subtitle": "What news in JS in 2022",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/836/660/16b/83666016b89578e4df409c726b553cd0.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 8390,
+      "createdAt": "22.06.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -827,18 +827,18 @@
     },
     {
       "id": "8",
-      "title": "Feature-Sliced Design",
+      "title": "Reds Feature-Sliced Design",
       "subtitle": "эволюция фронтенда для быстрых экспериментов",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f0d/6a3/5b6/f0d6a35b68c28f0f559b9c691164f997.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 3203,
+      "createdAt": "26.09.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
         "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
       },
       "type": [
-        "IT",
+        "Economic",
         "Desing"
       ],
       "blocks": [
@@ -940,11 +940,11 @@
     },
     {
       "id": "9",
-      "title": "JS - news",
-      "subtitle": "What news in JS in 2022",
+      "title": "Android - news",
+      "subtitle": "What Android news in JS in 2023",
       "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 572,
+      "createdAt": "05.02.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -1053,11 +1053,11 @@
     },
     {
       "id": "10",
-      "title": "Как новичку разработать опенсорс-библиотеку",
-      "subtitle": "опыт фронтенд-разработчика",
+      "title": "Как новичку разработать библиотеку Android",
+      "subtitle": "Android опыт фронтенд-разработчика",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/547/233/397/547233397b1627fe03f613501a902b67.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 432,
+      "createdAt": "17.12.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -1166,11 +1166,11 @@
     },
     {
       "id": "11",
-      "title": "В DWH только Python",
-      "subtitle": "What news in JS in 2022",
+      "title": "Russian В DWH только Python",
+      "subtitle": "What Python news in JS in 2022",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/836/660/16b/83666016b89578e4df409c726b553cd0.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 3211,
+      "createdAt": "22.10.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",
@@ -1281,11 +1281,11 @@
     },
     {
       "id": "12",
-      "title": "Feature-Sliced Design",
-      "subtitle": "эволюция фронтенда для быстрых экспериментов",
+      "title": "Describe Feature-Sliced Design",
+      "subtitle": "Feature эволюция фронтенда для быстрых экспериментов",
       "img": "https://habrastorage.org/r/w1560/getpro/habr/upload_files/f0d/6a3/5b6/f0d6a35b68c28f0f559b9c691164f997.png",
-      "views": 1022,
-      "createdAt": "26.03.2022",
+      "views": 2103,
+      "createdAt": "25.07.2022",
       "user": {
         "id": "3",
         "username": "user_nuh",

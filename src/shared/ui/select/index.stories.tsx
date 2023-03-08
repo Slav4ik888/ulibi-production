@@ -16,7 +16,7 @@ export default {
 
 const
   Template: ComponentStory<typeof Select> = (args) => <Select {...args} />,
-  defaultProps: SelectProps = {
+  defaultProps: SelectProps<string> = {
     label   : 'Select value',
     value   : '125',
     options : [

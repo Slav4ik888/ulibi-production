@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { PageWrapper } from 'shared/ui';
+import { PageWrapper } from 'widgets/page-wrapper';
+
 
 const AboutPage = memo(() => {
   const { t } = useTranslation('about');

@@ -27,7 +27,7 @@ interface Props {
 }
 
 
-export const ArticleToggleViewSelector: FC<Props> = memo(({ view, classname, onToggle }: Props) => {
+export const ArticleViewSelector: FC<Props> = memo(({ view, classname, onToggle }: Props) => {
   const
     { t } = useTranslation(),
     handlerToggle = (newView: ArticlesView) => () => onToggle(newView);

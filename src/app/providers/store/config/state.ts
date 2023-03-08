@@ -6,13 +6,15 @@ import { ProfileSchema } from 'entities/profile';
 import { UserSchema } from 'entities/user';
 import { AddCommentFormSchema } from 'features/add-comment-form';
 import { LoginSchema } from 'features/auth-by-username';
+import { StateSchemaScrollRestore } from 'features/scroll-restore';
 import { ArticlesPageSchema, ArticleDetailsCommentsSchema } from 'pages';
 import { NavigateOptions, To } from 'react-router-dom';
 
 
 export interface StateSchema {
-  counter : CounterSchema
-  user    : UserSchema
+  counter       : CounterSchema
+  user          : UserSchema
+  scrollRestore : StateSchemaScrollRestore
 
   // Async reducers
   login?                  : LoginSchema

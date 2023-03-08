@@ -8,9 +8,10 @@ import {
 } from 'entities/profile';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { profileActions } from 'entities/profile/model/slice';
-import { PageWrapper, Text, TextTheme } from 'shared/ui';
+import { Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { PageWrapper } from 'widgets/page-wrapper';
 
 
 const reducers: ReducersList = {
