@@ -2,7 +2,7 @@
 import { StateSchema } from 'app/providers/store';
 import { Article } from '../types';
 
-export const selectArticleDetailsModule  = (state: StateSchema) => state?.articleDetails;
-export const selectArticleDetailsData    = (state: StateSchema) => selectArticleDetailsModule(state)?.data || {} as Article;
-export const selectArticleDetailsError   = (state: StateSchema) => selectArticleDetailsModule(state)?.error;
-export const selectArticleDetailsLoading = (state: StateSchema) => selectArticleDetailsModule(state)?.loading;
+export const selectArticleModule  = (state: StateSchema) => state?.article;
+export const selectArticleData    = (state: StateSchema) => selectArticleModule(state)?.data || {} as Article;
+export const selectArticleError   = (state: StateSchema) => selectArticleModule(state)?.error;
+export const selectArticleLoading = (state: StateSchema) => selectArticleModule(state)?.loading;

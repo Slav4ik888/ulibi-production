@@ -1,13 +1,13 @@
 import { memo, useCallback } from 'react';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
-import { articleDetailsReducer } from '../../model/slice';
+import { articleReducer } from '../../model/slice';
 import { fetchArticleById } from '../../model/services';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 import { useSelector } from 'react-redux';
 import {
-  selectArticleDetailsData, selectArticleDetailsError, selectArticleDetailsLoading
+  selectArticleData, selectArticleError, selectArticleLoading
 } from '../../model/selectors';
 import { Avatar, IconWrapper, Skeleton, Text, TextAlign, TextSize } from 'shared/ui';
 import EyeIcon from 'shared/assets/icons/eye.svg';
@@ -21,7 +21,7 @@ import s from './index.module.scss';
 
 
 const reducers: ReducersList = {
-  articleDetails: articleDetailsReducer
+  article: articleReducer
 }
 
 
@@ -31,13 +31,13 @@ interface Props {
 }
 
 
-export const ArticleDetails = memo(({ id, className }: Props) => {
+export const ArticleComponent = memo(({ id, className }: Props) => {
   const
     { t }    = useTranslation('article'),
     dispatch = useAppDispatch(),
-    article  = useSelector(selectArticleDetailsData),
-    loading  = useSelector(selectArticleDetailsLoading),
-    error    = useSelector(selectArticleDetailsError);
+    article  = useSelector(selectArticleData),
+    loading  = useSelector(selectArticleLoading),
+    error    = useSelector(selectArticleError);
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {

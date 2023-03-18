@@ -1,4 +1,9 @@
-import { AboutPage, ArticlesPage, ArticlePageDetails, MainPage, NotFoundPage, ProfilePage } from 'pages';
+import { AboutPage } from 'pages/about';
+import { ArticlePageDetails } from 'pages/article-details';
+import { ArticlesPage } from 'pages/articles-page';
+import { MainPage } from 'pages/main';
+import { NotFoundPage } from 'pages/not-found';
+import { ProfilePage } from 'pages/profile';
 import { RouteProps } from 'react-router-dom';
 
 

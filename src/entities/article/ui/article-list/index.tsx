@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, HTMLAttributeAnchorTarget } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 import { Text } from 'shared/ui';
@@ -23,11 +23,12 @@ export interface Props {
   articles   : Article[]
   loading?   : boolean
   view?      : ArticlesView
+  target?    : HTMLAttributeAnchorTarget
 }
 
 
 export const ArticleList: FC<Props> = ({
-  className, articles, loading,
+  className, articles, loading, target,
   view = ArticlesView.TILE
 }) => {
   const { t } = useTranslation('article');
@@ -35,6 +36,7 @@ export const ArticleList: FC<Props> = ({
     key       = {article.id}
     article   = {article}
     view      = {view}
+    target    = {target}
     className = {s.card}
   />;
 

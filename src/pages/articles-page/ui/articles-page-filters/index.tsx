@@ -15,7 +15,7 @@ import { Card } from 'shared/ui';
 import { Input } from 'shared/ui/input';
 import { ArticleSortSelector } from 'features/article-sort-selector';
 import { SortOrder } from 'shared/types';
-import { fetchArticlesList } from 'pages/articles/model/services';
+import { fetchArticlesList } from 'pages/articles-page/model/services';
 import { useDebounce } from 'shared/lib/hooks/use-debounce';
 import { ArticleTypeTabs } from 'features/article-type-tabs';
 import { TabItem } from 'shared/ui/tabs';

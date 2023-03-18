@@ -8,7 +8,9 @@ import { selectArticleDetailsCommentsError, selectArticleDetailsCommentsLoading 
 describe('selectArticleDetailsCommentsError', () => {
   test('Should return article error', () => {
     const state: DeepPartial<StateSchema> = {
-      articleDetailsComments: { ...STATE_ARTICLE_COMMENTS, error: 'Error' }
+      articleDetailsPage: {
+        comments: { ...STATE_ARTICLE_COMMENTS, error: 'Error' }
+      }
     };
 
     expect(selectArticleDetailsCommentsError(state as StateSchema)).toEqual('Error');
@@ -29,7 +31,9 @@ describe('selectArticleDetailsCommentsError', () => {
 describe('selectArticleDetailsCommentsLoading', () => {
   test('Should return article loading', () => {
     const state: DeepPartial<StateSchema> = {
-      articleDetailsComments: { ...STATE_ARTICLE_COMMENTS, loading: true }
+      articleDetailsPage: {
+        comments: { ...STATE_ARTICLE_COMMENTS, loading: true }
+      }
     };
 
     expect(selectArticleDetailsCommentsLoading(state as StateSchema)).toEqual(true);

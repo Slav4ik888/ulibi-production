@@ -5,7 +5,7 @@ import { ArticlePageFilters } from '.';
 
 
 export default {
-  title     : 'pages/ArticlePageFilters',
+  title     : 'pages/ArticlesPageFilters',
   component : ArticlePageFilters,
   argTypes  : {
     backgroundColor: { control: 'color' }

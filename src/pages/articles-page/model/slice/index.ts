@@ -2,7 +2,7 @@ import { createEntityAdapter, createSlice, PayloadAction } from '@reduxjs/toolki
 import { StateSchema } from 'app/providers/store';
 import { Article, ArticleSortField, ArticlesView, ArticleType } from 'entities/article';
 import { fetchArticlesList } from '../services/fetch-articles-list';
-import { ArticlesPageSchema } from '../types';
+import { StateSchemaArticlesPage } from '../types';
 import { SortOrder } from 'shared/types'
 import * as LS from 'shared/lib/local-storage';
 
@@ -19,7 +19,7 @@ export const selectArticles = articlesAdapter.getSelectors<StateSchema>(
 
 export const slice = createSlice({
   name: 'articlesPage',
-  initialState: articlesAdapter.getInitialState<ArticlesPageSchema>({
+  initialState: articlesAdapter.getInitialState<StateSchemaArticlesPage>({
     loading  : false,
     error    : undefined,
     ids      : [],

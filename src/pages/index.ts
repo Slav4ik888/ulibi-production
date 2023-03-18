@@ -1,6 +1,0 @@
-export * from './about'
-export * from './articles'
-export * from './article-details'
-export * from './main'
-export * from './not-found'
-export * from './profile'

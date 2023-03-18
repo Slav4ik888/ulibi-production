@@ -6,7 +6,7 @@ export const fetchArticleById = createAsyncThunk<
   Article,
   string, // То что потом будем передавать на сервер
   ThunkConfig<string>
->('articleDetails/fetchArticleById',
+>('article/fetchArticleById',
   async (articleId, thunkApi) => {
     const { extra, rejectWithValue } = thunkApi;
 

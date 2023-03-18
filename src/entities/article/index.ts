@@ -1,6 +1,6 @@
-export { ArticleDetails } from './ui/article-details'
+export { ArticleComponent } from './ui/article'
 export { ArticleList } from './ui/article-list'
 export {
-  Article, ArticleDetailsSchema, ArticlesView, ArticleSortField, ArticleType
+  Article, StateSchemaArticle, ArticlesView, ArticleSortField, ArticleType
 } from './model/types'
-export { selectArticleDetailsData } from './model/selectors'
+export { selectArticleData } from './model/selectors'

@@ -3,22 +3,22 @@ import { StateSchema } from 'app/providers/store';
 import { Theme } from 'app/providers/theme';
 import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { MOCK_ARTICLE } from 'shared/lib/tests/__mocks__';
-import { ArticleDetails } from '.';
+import { ArticleComponent } from '.';
 
 
 export default {
-  title     : 'entities/ArticleDetails',
-  component : ArticleDetails,
+  title     : 'entities/ArticleComponent',
+  component : ArticleComponent,
   argTypes  : {
     backgroundColor: { control: 'color' }
   }
-} as ComponentMeta<typeof ArticleDetails>;
+} as ComponentMeta<typeof ArticleComponent>;
 
 
 const
-  Template: ComponentStory<typeof ArticleDetails> = (args) => <ArticleDetails {...args} />,
+  Template: ComponentStory<typeof ArticleComponent> = (args) => <ArticleComponent {...args} />,
   store: Partial<StateSchema> = {
-    articleDetails: {
+    article: {
       data: MOCK_ARTICLE,
       loading: false
     }
@@ -35,7 +35,7 @@ Primary.decorators = [StoreDecorator(store)];
 export const Loading = Template.bind({});
 Loading.args = {};
 Loading.decorators = [StoreDecorator({
-  articleDetails: {
+  article: {
     loading: true
   }
 })];
@@ -43,7 +43,7 @@ Loading.decorators = [StoreDecorator({
 export const Error = Template.bind({});
 Error.args = {};
 Error.decorators = [StoreDecorator({
-  articleDetails: {
+  article: {
     error: 'Fucking error'
   }
 })];
@@ -58,7 +58,7 @@ PrimaryDark.decorators = [StoreDecorator(store), ThemeDecorator(Theme.DARK)];
 export const LoadingDark = Template.bind({});
 LoadingDark.args = {};
 LoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-  articleDetails: {
+  article: {
     loading: true
   }
 })];
@@ -66,7 +66,7 @@ LoadingDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
 export const ErrorDark = Template.bind({});
 ErrorDark.args = {};
 ErrorDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-  articleDetails: {
+  article: {
     error: 'Fucking error'
   }
 })];
@@ -81,7 +81,7 @@ PrimaryOrangeDark.decorators = [StoreDecorator(store), ThemeDecorator(Theme.ORAN
 export const LoadingOrange = Template.bind({});
 LoadingOrange.args = {};
 LoadingOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK), StoreDecorator({
-  articleDetails: {
+  article: {
     loading: true
   }
 })];
@@ -89,7 +89,7 @@ LoadingOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK), StoreDecorator({
 export const ErrorOrange = Template.bind({});
 ErrorOrange.args = {};
 ErrorOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK), StoreDecorator({
-  articleDetails: {
+  article: {
     error: 'Fucking error'
   }
 })];

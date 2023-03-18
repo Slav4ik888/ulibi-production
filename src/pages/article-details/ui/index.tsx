@@ -1,7 +1,8 @@
 import { RoutePath } from 'app/providers/router/config';
-import { ArticleDetails } from 'entities/article';
+import { ArticleComponent, ArticleList } from 'entities/article';
 import { CommentsList } from 'entities/comment';
 import { AddCommentForm } from 'features/add-comment-form';
+import { selectArticleDetailsRecommendationsLoading } from 'pages/article-details/model/selectors/recommendations';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
@@ -12,13 +13,16 @@ import { Button, ButtonTheme, Text } from 'shared/ui';
 import { PageWrapper } from 'widgets/page-wrapper';
 import { selectArticleDetailsCommentsLoading } from '../model/selectors';
 import { addCommentForArticle, fetchCommentsByArticleId } from '../model/services';
-import { articleDetailsCommentsReducer, selectArticleComments } from '../model/slice';
+import { fetchRecommendationsByArticleId } from '../model/services/fetch-recommendations-by-article-id';
+import { selectArticleComments } from '../model/slice/article-details-comments';
+import { selectArticleRecommendations } from '../model/slice/article-details-recommendations';
+import { articleDetailsPageReducer } from '../model/slice/article-details-reducer';
 import s from './index.module.scss';
 
 
 
 const reducers: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer
+  articleDetailsPage: articleDetailsPageReducer
 };
 
 
@@ -30,9 +34,14 @@ const ArticlePageDetails = memo(() => {
     dispatch = useAppDispatch(),
     navigate = useNavigate(),
     comments = useSelector(selectArticleComments.selectAll),
+    recommendations = useSelector(selectArticleRecommendations.selectAll),
+    recommendationsIsLoading = useSelector(selectArticleDetailsRecommendationsLoading),
     loading = useSelector(selectArticleDetailsCommentsLoading);
 
-  useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)));
+  useInitialEffect(() => {
+    dispatch(fetchCommentsByArticleId(id));
+    dispatch(fetchRecommendationsByArticleId());
+  });
 
 
   const handlerSendComment = useCallback((text: string) => {
@@ -50,12 +59,19 @@ const ArticlePageDetails = memo(() => {
 
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
+    <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <PageWrapper>
         <Button theme={ButtonTheme.SIMPLE} onClick={handlerBackToList}>
           {t('Назад к списку')}
         </Button>
-        <ArticleDetails id={id} />
+        <ArticleComponent id={id} />
+        <Text className={s.commentTitle} title={t('Рекомендуем')} />
+        <ArticleList
+          articles  = {recommendations}
+          loading   = {recommendationsIsLoading}
+          target    = '_blank'
+          className = {s.recommendations}
+        />
         <Text className={s.commentTitle} title={c('Комментарии')} />
         <AddCommentForm onSendComment={handlerSendComment} />
         <CommentsList

@@ -1,2 +1,2 @@
 export * from './article'
-export * from './state-article-details'
+export * from './state-schema-article'

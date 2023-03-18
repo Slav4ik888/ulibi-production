@@ -1,9 +1,9 @@
 import { ArticlesView } from 'entities/article';
-import { ArticlesPageSchema } from 'pages';
+import { StateSchemaArticlesPage } from 'pages/articles-page';
 import { MOCK_ARTICLE } from '../article';
 
 
-export const STATE_ARTICLES_PAGE: ArticlesPageSchema = {
+export const STATE_ARTICLES_PAGE: StateSchemaArticlesPage = {
   entities : {
     [MOCK_ARTICLE.id]: MOCK_ARTICLE
   },
@@ -16,7 +16,7 @@ export const STATE_ARTICLES_PAGE: ArticlesPageSchema = {
   hasMore  : true
 };
 
-export const STATE_ARTICLES_PAGE_EMPTY_DATA: ArticlesPageSchema = {
+export const STATE_ARTICLES_PAGE_EMPTY_DATA: StateSchemaArticlesPage = {
   entities : {},
   ids      : [],
   loading  : false,

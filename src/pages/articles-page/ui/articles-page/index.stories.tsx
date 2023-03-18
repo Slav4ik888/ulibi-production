@@ -5,7 +5,7 @@ import ArticlePage from '.';
 
 
 export default {
-  title     : 'pages/ArticlePage',
+  title     : 'pages/ArticlesPage',
   component : ArticlePage,
   argTypes  : {
     backgroundColor: { control: 'color' }
