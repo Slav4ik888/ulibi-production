@@ -16,11 +16,9 @@ interface Props {
 
 export const StoreProvider: FC<Props> = ({ initialState, children, asyncReducers }) => {
   const
-    // navigate = useNavigate(),
     store = createReduxStore(
       initialState as StateSchema,
       asyncReducers as ReducersMapObject<StateSchema>,
-      // navigate
     );
 
   return (

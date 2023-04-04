@@ -22,8 +22,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
 
       LS.setAuth(data);
       dispatch(userActions.setAuthData(data));
-      // @ts-ignore
-      extra?.navigate('/about');
 
       return data;
     }

@@ -1480,8 +1480,8 @@
     },
     {
       "id": "3",
-      "firstname": "Dariya",
-      "lastname": "Vasina",
+      "firstname": "User",
+      "lastname": "Nuhhh",
       "age": "35",
       "currency": "USD",
       "country": "USA",
@@ -1508,7 +1508,7 @@
     {
       "id": "3",
       "username": "user_nuh",
-      "password": "123",
+      "password": "321",
       "role": "USER",
       "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
     }

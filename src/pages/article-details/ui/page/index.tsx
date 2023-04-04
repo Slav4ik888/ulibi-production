@@ -11,12 +11,13 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
 import { Button, ButtonTheme, Text } from 'shared/ui';
 import { PageWrapper } from 'widgets/page-wrapper';
-import { selectArticleDetailsCommentsLoading } from '../model/selectors';
-import { addCommentForArticle, fetchCommentsByArticleId } from '../model/services';
-import { fetchRecommendationsByArticleId } from '../model/services/fetch-recommendations-by-article-id';
-import { selectArticleComments } from '../model/slice/article-details-comments';
-import { selectArticleRecommendations } from '../model/slice/article-details-recommendations';
-import { articleDetailsPageReducer } from '../model/slice/article-details-reducer';
+import { selectArticleDetailsCommentsLoading } from '../../model/selectors';
+import { addCommentForArticle, fetchCommentsByArticleId } from '../../model/services';
+import { fetchRecommendationsByArticleId } from '../../model/services/fetch-recommendations-by-article-id';
+import { selectArticleComments } from '../../model/slice/article-details-comments';
+import { selectArticleRecommendations } from '../../model/slice/article-details-recommendations';
+import { articleDetailsPageReducer } from '../../model/slice/article-details-reducer';
+import { ArticlePageDetailsHeader } from '../header';
 import s from './index.module.scss';
 
 
@@ -32,7 +33,6 @@ const ArticlePageDetails = memo(() => {
     { t: c } = useTranslation('comments'),
     { id } = useParams<{ id: string }>(),
     dispatch = useAppDispatch(),
-    navigate = useNavigate(),
     comments = useSelector(selectArticleComments.selectAll),
     recommendations = useSelector(selectArticleRecommendations.selectAll),
     recommendationsIsLoading = useSelector(selectArticleDetailsRecommendationsLoading),
@@ -48,10 +48,6 @@ const ArticlePageDetails = memo(() => {
     dispatch(addCommentForArticle(text));
   }, [dispatch]);
 
-  const handlerBackToList = useCallback(() => {
-    navigate(RoutePath.ARTICLES);
-  }, [navigate]);
-
 
   if (!id) return (
     <div>{t('Статья не найдена')}</div>
@@ -61,9 +57,7 @@ const ArticlePageDetails = memo(() => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <PageWrapper>
-        <Button theme={ButtonTheme.SIMPLE} onClick={handlerBackToList}>
-          {t('Назад к списку')}
-        </Button>
+        <ArticlePageDetailsHeader />
         <ArticleComponent id={id} />
         <Text className={s.commentTitle} title={t('Рекомендуем')} />
         <ArticleList
