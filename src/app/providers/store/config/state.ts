@@ -7,7 +7,7 @@ import { UserSchema } from 'entities/user';
 import { AddCommentFormSchema } from 'features/add-comment-form';
 import { LoginSchema } from 'features/auth-by-username';
 import { StateSchemaScrollRestore } from 'features/scroll-restore';
-import { StateSchemaArticleDetailsPage } from 'pages/article-details';
+import { StateSchemaArticleDetailsPage } from 'pages/article-details-page';
 import { StateSchemaArticlesPage } from 'pages/articles-page';
 import { NavigateOptions, To } from 'react-router-dom';
 

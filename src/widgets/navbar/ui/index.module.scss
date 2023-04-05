@@ -9,9 +9,20 @@
 }
 
 .links {
-  // margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .mainLink {
   margin-right: 16px;
+}
+
+.app-name {
+  // width: var(--sidebar-width);
+  margin-left: 16px;
+  margin-right: 32px;
+}
+
+.app-link {
+
 }

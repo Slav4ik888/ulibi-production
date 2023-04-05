@@ -53,7 +53,7 @@ export const ArticleListItem: FC<Props> = ({ className, article, view, target })
         <div className={s.footer}>
           <AppLink
             target = {target}
-            to     = {`${RoutePath.ARTICLES_DETAILS}/${article.id}`}
+            to     = {`${RoutePath.ARTICLE_DETAILS}/${article.id}`}
           >
             <Button theme={ButtonTheme.SIMPLE}>
               {t('Читать далее...')}
@@ -68,7 +68,7 @@ export const ArticleListItem: FC<Props> = ({ className, article, view, target })
   return (
     <AppLink
       target = {target}
-      to     = {`${RoutePath.ARTICLES_DETAILS}/${article.id}`}
+      to     = {`${RoutePath.ARTICLE_DETAILS}/${article.id}`}
     >
       <Card
         {...bindHover}

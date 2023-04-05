@@ -1,4 +1,4 @@
-import { StateSchemaArticleDetailsComments } from 'pages/article-details';
+import { StateSchemaArticleDetailsComments } from 'pages/article-details-page';
 import { COMMENTS, COMMENT_ONE, COMMENT_TWO } from '.';
 
 

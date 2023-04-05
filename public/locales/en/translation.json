@@ -9,5 +9,7 @@
   "Введите username"                 : "Enter username",
   "Введите пароль"                   : "Enter password",
   "Ввели не верный логин или пароль" : "Incorrect username or password entered",
-  "Выйти"                            : "Exit"
+  "Выйти"                            : "Exit",
+  "Korzan Blog App"                  : "Korzan Blog App",
+  "Добавить статью"                  : "Add article"
 }

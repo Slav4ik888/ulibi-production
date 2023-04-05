@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { cn } from 'shared/lib';
 import { Button, ButtonTheme } from 'shared/ui';
 import s from './index.module.scss';
+import { selectArticleData } from 'entities/article';
 
 
 
@@ -24,12 +25,17 @@ export const ArticlePageDetailsHeader = memo(({ styles = {} }: Props) => {
   const
     { t } = useTranslation('article'),
     navigate = useNavigate(),
+    article = useSelector(selectArticleData),
     isCanEdit = useSelector(selectIsCanEditArticle);
 
 
   const handlerBackToList = useCallback(() => {
     navigate(RoutePath.ARTICLES);
   }, [navigate]);
+
+  const handlerEditArticle = useCallback(() => {
+    navigate(`${RoutePath.ARTICLE_DETAILS}/${article?.id}/edit`);
+  }, [article?.id, navigate]);
 
 
   return (
@@ -42,7 +48,7 @@ export const ArticlePageDetailsHeader = memo(({ styles = {} }: Props) => {
           <Button
             className = {s.editBtn}
             theme     = {ButtonTheme.SIMPLE}
-            onClick   = {handlerBackToList}
+            onClick   = {handlerEditArticle}
           >
             {t('Редактировать')}
           </Button>

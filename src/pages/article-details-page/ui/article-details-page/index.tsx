@@ -2,7 +2,7 @@ import { RoutePath } from 'app/providers/router/config';
 import { ArticleComponent, ArticleList } from 'entities/article';
 import { CommentsList } from 'entities/comment';
 import { AddCommentForm } from 'features/add-comment-form';
-import { selectArticleDetailsRecommendationsLoading } from 'pages/article-details/model/selectors/recommendations';
+import { selectArticleDetailsRecommendationsLoading } from 'pages/article-details-page/model/selectors/recommendations';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';

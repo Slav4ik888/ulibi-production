@@ -1,4 +1,4 @@
-export { ArticlePageDetailsAsync as ArticlePageDetails } from './ui/page/index.async'
+export { ArticlePageDetailsAsync as ArticlePageDetails } from './ui/article-details-page/index.async'
 export { StateSchemaArticleDetailsComments } from './model/types/state-schema-article-details'
 export { StateSchemaArticleDetailsRecommendations } from './model/types/state-schema-recommendations'
 export { StateSchemaArticleDetailsPage } from './model/types/state-schema-page'

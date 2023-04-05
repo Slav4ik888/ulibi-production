@@ -1,5 +1,6 @@
-import { AboutPage } from 'pages/about';
-import { ArticlePageDetails } from 'pages/article-details';
+import { AboutPage } from 'pages/about-page';
+import { ArticlePageDetails } from 'pages/article-details-page';
+import { ArticleEditPage } from 'pages/article-edit-page';
 import { ArticlesPage } from 'pages/articles-page';
 import { MainPage } from 'pages/main';
 import { NotFoundPage } from 'pages/not-found';
@@ -18,17 +19,21 @@ export enum AppRoutes {
   ABOUT            = 'ABOUT',
   PROFILE          = 'PROFILE',
   ARTICLES         = 'ARTICLES',
-  ARTICLES_DETAILS = 'ARTICLES_DETAILS',
-  NOT_FOUND        = 'NOT_FOUND',
+  ARTICLE_DETAILS  = 'ARTICLE_DETAILS',
+  ARTICLE_ADD      = 'ARTICLE_ADD',
+  ARTICLE_EDIT     = 'ARTICLE_EDIT',
+  NOT_FOUND        = 'NOT_FOUND'
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-  [AppRoutes.MAIN]             : '/',
-  [AppRoutes.ABOUT]            : '/about',
-  [AppRoutes.PROFILE]          : '/profile', // + id
-  [AppRoutes.ARTICLES]         : '/articles',
-  [AppRoutes.ARTICLES_DETAILS] : '/articles-details', // + id
-  [AppRoutes.NOT_FOUND]        : '*'
+  [AppRoutes.MAIN]            : '/',
+  [AppRoutes.ABOUT]           : '/about',
+  [AppRoutes.PROFILE]         : '/profile', // + id
+  [AppRoutes.ARTICLES]        : '/articles',
+  [AppRoutes.ARTICLE_DETAILS] : '/article-details', // + id
+  [AppRoutes.ARTICLE_ADD]     : '/article-details/add',
+  [AppRoutes.ARTICLE_EDIT]    : '/article-details/:id/edit',
+  [AppRoutes.NOT_FOUND]       : '*'
 }
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
@@ -50,9 +55,19 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     element  : <ArticlesPage />,
     authOnly : true
   },
-  [AppRoutes.ARTICLES_DETAILS]: {
-    path     : `${RoutePath.ARTICLES_DETAILS}/:id`,
+  [AppRoutes.ARTICLE_DETAILS]: {
+    path     : `${RoutePath.ARTICLE_DETAILS}/:id`,
     element  : <ArticlePageDetails />,
+    authOnly : true
+  },
+  [AppRoutes.ARTICLE_ADD]: {
+    path     : `${RoutePath.ARTICLE_ADD}`,
+    element  : <ArticleEditPage />,
+    authOnly : true
+  },
+  [AppRoutes.ARTICLE_EDIT]: {
+    path     : `${RoutePath.ARTICLE_EDIT}`,
+    element  : <ArticleEditPage />,
     authOnly : true
   },
   [AppRoutes.NOT_FOUND]: {

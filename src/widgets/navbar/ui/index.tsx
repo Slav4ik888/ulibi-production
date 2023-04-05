@@ -6,7 +6,7 @@ import { memo, useCallback, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { cn } from 'shared/lib';
-import { AppLink, AppLinkTheme, Button, ButtonTheme } from 'shared/ui';
+import { AppLink, AppLinkTheme, Button, ButtonTheme, Text, TextSize, TextTheme } from 'shared/ui';
 import s from './index.module.scss';
 
 
@@ -31,6 +31,12 @@ export const Navbar = memo(({ classNames }: Props) => {
   return (
     <header className={cn(s.root, {}, [classNames])}>
       <div className={s.links}>
+        <Text
+          className = {s.appName}
+          title     = {t('Korzan Blog App')}
+          size      = {TextSize.S}
+          theme     = {TextTheme.INVERTED}
+        />
         <AppLink
           to        = {RoutePath.MAIN}
           theme     = {AppLinkTheme.SECONDARY}
@@ -46,13 +52,21 @@ export const Navbar = memo(({ classNames }: Props) => {
 
       {
         authData
-          ? <Button
+          ? (<>
+            <AppLink
+              to        = {RoutePath.ARTICLE_ADD}
+              theme     = {AppLinkTheme.SECONDARY}
+              className = {s.appLink}
+              children  = {t('Добавить статью')}
+            />
+            <Button
               theme   = {ButtonTheme.CLEAR_SEC}
               onClick = {handlerLogout}
             >
               {t('Выйти')}
-          </Button>
-          : <>
+            </Button>
+            </>)
+          : (<>
             <Button
               theme   = {ButtonTheme.CLEAR_INV}
               onClick = {toggle}
@@ -64,7 +78,7 @@ export const Navbar = memo(({ classNames }: Props) => {
               isOpen  = {isOpen}
               onClose = {toggle}
             />
-          </>
+          </>)
       }
     </header>
   )

@@ -29,7 +29,6 @@ const ArticlesPage = memo(() => {
     loading  = useSelector(selectArticlesPageLoading),
     view     = useSelector(selectArticlesPageView),
     [searchParams] = useSearchParams();
-    console.log('searchParams: ', searchParams);
 
   const onLoadNextPart = useCallback(() => {
     dispatch(fetchNextArticlesPage());
