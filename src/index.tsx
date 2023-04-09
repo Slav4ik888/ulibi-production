@@ -43,4 +43,4 @@ render(
 // "configurations": {
 
 
-// git add . && git commit -m "lesson 62 start" && git push -u origin main
+// git add . && git commit -m "lesson 62 add netlify.toml" && git push -u origin main
