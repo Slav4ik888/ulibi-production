@@ -1,4 +1,3 @@
-import { RoutePath } from 'app/providers/router/config';
 import { ArticleComponent, ArticleList } from 'entities/article';
 import { CommentsList } from 'entities/comment';
 import { AddCommentForm } from 'features/add-comment-form';
@@ -6,10 +5,10 @@ import { selectArticleDetailsRecommendationsLoading } from 'pages/article-detail
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
 import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
-import { Button, ButtonTheme, Text } from 'shared/ui';
+import { Text } from 'shared/ui';
 import { PageWrapper } from 'widgets/page-wrapper';
 import { selectArticleDetailsCommentsLoading } from '../../model/selectors';
 import { addCommentForArticle, fetchCommentsByArticleId } from '../../model/services';

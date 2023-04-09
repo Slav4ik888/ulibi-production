@@ -43,4 +43,6 @@ render(
 // "configurations": {
 
 
-// git add . && git commit -m "lesson 62 add netlify.toml" && git push -u origin main
+// "stylelint.config": null
+
+// git add . && git commit -m "lesson 62 end" && git push -u origin main

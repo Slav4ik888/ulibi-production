@@ -6,8 +6,11 @@ import * as LS from 'shared/lib/local-storage';
 
 
 export const api = axios.create({
-  baseURL: __API_URL__,
-  headers: {
-    authorization: LS.getAuth()?.username || ''
-  }
+  baseURL: __API_URL__
+});
+
+api.interceptors.request.use((config) => {
+  if (config.headers) config.headers.Authorization = LS.getAuth()?.username || ''
+
+  return config
 });
