@@ -7,10 +7,12 @@ import { buildSvgLoader, buildCssLoaders } from '../build/loaders';
 
 export default ({ config }: { config: Configuration}) => {
   const paths: BuildPaths = {
-    build : '',
-    html  : '',
-    entry : '',
-    src   : path.resolve(__dirname, '..', '..', 'src')
+    build        : '',
+    html         : '',
+    entry        : '',
+    locales      : '',
+    buildLocales : '',
+    src          : path.resolve(__dirname, '..', '..', 'src')
   };
 
   config!.resolve!.modules!.push(paths.src);

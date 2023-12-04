@@ -5,8 +5,8 @@ import { Text } from 'shared/ui';
 import { Article, ArticlesView } from '../../model/types';
 import { ArticleListItem } from '../article-list-item';
 import { ArticleListItemSkeleton } from '../article-list-item-skeleton';
+import { AutoSizer, List } from 'react-virtualized';
 import s from './index.module.scss';
-
 
 
 const getSkeletons = (view: ArticlesView) => new Array(view === ArticlesView.TILE ? 9 : 3)
@@ -49,15 +49,30 @@ export const ArticleList: FC<Props> = ({
   }
 
   return (
-    <div className={cn(s.root, {}, [s[view], className])}>
-      {
-        articles?.length > 0
-          ? articles.map(renderArticle)
-          : null
-      }
-      {
-        loading && getSkeletons(view)
-      }
-    </div>
+    <AutoSizer>
+      {({ width, height }) => (
+        <List
+          // ref="List"
+          // className={styles.List}
+          height={500}
+          rowCount={articles?.length}
+          rowHeight={500} // useDynamicRowHeight ? this._getRowHeight : listRowHeight
+          rowRenderer={() => <div>Row nuh...</div>}
+          // scrollToIndex={scrollToIndex}
+          width={width}
+        />
+      )}
+    </AutoSizer>
+    // <div className={cn(s.root, {}, [s[view], className])}>
+    //   {
+    //     articles?.length > 0
+    //       ? articles.map(renderArticle)
+    //       : null
+    //   }
+    //   {
+    //     loading && getSkeletons(view)
+    //   }
+    // </div>
+    
   )
 };
