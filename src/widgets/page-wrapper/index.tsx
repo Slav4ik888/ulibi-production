@@ -16,6 +16,8 @@ interface Props {
   onScrollEnd? : () => void
 }
 
+export const PAGE_ID = 'page-id'; // Тимур сказал возможно лучше это в shared layer убрать...
+
 
 export const PageWrapper = memo(({ className, children, onScrollEnd }: Props) => {
   const
@@ -46,6 +48,7 @@ export const PageWrapper = memo(({ className, children, onScrollEnd }: Props) =>
 
   return (
     <section
+      id        = {PAGE_ID}
       ref       = {wrapperRef}
       className = {cn(s.root, {}, [className])}
       onScroll  = {onScroll}

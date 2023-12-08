@@ -5,7 +5,8 @@ import { Text } from 'shared/ui';
 import { Article, ArticlesView } from '../../model/types';
 import { ArticleListItem } from '../article-list-item';
 import { ArticleListItemSkeleton } from '../article-list-item-skeleton';
-import { AutoSizer, List } from 'react-virtualized';
+import { List, ListRowProps, WindowScroller } from 'react-virtualized';
+import { PAGE_ID } from 'widgets/page-wrapper';
 import s from './index.module.scss';
 
 
@@ -32,15 +33,45 @@ export const ArticleList: FC<Props> = ({
   view = ArticlesView.TILE
 }) => {
   const { t } = useTranslation('article');
-  const renderArticle = (article: Article) => <ArticleListItem
-    key       = {article.id}
-    article   = {article}
-    view      = {view}
-    target    = {target}
-    className = {s.card}
-  />;
 
-  if (!loading && !articles.length) {
+  const
+    isList      = view === ArticlesView.LIST,
+    itemsPerRow = isList ? 1 : 3, // ref.currentWidth / ITEM_WIDTH;
+    rowCount    = isList ? articles.length : Math.ceil(articles.length / itemsPerRow);
+
+
+  const rowRender = ({ index, isScrolling, key, style }: ListRowProps) => {
+    const
+      items     = [],
+      fromIndex = index * itemsPerRow,
+      toIndex   = Math.min(fromIndex + itemsPerRow, articles.length);
+
+    for (let i = fromIndex; i < toIndex; i++) {
+      items.push(
+        <ArticleListItem
+          article   = {articles[i]}
+          view      = {view}
+          target    = {target}
+          className = {s.card}
+          key       = {articles[i].id}
+        />
+      )
+    }
+
+
+    return (
+      <div
+        key       = {key}
+        style     = {style}
+        className = {s.row}
+      >
+        {items}
+      </div>
+    );
+  };
+
+
+  if (! loading && !articles.length) {
     return (
       <div className={cn(s.root, {}, [s[view], className])}>
         <Text title={t('Статья не найдена')} />
@@ -49,30 +80,41 @@ export const ArticleList: FC<Props> = ({
   }
 
   return (
-    <AutoSizer>
-      {({ width, height }) => (
-        <List
-          // ref="List"
-          // className={styles.List}
-          height={500}
-          rowCount={articles?.length}
-          rowHeight={500} // useDynamicRowHeight ? this._getRowHeight : listRowHeight
-          rowRenderer={() => <div>Row nuh...</div>}
-          // scrollToIndex={scrollToIndex}
-          width={width}
-        />
-      )}
-    </AutoSizer>
-    // <div className={cn(s.root, {}, [s[view], className])}>
-    //   {
-    //     articles?.length > 0
-    //       ? articles.map(renderArticle)
-    //       : null
-    //   }
-    //   {
-    //     loading && getSkeletons(view)
-    //   }
-    // </div>
-    
+    <WindowScroller
+      onScroll      = {() => console.log('Scroller nuh')}
+      scrollElement = {document.getElementById(PAGE_ID) as Element}
+    >
+      {
+        ({
+          width,
+          height,
+          isScrolling,
+          scrollTop,
+          onChildScroll,
+          registerChild
+        }) => (
+          <div
+            ref       = {registerChild}
+            className = {cn(s.root, {}, [s[view], className])}
+          >
+            <List
+              // ref="List"
+              // className={styles.List}
+              autoHeight
+              height      = {height ?? 700}
+              width       = {width ? width - 80 : 700}
+              rowCount    = {rowCount}
+              rowHeight   = {isList ? 700 : 330} // useDynamicRowHeight ? this._getRowHeight : listRowHeight
+              rowRenderer = {rowRender}
+              isScrolling = {isScrolling}
+              scrollTop   = {scrollTop}
+              // scrollToIndex={scrollToIndex}
+              onScroll    = {onChildScroll}
+            />
+            {loading && getSkeletons(view)}
+          </div>
+        )
+      }
+    </WindowScroller>
   )
 };
