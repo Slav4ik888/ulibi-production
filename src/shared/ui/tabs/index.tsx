@@ -1,6 +1,6 @@
 import { memo, ReactNode, useCallback } from 'react';
 import { cn } from 'shared/lib';
-import { Card, CardTheme } from 'shared/ui/card';
+import { Card, CardTheme } from '../card';
 import s from './index.module.scss';
 
 

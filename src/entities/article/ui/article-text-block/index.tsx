@@ -1,4 +1,4 @@
-import { ArticleTextBlock } from 'entities/article/model/types';
+import { ArticleTextBlock } from '../../model/types';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';

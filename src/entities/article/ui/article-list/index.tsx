@@ -81,6 +81,7 @@ export const ArticleList: FC<Props> = ({
 
   return (
     <WindowScroller
+      // eslint-disable-next-line no-console
       onScroll      = {() => console.log('Scroller nuh')}
       scrollElement = {document.getElementById(PAGE_ID) as Element}
     >

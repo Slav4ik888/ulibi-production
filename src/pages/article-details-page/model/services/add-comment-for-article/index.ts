@@ -34,7 +34,6 @@ export const addCommentForArticle = createAsyncThunk<
       return data;
     }
     catch (e) {
-      console.log('e: ', e);
       return rejectWithValue('sendComment error');
     }
   }

@@ -21,7 +21,6 @@ export const fetchProfileData = createAsyncThunk<
       return data;
     }
     catch (e) {
-      console.log('e: ', e);
       return rejectWithValue('Error in fetchProfileData');
     }
   }

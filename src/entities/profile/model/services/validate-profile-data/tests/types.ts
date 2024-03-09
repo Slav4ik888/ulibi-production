@@ -1,4 +1,4 @@
-import { Profile, ValidateProfileError } from 'entities/profile/model/types'
+import { Profile, ValidateProfileError } from '../../../types'
 
 interface MockItem {
   description : string

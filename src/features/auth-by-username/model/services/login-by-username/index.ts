@@ -26,7 +26,6 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
       return data;
     }
     catch (e) {
-      console.log('e: ', e);
       return rejectWithValue('Ввели не верный логин или пароль');
     }
   }

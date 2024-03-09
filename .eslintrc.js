@@ -21,7 +21,7 @@ module.exports = {
     sourceType: 'module'
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'slavchik888-plugin'],
   overrides: [{
     files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
     rules: {
@@ -83,6 +83,8 @@ module.exports = {
     '@typescript-eslint/no-misused-promises': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-empty-function': 0,
+    '@typescript-eslint/no-non-null-assertion': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     'react/jsx-indent': 0,
     'react/display-name': 0,
     'react/jsx-props-no-multi-spaces': 0,
@@ -100,6 +102,7 @@ module.exports = {
     'react/jsx-closing-tag-location': 0,
     'react/jsx-closing-bracket-location': 0,
     'jsx-quotes': ['error', 'prefer-single'],
+    'slavchik888-plugin/path-checker': 'error',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to', 'name', 'alt', 'target']

@@ -1,6 +1,6 @@
 import React, { FC, ReactNode, useEffect, useRef, useState, useCallback, MutableRefObject } from 'react';
 import { cn, Mods } from 'shared/lib';
-import { Portal } from 'shared/ui';
+import { Portal } from '../../portal';
 import s from './index.module.scss';
 
 

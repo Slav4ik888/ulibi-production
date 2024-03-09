@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { Profile, selectProfileReadonly } from 'entities/profile';
+import { Profile, selectProfileReadonly } from '../../model/types';
 import { useTranslation } from 'react-i18next';
 import { Currency } from 'entities/currency';
 import { CurrencySelect } from 'entities/currency/ui/currency-select';

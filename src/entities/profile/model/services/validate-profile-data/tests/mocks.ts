@@ -1,4 +1,4 @@
-import { Profile, ValidateProfileError } from 'entities/profile/model/types';
+import { Profile, ValidateProfileError } from '../../../types';
 import { PROFILE } from 'shared/lib/tests/__mocks__';
 import { Mocks } from './types';
 
