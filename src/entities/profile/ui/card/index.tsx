@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
-import { Profile, selectProfileReadonly } from '../../model/types';
+import { Profile } from '../../model/types';
 import { useTranslation } from 'react-i18next';
 import { Currency } from 'entities/currency';
 import { CurrencySelect } from 'entities/currency/ui/currency-select';
@@ -9,6 +9,8 @@ import { Avatar, Loader, Text, TextAlign, TextTheme } from 'shared/ui';
 import { Input } from 'shared/ui/input';
 import s from './index.module.scss';
 import { Country, CountrySelect } from 'entities/country';
+import { selectProfileReadonly } from '../../model/selectors/select-readonly';
+import { HStack, VStack } from 'shared/ui/stack';
 
 
 
@@ -42,30 +44,38 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
 
 
   if (error) return (
-    <div className={cn(s.root, mods, [className])}>
+    <HStack
+      fullWidth
+      justify   = 'center'
+      className = {cn(s.root, mods, [className])}
+    >
       <Text
         theme = {TextTheme.ERROR}
         title = {e('Произошла ошибка при загрузке')}
         text  = {e(error)}
         align = {TextAlign.CENTER}
       />
-    </div>
+    </HStack>
   )
 
 
   return (
-    <div className={cn(s.root, mods, [className])}>
+    <VStack
+      fullWidth
+      gap       = '16'
+      className = {cn(s.root, mods, [className])}
+    >
       {
         loading
           ? <Loader />
           : <>
               {
-                avatar && <div className={s.avatarWrapper}>
+                avatar && <HStack fullWidth justify='center'>
                   <Avatar
                     src  = {avatar}
                     alt  = {t('Аватар')}
                   />
-                </div>
+                </HStack>
               }
               <Input
                 value     = {firstname}
@@ -122,6 +132,6 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
               />
             </>
       }
-    </div>
+    </VStack>
   )
 };

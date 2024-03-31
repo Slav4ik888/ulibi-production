@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks';
 import { Button, ButtonTheme, Text, } from 'shared/ui';
-import s from './index.module.scss';
 import { selectUserAuthData } from 'entities/user';
+import { HStack } from 'shared/ui/stack';
 
 
 
@@ -27,27 +27,31 @@ export const ProfileHeader = memo(() => {
 
   const handlerSubmit = useCallback(() => dispatch(updateProfileData()), [dispatch]);
 
+
   return (
-    <div className={s.root}>
+    <HStack
+      fullWidth
+      justify='between'
+    >
       <Text title={t('Профиль')} />
-      {
-        !canEdit && <Button
-          className = {s.editBtn}
-          theme     = {ButtonTheme.SIMPLE}
-          onClick   = {handlerClick}
-        >
-          {btnTitle}
-        </Button>
-      }
-      {
-        !readonly && <Button
-          className = {s.submitBtn}
-          theme     = {ButtonTheme.SIMPLE_RED}
-          onClick   = {handlerSubmit}
-        >
-          {b('Сохранить')}
-        </Button>
-      }
-    </div>
+      <HStack gap='8'>
+        {
+          canEdit && <Button
+            theme   = {ButtonTheme.SIMPLE}
+            onClick = {handlerClick}
+          >
+            {btnTitle}
+          </Button>
+        }
+        {
+          ! readonly && <Button
+            theme   = {ButtonTheme.SIMPLE_RED}
+            onClick = {handlerSubmit}
+          >
+            {b('Сохранить')}
+          </Button>
+        }
+      </HStack>
+    </HStack>
   )
 });

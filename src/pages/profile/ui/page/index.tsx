@@ -12,6 +12,7 @@ import { Text, TextTheme } from 'shared/ui';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { PageWrapper } from 'widgets/page-wrapper';
+import { VStack } from 'shared/ui/stack';
 
 
 const reducers: ReducersList = {
@@ -50,23 +51,28 @@ const ProfilePage = memo(() => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <PageWrapper>
-        <ProfileHeader />
-        {
-          validateErrors?.map(err => (
-            <Text
-              key   = {err}
-              theme = {TextTheme.ERROR}
-              text  = {validateErrorTranslate[err]}
-            />
-          ))
-        }
-        <ProfileCard
-          profile  = {formData}
-          loading  = {loading}
-          error    = {error}
-          readOnly = {readOnly}
-          onChange = {handlerChange}
-        />
+        <VStack
+          fullWidth
+          gap='8'
+        >
+          <ProfileHeader />
+          {
+            validateErrors?.map(err => (
+              <Text
+                key   = {err}
+                theme = {TextTheme.ERROR}
+                text  = {validateErrorTranslate[err]}
+              />
+            ))
+          }
+          <ProfileCard
+            profile  = {formData}
+            loading  = {loading}
+            error    = {error}
+            readOnly = {readOnly}
+            onChange = {handlerChange}
+          />
+        </VStack>
       </PageWrapper>
     </DynamicModuleLoader>
   )

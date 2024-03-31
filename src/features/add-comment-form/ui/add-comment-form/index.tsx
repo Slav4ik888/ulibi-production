@@ -2,13 +2,13 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from 'shared/lib/hooks';
 import { cn } from 'shared/lib';
-import s from './index.module.scss';
 import { Input } from 'shared/ui/input';
 import { Button } from 'shared/ui';
 import { useSelector } from 'react-redux';
 import { selectAddCommentFormComment } from '../../model/selectors';
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slice';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
+import { HStack } from 'shared/ui/stack';
 
 
 
@@ -41,18 +41,17 @@ const AddCommentForm = memo(({ className, onSendComment }: Props) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={cn(s.root, {}, [className])}>
+      <HStack fullWidth className={cn('', {}, [className])}>
         <Input
           placeholder = {t('Введите текст комментария')}
           value       = {message}
-          className   = {s.comment}
           onChange    = {handlerCommentChange}
         />
         <Button
           children={t('Отправить')}
           onClick = {handlerSendComment}
         />
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 });

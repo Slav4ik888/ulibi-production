@@ -8,6 +8,7 @@ import { cn } from 'shared/lib';
 import { Button, ButtonTheme } from 'shared/ui';
 import s from './index.module.scss';
 import { selectArticleData } from 'entities/article';
+import { HStack } from 'shared/ui/stack';
 
 
 
@@ -39,7 +40,7 @@ export const ArticlePageDetailsHeader = memo(({ styles = {} }: Props) => {
 
 
   return (
-    <div className={cn(s.root, {}, [styles.root])}>
+    <HStack fullWidth gap='16' className={cn('', {}, [styles.root])}>
       <Button theme={ButtonTheme.SIMPLE} onClick={handlerBackToList}>
         {t('Назад к списку')}
       </Button>
@@ -54,6 +55,6 @@ export const ArticlePageDetailsHeader = memo(({ styles = {} }: Props) => {
           </Button>
         )
       }
-    </div>
+    </HStack>
   )
 });

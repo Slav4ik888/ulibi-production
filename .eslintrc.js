@@ -105,7 +105,7 @@ module.exports = {
     'slavchik888-plugin/path-checker': 'error',
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid', 'to', 'name', 'alt', 'target']
+      ignoreAttribute: ['data-testid', 'to', 'name', 'alt', 'target', 'justify', 'align', 'direction', 'gap']
     }]
   },
   globals: {

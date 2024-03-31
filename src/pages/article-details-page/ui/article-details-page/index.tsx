@@ -18,6 +18,7 @@ import { selectArticleRecommendations } from '../../model/slice/article-details-
 import { articleDetailsPageReducer } from '../../model/slice/article-details-reducer';
 import { ArticlePageDetailsHeader } from '../header';
 import s from './index.module.scss';
+import { VStack } from 'shared/ui/stack';
 
 
 
@@ -56,21 +57,23 @@ const ArticlePageDetails = memo(() => {
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <PageWrapper>
-        <ArticlePageDetailsHeader />
-        <ArticleComponent id={id} />
-        <Text className={s.commentTitle} title={t('Рекомендуем')} />
-        <ArticleList
-          articles  = {recommendations}
-          loading   = {recommendationsIsLoading}
-          target    = '_blank'
-          className = {s.recommendations}
-        />
-        <Text className={s.commentTitle} title={c('Комментарии')} />
-        <AddCommentForm onSendComment={handlerSendComment} />
-        <CommentsList
-          comments = {comments}
-          loading  = {loading}
-        />
+        <VStack fullWidth gap='16'>
+          <ArticlePageDetailsHeader />
+          <ArticleComponent id={id} />
+          <Text className={s.commentTitle} title={t('Рекомендуем')} />
+          <ArticleList
+            articles  = {recommendations}
+            loading   = {recommendationsIsLoading}
+            target    = '_blank'
+            className = {s.recommendations}
+          />
+          <Text className={s.commentTitle} title={c('Комментарии')} />
+          <AddCommentForm onSendComment={handlerSendComment} />
+          <CommentsList
+            comments = {comments}
+            loading  = {loading}
+          />
+        </VStack>
       </PageWrapper>
     </DynamicModuleLoader>
   )

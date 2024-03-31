@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { cn } from 'shared/lib';
 import { CommentCard } from '../card';
 import { Text } from 'shared/ui';
-import s from './index.module.scss';
+import { VStack } from 'shared/ui/stack';
 
 
 
@@ -19,15 +19,15 @@ export const CommentsList: FC<Props> = ({ className, comments, loading }) => {
   const { t } = useTranslation('comments');
 
   if (loading) return (
-    <>
+    <VStack fullWidth>
       <CommentCard loading />
       <CommentCard loading />
       <CommentCard loading />
-    </>
+    </VStack>
   )
 
   return (
-    <div className={cn(s.root, {}, [className])}>
+    <VStack gap='16' fullWidth className={cn('', {}, [className])}>
       {
         comments?.length
           ? comments.map(comment => (
@@ -35,11 +35,10 @@ export const CommentsList: FC<Props> = ({ className, comments, loading }) => {
               key       = {comment.id}
               comment   = {comment}
               loading   = {loading}
-              className = {s.comment}
             />
           ))
           : <Text text={t('Комментарии отсутствуют')} />
       }
-    </div>
+    </VStack>
   )
 };
