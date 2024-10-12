@@ -47,7 +47,7 @@ export const PageWrapper = memo(({ className, children, onScrollEnd }: Props) =>
 
 
   return (
-    <section
+    <main
       id        = {PAGE_ID}
       ref       = {wrapperRef}
       className = {cn(s.root, {}, [className])}
@@ -58,6 +58,6 @@ export const PageWrapper = memo(({ className, children, onScrollEnd }: Props) =>
       }
       {/* @ts-ignore */}
       { onScrollEnd && <div className={s.trigger} ref={triggerRef} /> }
-    </section>
+    </main>
   )
 });

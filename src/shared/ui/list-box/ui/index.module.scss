@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  align-items: center;
+}
+
+.list-box {
+  position: relative;
+}
+
+.trigger {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.options {
+  position: absolute;
+  background: var(--list-box-bg);
+  border-radius: 12px;
+  box-shadow: 4px 4px 8px var(--list-box-bg);
+  min-width: 100%;
+  width: max-content;
+  z-index: 10000;
+}
+
+.optionsTop {
+  bottom: 100%;
+}
+
+.item {
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.active {
+  background: var(--inverted-primary-color);
+}
+
+.disabled {
+  opacity: 0.7;
+}

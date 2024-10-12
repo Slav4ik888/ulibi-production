@@ -1,4 +1,4 @@
-import { FC, memo, ReactNode } from 'react';
+import { DetailedHTMLProps, FC, HTMLAttributes, memo, ReactNode } from 'react';
 import { cn, Mods } from 'shared/lib';
 import s from './index.module.scss';
 
@@ -9,6 +9,7 @@ export type FlexAlign     = 'start' | 'center' | 'end'
 export type FlexDirection = 'row' | 'column'
 export type FlexGap       = '4' | '8' | '16' | '24' | '32'
 
+type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 const justifyClasses: Record<FlexJustify, string> = {
   start   : s.justifyStart,
@@ -37,7 +38,7 @@ const gapClasses: Record<FlexGap, string> = {
 };
 
 
-export interface FlexProps {
+export interface FlexProps extends DivProps {
   className? : string
   children   : ReactNode
   justify?   : FlexJustify
@@ -47,7 +48,7 @@ export interface FlexProps {
   fullWidth? : boolean
 }
 
-
+// @ts-ignore
 export const Flex: FC<FlexProps> = memo((props: FlexProps) => {
   const {
     className,

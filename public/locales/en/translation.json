@@ -11,5 +11,7 @@
   "Ввели не верный логин или пароль" : "Incorrect username or password entered",
   "Выйти"                            : "Exit",
   "Korzan Blog App"                  : "Korzan Blog App",
-  "Добавить статью"                  : "Add article"
+  "Добавить статью"                  : "Add article",
+  "Укажите валюту"                   : "Select currency",
+  "Укажите страну"                   : "Select country"
 }

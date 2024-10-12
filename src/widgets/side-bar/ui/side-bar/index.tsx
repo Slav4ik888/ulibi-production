@@ -33,7 +33,7 @@ export const SideBar = memo(({ className }: Props) => {
 
 
   return (
-    <menu
+    <aside
       data-testid = 'sidebar'
       className   = {cn(s.root, { [s.collapsed]: collapsed }, [className])}
     >
@@ -50,7 +50,7 @@ export const SideBar = memo(({ className }: Props) => {
         {collapsed ? '>' : '<'}
       </Button>
 
-      <VStack gap='8' className={s.items}>
+      <VStack role='navigation' gap='8' className={s.items}>
         {itemsList}
       </VStack>
 
@@ -59,6 +59,6 @@ export const SideBar = memo(({ className }: Props) => {
         <LangSwitcher className={s.lang} />
         <BugButton    className={s.lang} short={collapsed} />
       </div>
-    </menu>
+    </aside>
   )
 });
