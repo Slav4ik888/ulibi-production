@@ -6,8 +6,10 @@ import { memo, useCallback, useReducer } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { cn } from 'shared/lib';
-import { AppLink, AppLinkTheme, Button, ButtonTheme, Text, TextSize, TextTheme } from 'shared/ui';
+import { AppLink, AppLinkTheme, Avatar, Button, ButtonTheme, Text, TextSize, TextTheme } from 'shared/ui';
+import { DropdownMenu } from 'shared/ui/dropdown';
 import s from './index.module.scss';
+
 
 
 interface Props {
@@ -59,12 +61,21 @@ export const Navbar = memo(({ classNames }: Props) => {
               className = {s.appLink}
               children  = {t('Добавить статью')}
             />
-            <Button
-              theme   = {ButtonTheme.CLEAR_SEC}
-              onClick = {handlerLogout}
-            >
-              {t('Выйти')}
-            </Button>
+            <DropdownMenu
+              direction = 'bottom left'
+              trigger={<Avatar size={30} src={authData?.avatar || ''} />}
+              items={[
+                {
+                  content : t('Профиль'),
+                  href    : `${RoutePath.PROFILE}/${authData.id}`,
+                },
+                {
+                  content : t('Выйти'),
+                  onClick : handlerLogout
+                },
+              ]}
+              className = {s.dropdown}
+            />
             </>)
           : (<>
             <Button
