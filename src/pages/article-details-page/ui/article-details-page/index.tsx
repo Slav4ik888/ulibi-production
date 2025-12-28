@@ -19,6 +19,7 @@ import { articleDetailsPageReducer } from '../../model/slice/article-details-red
 import { ArticlePageDetailsHeader } from '../header';
 import s from './index.module.scss';
 import { VStack } from 'shared/ui/stack';
+import { ArticleRecommendationsList } from 'features/article-recommendations-list';
 
 
 
@@ -60,6 +61,7 @@ const ArticlePageDetails = memo(() => {
         <VStack fullWidth gap='16'>
           <ArticlePageDetailsHeader />
           <ArticleComponent id={id} />
+          <ArticleRecommendationsList />
           <Text className={s.commentTitle} title={t('Рекомендуем')} />
           <ArticleList
             articles  = {recommendations}

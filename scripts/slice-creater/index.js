@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const createTemplate = require('./templates/createTemplate');
+const camelCase = require('./camel-case');
 
 const layer = process.argv[2];
 const sliceName = process.argv[3];
