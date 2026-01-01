@@ -71,7 +71,7 @@ export const ArticleList: FC<Props> = ({
   };
 
 
-  if (! loading && !articles.length) {
+  if (! loading && ! articles.length) {
     return (
       <div className={cn(s.root, {}, [s[view], className])}>
         <Text title={t('Статья не найдена')} />

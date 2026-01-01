@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import cls from './index.module.scss';
 import { memo } from 'react';
 
+
+
 ${interfaceConst} ${componentName}Props {
   className?: string;
 }

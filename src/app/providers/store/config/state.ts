@@ -10,20 +10,22 @@ import { StateSchemaScrollRestore } from 'features/scroll-restore';
 import { StateSchemaArticleDetailsPage } from 'pages/article-details-page';
 import { StateSchemaArticlesPage } from 'pages/articles-page';
 import { NavigateOptions, To } from 'react-router-dom';
+import { rtkApi } from 'shared/api';
 
 
 export interface StateSchema {
-  counter       : CounterSchema
-  user          : UserSchema
-  scrollRestore : StateSchemaScrollRestore
+  counter              : CounterSchema
+  user                 : UserSchema
+  scrollRestore        : StateSchemaScrollRestore
+  [rtkApi.reducerPath] : ReturnType<typeof rtkApi.reducer>
 
   // Async reducers
-  login?              : LoginSchema
-  profile?            : ProfileSchema
-  article?            : StateSchemaArticle
-  articleDetailsPage? : StateSchemaArticleDetailsPage
-  articlesPage?       : StateSchemaArticlesPage
-  addCommentForm?     : AddCommentFormSchema
+  login?               : LoginSchema
+  profile?             : ProfileSchema
+  article?             : StateSchemaArticle
+  articleDetailsPage?  : StateSchemaArticleDetailsPage
+  articlesPage?        : StateSchemaArticlesPage
+  addCommentForm?      : AddCommentFormSchema
 }
 
 export type StateKey = keyof StateSchema;

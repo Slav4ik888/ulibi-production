@@ -38,7 +38,7 @@ export function buildPlugins({ paths, isDev, isAnal, apiUrl, project }: BuildOpt
 
   if (isAnal) {
     plugins.push(new BundleAnalyzerPlugin({
-      openAnalyzer: false
+      openAnalyzer: true
     }));
   }
 

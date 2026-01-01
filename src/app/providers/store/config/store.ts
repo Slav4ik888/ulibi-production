@@ -2,7 +2,7 @@ import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@redu
 import { counterReducer } from 'entities/counter'
 import { userReducer } from 'entities/user'
 import { scrollRestoreReducer } from 'features/scroll-restore'
-import { api } from 'shared/api'
+import { api, rtkApi } from 'shared/api'
 import { createReducerManager } from './reducer-manager'
 import { StateSchema } from './state'
 
@@ -17,7 +17,8 @@ export function createReduxStore(
       ...asyncReducers,
       counter       : counterReducer,
       user          : userReducer,
-      scrollRestore : scrollRestoreReducer
+      scrollRestore : scrollRestoreReducer,
+      [rtkApi.reducerPath]: rtkApi.reducer,
     },
     reducerManager = createReducerManager(rootReducers),
     extraArg = {
@@ -32,7 +33,7 @@ export function createReduxStore(
       thunk: {
         extraArgument: extraArg
       }
-    })
+    }).concat(rtkApi.middleware)
   });
 
   // @ts-ignore
