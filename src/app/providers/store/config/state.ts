@@ -2,7 +2,7 @@ import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } f
 import { AxiosInstance } from 'axios';
 import { StateSchemaArticle } from 'entities/article';
 import { CounterSchema } from 'entities/counter';
-import { ProfileSchema } from 'entities/profile';
+import { ProfileSchema } from 'features/editable-profile-card';
 import { UserSchema } from 'entities/user';
 import { AddCommentFormSchema } from 'features/add-comment-form';
 import { LoginSchema } from 'features/auth-by-username';

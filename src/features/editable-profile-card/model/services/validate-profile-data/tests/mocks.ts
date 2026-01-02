@@ -1,6 +1,8 @@
-import { Profile, ValidateProfileError } from '../../../types';
+import { ValidateProfileError } from '../../../types';
 import { PROFILE } from 'shared/lib/tests/__mocks__';
 import { Mocks } from './types';
+import { Profile } from 'entities/profile';
+
 
 export const mocks: Mocks = [
   [

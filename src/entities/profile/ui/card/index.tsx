@@ -9,8 +9,8 @@ import { Avatar, Loader, Text, TextAlign, TextTheme } from 'shared/ui';
 import { Input } from 'shared/ui/input';
 import s from './index.module.scss';
 import { Country, CountrySelect } from 'entities/country';
-import { selectProfileReadonly } from '../../model/selectors/select-readonly';
 import { HStack, VStack } from 'shared/ui/stack';
+import { selectProfileReadonly } from 'features/editable-profile-card';
 
 
 

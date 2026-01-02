@@ -1,7 +1,9 @@
 import { PROFILE } from 'shared/lib/tests/__mocks__';
 import { profileReducer, profileActions } from '.';
 import { updateProfileData } from '../services';
-import { Profile, ProfileSchema, ValidateProfileError } from '../types';
+import { ProfileSchema, ValidateProfileError } from '../types';
+import { Profile } from 'entities/profile';
+
 
 
 const state: DeepPartial<ProfileSchema> = {

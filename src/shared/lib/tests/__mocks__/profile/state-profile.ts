@@ -1,5 +1,7 @@
-import { Profile, ProfileSchema } from 'entities/profile';
+import { Profile } from 'entities/profile';
+import { ProfileSchema } from 'features/editable-profile-card';
 import { PROFILE } from './profile';
+
 
 
 export const STATE_PROFILE: ProfileSchema = {

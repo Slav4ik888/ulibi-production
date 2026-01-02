@@ -32,8 +32,8 @@ export const ArticleListItem: FC<Props> = ({ className, article, view, target })
     );
 
 
-  if (view === ArticlesView.LIST) {
-    const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlock;
+  if (view === 'LIST') {
+    const textBlock = article.blocks.find(block => block.type === 'TEXT') as ArticleTextBlock;
 
     return (
       <Card className={cn(s.root, {}, [s.LIST, className])}>

@@ -10,7 +10,7 @@ import { PAGE_ID } from 'widgets/page-wrapper';
 import s from './index.module.scss';
 
 
-const getSkeletons = (view: ArticlesView) => new Array(view === ArticlesView.TILE ? 9 : 3)
+const getSkeletons = (view: ArticlesView) => new Array(view === 'TILE' ? 9 : 3)
   .fill(0)
   .map((_, idx) => <ArticleListItemSkeleton
     key       = {idx}
@@ -30,12 +30,12 @@ export interface Props {
 
 export const ArticleList: FC<Props> = ({
   className, articles, loading, target,
-  view = ArticlesView.TILE
+  view = 'TILE'
 }) => {
   const { t } = useTranslation('article');
 
   const
-    isList      = view === ArticlesView.LIST,
+    isList      = view === 'LIST',
     itemsPerRow = isList ? 1 : 3, // ref.currentWidth / ITEM_WIDTH;
     rowCount    = isList ? articles.length : Math.ceil(articles.length / itemsPerRow);
 

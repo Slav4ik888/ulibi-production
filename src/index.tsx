@@ -46,4 +46,4 @@ render(
 // "stylelint.config": null
 
 
-// git add . && git commit -m "lesson 70 continue" && git push -u origin main
+// git add . && git commit -m "lesson 70 end" && git push -u origin main

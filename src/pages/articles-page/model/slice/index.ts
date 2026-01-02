@@ -25,20 +25,20 @@ export const slice = createSlice({
     ids      : [],
     entities : {},
     _inited  : false,
-    view     : ArticlesView.TILE,
+    view     : 'TILE',
     page     : 1,
     limit    : 9,
     hasMore  : true,
     search   : '',
-    sort     : ArticleSortField.CREATED,
+    sort     : 'createdAt',
     order    : 'asc',
-    type     : ArticleType.ALL
+    type     : 'ALL'
   }),
   reducers: {
     initState: (state) => {
-      const view    = LS.getArticlesView() || ArticlesView.TILE;
+      const view    = LS.getArticlesView() || 'TILE';
       state.view    = view;
-      state.limit   = view === ArticlesView.LIST ? 2 : 4;
+      state.limit   = view === 'LIST' ? 2 : 4;
       state._inited = true;
     },
     setView: (state, { payload }: PayloadAction<ArticlesView>) => {

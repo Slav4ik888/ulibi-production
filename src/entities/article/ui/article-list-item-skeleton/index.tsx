@@ -13,7 +13,7 @@ interface Props {
 
 
 export const ArticleListItemSkeleton: FC<Props> = ({ className, view }) => {
-  if (view === ArticlesView.LIST) {
+  if (view === 'LIST') {
     return (
       <Card className={cn(s.root, {}, [s.BIG, className])}>
         <div className={s.header}>

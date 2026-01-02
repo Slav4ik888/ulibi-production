@@ -1,6 +1,6 @@
 import { AsyncThunkAction } from '@reduxjs/toolkit';
 import axios, { AxiosStatic } from 'axios';
-import { ValidateProfileError } from 'entities/profile/model/types';
+import { ValidateProfileError } from 'features/editable-profile-card';
 import { StateSchema } from '../../../../app/providers/store';
 
 

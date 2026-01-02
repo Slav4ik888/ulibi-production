@@ -51,18 +51,18 @@ describe('selectArticlesPageLoading', () => {
 describe('selectArticlesPageView', () => {
   test('Should return article loading', () => {
     const state: DeepPartial<StateSchema> = {
-      articlesPage: { ...STATE_ARTICLES_PAGE, view: ArticlesView.LIST }
+      articlesPage: { ...STATE_ARTICLES_PAGE, view: 'LIST' }
     };
 
-    expect(selectArticlesPageView(state as StateSchema)).toEqual(ArticlesView.LIST);
+    expect(selectArticlesPageView(state as StateSchema)).toEqual('LIST');
   });
 
   test('Shoul work with undefined StateSchema', () => {
-    expect(selectArticlesPageView(undefined as unknown as StateSchema)).toEqual(ArticlesView.TILE);
+    expect(selectArticlesPageView(undefined as unknown as StateSchema)).toEqual('TILE');
   });
 
   test('Shoul work with empty StateSchema', () => {
-    expect(selectArticlesPageView({} as unknown as StateSchema)).toEqual(ArticlesView.TILE);
+    expect(selectArticlesPageView({} as unknown as StateSchema)).toEqual('TILE');
   });
 });
 

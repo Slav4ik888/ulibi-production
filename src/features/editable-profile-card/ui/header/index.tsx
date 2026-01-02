@@ -1,6 +1,7 @@
 import { memo, useCallback, useMemo } from 'react';
-import { selectProfileData, selectProfileReadonly, updateProfileData } from 'entities/profile';
-import { profileActions } from 'entities/profile/model/slice';
+import { selectProfileData, selectProfileReadonly } from '../../model/selectors';
+import { profileActions } from '../../model/slice';
+import { updateProfileData } from '../../model/services';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks';

@@ -1,6 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
-import { Profile, ProfileSchema } from '../../types';
+import { ProfileSchema } from '../../types';
 import { selectStateProfile } from '../select-state-profile';
+import { Profile } from 'entities/profile';
 
 
 export const selectProfileForm = createSelector(

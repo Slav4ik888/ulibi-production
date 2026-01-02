@@ -21,16 +21,9 @@ const ArticlePageDetails = memo(() => {
   const
     { t } = useTranslation('article'),
     { id } = useParams<{ id: string }>();
-    // comments = useSelector(selectArticleComments.selectAll),
-    // loading = useSelector(selectArticleDetailsCommentsLoading);
-
-  // useInitialEffect(() => {
-  //   dispatch(fetchCommentsByArticleId(id));
-  //   dispatch(fetchRecommendationsByArticleId());
-  // });
 
 
-  if (!id) return (
+  if (! id) return (
     <div>{t('Статья не найдена')}</div>
   );
 

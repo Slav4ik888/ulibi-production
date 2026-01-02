@@ -14,7 +14,7 @@ module.exports = async (layer, sliceName) => {
     await fs.writeFile(
       resolveRoot('src', layer, sliceName, 'index.ts'),
       `export { ${componentName} } from './ui/${sliceName}';
-export { ${firstCharUpperCase(schemaName)} } from './model/types';
+export type { ${firstCharUpperCase(schemaName)} } from './model/types';
 `,
     );
   }
