@@ -18,7 +18,7 @@ interface ArticleRecommendationsListProps {
 export const ArticleRecommendationsList = memo((props: ArticleRecommendationsListProps) => {
   const { className } = props;
   const { t } = useTranslation();
-  const { data: articleRecommendations, isLoading, error } = useArticleRecommendationsList(3);
+  const { data: articles, isLoading, error } = useArticleRecommendationsList(3);
 
   if (isLoading) return (
     <VStack fullWidth>
@@ -32,13 +32,16 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
     <div>{t('Ошибка')}</div>
   );
 
+  if (! articles) return null;
+
   return (
     <VStack gap='8' className={cn('', {}, [className])}>
       <Text className={s.commentTitle} title={t('Рекомендуем')} />
       <ArticleList
-        articles  = {articleRecommendations}
-        target    = '_blank'
-        className = {s.recommendations}
+        articles    = {articles}
+        target      = '_blank'
+        virtualized = {false}
+        className   = {s.recommendations}
       />
     </VStack>
   );

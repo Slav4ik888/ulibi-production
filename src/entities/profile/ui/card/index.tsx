@@ -78,29 +78,32 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
                 </HStack>
               }
               <Input
-                value     = {firstname}
-                name      = 'firstname'
-                label     = {t('Ваше имя')}
-                readOnly  = {readOnly}
-                className = {s.input}
-                onChange  = {handlerChange}
+                value       = {firstname}
+                name        = 'firstname'
+                label       = {t('Ваше имя')}
+                readOnly    = {readOnly}
+                data-testid = 'ProfileCard.firstname'
+                className   = {s.input}
+                onChange    = {handlerChange}
               />
               <Input
-                value     = {lastname}
-                name      = 'lastname'
-                label     = {t('Ваша фамилия')}
-                readOnly  = {readOnly}
-                className = {s.input}
-                onChange  = {handlerChange}
+                value       = {lastname}
+                name        = 'lastname'
+                label       = {t('Ваша фамилия')}
+                readOnly    = {readOnly}
+                data-testid = 'ProfileCard.lastname'
+                className   = {s.input}
+                onChange    = {handlerChange}
               />
               <Input
-                value     = {age}
-                name      = 'age'
-                type      = 'number'
-                label     = {t('Возраст')}
-                readOnly  = {readOnly}
-                className = {s.input}
-                onChange  = {handlerChange}
+                value       = {age}
+                name        = 'age'
+                type        = 'number'
+                label       = {t('Возраст')}
+                readOnly    = {readOnly}
+                data-testid = 'ProfileCard.age'
+                className   = {s.input}
+                onChange    = {handlerChange}
               />
               <CurrencySelect
                 value     = {currency as Currency}
@@ -115,20 +118,22 @@ export const ProfileCard: FC<Props> = ({ className, profile, loading, error, rea
                 onChange  = {handlerChange}
               />
               <Input
-                value     = {city}
-                name      = 'city'
-                label     = {t('Город')}
-                readOnly  = {readOnly}
-                className = {s.input}
-                onChange  = {handlerChange}
+                value       = {city}
+                name        = 'city'
+                label       = {t('Город')}
+                readOnly    = {readOnly}
+                data-testid = 'ProfileCard.city'
+                className   = {s.input}
+                onChange    = {handlerChange}
               />
               <Input
-                value     = {avatar}
-                name      = 'avatar'
-                label     = {t('Ссылка на аватар')}
-                readOnly  = {readOnly}
-                className = {s.input}
-                onChange  = {handlerChange}
+                value       = {avatar}
+                name        = 'avatar'
+                label       = {t('Ссылка на аватар')}
+                readOnly    = {readOnly}
+                data-testid = 'ProfileCard.avatar'
+                className   = {s.input}
+                onChange    = {handlerChange}
               />
             </>
       }

@@ -12,15 +12,14 @@ import { HStack } from 'shared/ui/stack';
 
 
 export const ProfileHeader = memo(() => {
-  const
-    { t } = useTranslation('profile'),
-    { t: b } = useTranslation('buttons'),
-    dispatch = useAppDispatch(),
-    authData = useSelector(selectUserAuthData),
-    profile  = useSelector(selectProfileData),
-    canEdit  = authData?.id === profile.id,
-    readonly = useSelector(selectProfileReadonly),
-    btnTitle = useMemo(() => readonly ? t('Редактировать') : t('Отменить'), [readonly, t]);
+  const { t } = useTranslation('profile');
+  const { t: b } = useTranslation('buttons');
+  const dispatch = useAppDispatch();
+  const authData = useSelector(selectUserAuthData);
+  const profile  = useSelector(selectProfileData);
+  const canEdit  = authData?.id === profile.id;
+  const readonly = useSelector(selectProfileReadonly);
+
 
   const handlerClick = useCallback(() => readonly
       ? dispatch(profileActions.setReadonly(false))
@@ -38,15 +37,17 @@ export const ProfileHeader = memo(() => {
       <HStack gap='8'>
         {
           canEdit && <Button
-            theme   = {ButtonTheme.SIMPLE}
-            onClick = {handlerClick}
+            theme       = {ButtonTheme.SIMPLE}
+            data-testid = {readonly ? 'ProfileHeader.EditButton' : 'ProfileHeader.CancelButton'}
+            onClick     = {handlerClick}
           >
-            {btnTitle}
+            {readonly ? t('Редактировать') : t('Отменить')}
           </Button>
         }
         {
           ! readonly && <Button
             theme   = {ButtonTheme.SIMPLE_RED}
+            data-testid = 'ProfileHeader.SaveButton'
             onClick = {handlerSubmit}
           >
             {b('Сохранить')}

@@ -28,6 +28,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?          : ButtonSize
   disabled?      : boolean
   notHoverColor? : boolean
+  'data-testid'? : string
 }
 
 
@@ -38,6 +39,7 @@ export const Button = memo((props: Props) => {
       square   = false,
       size     = ButtonSize.M,
       disabled = false,
+      'data-testid': dataTestid = 'Button',
       notHoverColor, className, children, ...rest
     } = props,
 
@@ -53,9 +55,10 @@ export const Button = memo((props: Props) => {
 
   return (
     <button
-      type      = 'button'
-      disabled  = {disabled}
-      className = {cn(s.root, mods, additional)}
+      type        = 'button'
+      disabled    = {disabled}
+      data-testid = {dataTestid}
+      className   = {cn(s.root, mods, additional)}
       {...rest}
     >
       {children}

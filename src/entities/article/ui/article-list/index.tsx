@@ -20,17 +20,19 @@ const getSkeletons = (view: ArticlesView) => new Array(view === 'TILE' ? 9 : 3)
 
 
 export interface Props {
-  className? : string
-  articles   : Article[]
-  loading?   : boolean
-  view?      : ArticlesView
-  target?    : HTMLAttributeAnchorTarget
+  className?   : string
+  articles     : Article[]
+  loading?     : boolean
+  view?        : ArticlesView
+  target?      : HTMLAttributeAnchorTarget
+  virtualized? : boolean
 }
 
 
 export const ArticleList: FC<Props> = ({
   className, articles, loading, target,
-  view = 'TILE'
+  virtualized = true,
+  view       = 'TILE',
 }) => {
   const { t } = useTranslation('article');
 
@@ -98,20 +100,35 @@ export const ArticleList: FC<Props> = ({
             ref       = {registerChild}
             className = {cn(s.root, {}, [s[view], className])}
           >
-            <List
-              // ref="List"
-              // className={styles.List}
-              autoHeight
-              height      = {height ?? 700}
-              width       = {width ? width - 80 : 700}
-              rowCount    = {rowCount}
-              rowHeight   = {isList ? 700 : 330} // useDynamicRowHeight ? this._getRowHeight : listRowHeight
-              rowRenderer = {rowRender}
-              isScrolling = {isScrolling}
-              scrollTop   = {scrollTop}
-              // scrollToIndex={scrollToIndex}
-              onScroll    = {onChildScroll}
-            />
+            {
+              virtualized
+                ? (
+                  <List
+                    // ref="List"
+                    // className={styles.List}
+                    autoHeight
+                    height      = {height ?? 700}
+                    width       = {width ? width - 80 : 700}
+                    rowCount    = {rowCount}
+                    rowHeight   = {isList ? 700 : 330} // useDynamicRowHeight ? this._getRowHeight : listRowHeight
+                    rowRenderer = {rowRender}
+                    isScrolling = {isScrolling}
+                    scrollTop   = {scrollTop}
+                    // scrollToIndex={scrollToIndex}
+                    onScroll    = {onChildScroll}
+                  />
+                )
+                : (
+                  articles.map(item => (
+                    <ArticleListItem
+                      key       = {item.id}
+                      article   = {item}
+                      view      = {view}
+                      className = {s.card}
+                    />
+                  ))
+                )
+            }
             {loading && getSkeletons(view)}
           </div>
         )
