@@ -1,5 +1,5 @@
 import { RoutePath } from 'app/providers/router/config';
-import { selectUserAuthData, userActions } from 'entities/user';
+import { isUserAdmin, isUserManager, selectUserAuthData, userActions } from 'entities/user';
 import { LoginModal } from 'features/auth-by-username';
 import { loginActions } from 'features/auth-by-username/model';
 import { memo, useCallback, useReducer } from 'react';
@@ -18,16 +18,22 @@ interface Props {
 
 
 export const Navbar = memo(({ classNames }: Props) => {
-  const
-    { t }            = useTranslation(),
-    [isOpen, toggle] = useReducer(s => !s, false),
-    authData         = useSelector(selectUserAuthData),
-    dispatch         = useDispatch(),
+  const { t }            = useTranslation();
+  const [isOpen, toggle] = useReducer(s => !s, false);
+  const authData         = useSelector(selectUserAuthData);
+  const dispatch         = useDispatch();
+  const isAdmin          = useSelector(isUserAdmin);
+  console.log('isAdmin: ', isAdmin);
+  const isManager        = useSelector(isUserManager);
+  console.log('isManager: ', isManager);
+  const isAdminPanelAvailable = isAdmin || isManager;
+  console.log('isAdminPanelAvailable: ', isAdminPanelAvailable);
 
-    handlerLogout    = useCallback(() => {
-      dispatch(userActions.logout());
-      dispatch(loginActions.clearUsernamePassword());
-    }, [dispatch]);
+
+  const handlerLogout    = useCallback(() => {
+    dispatch(userActions.logout());
+    dispatch(loginActions.clearUsernamePassword());
+  }, [dispatch]);
 
 
   return (
@@ -69,6 +75,13 @@ export const Navbar = memo(({ classNames }: Props) => {
                   content : t('Профиль'),
                   href    : `${RoutePath.PROFILE}/${authData.id}`,
                 },
+                ...(isAdminPanelAvailable
+                  ? [{
+                      content : t('Админ панель'),
+                      href    : RoutePath.ADMIN_PANEL,
+                    }]
+                  : []
+                ),
                 {
                   content : t('Выйти'),
                   onClick : handlerLogout

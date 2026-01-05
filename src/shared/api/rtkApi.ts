@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import * as LS from 'shared/lib/local-storage';
+import 'whatwg-fetch';
 
 
 

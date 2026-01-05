@@ -1500,6 +1500,17 @@
       "city": "New York",
       "username": "user_nuh",
       "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+    },
+    {
+      "id": "4",
+      "firstname": "User 4",
+      "lastname": "4 Nuhhh",
+      "age": "54",
+      "currency": "USD",
+      "country": "USA",
+      "city": "New York",
+      "username": "user_nuh",
+      "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
     }
   ],
   "users": [
@@ -1507,21 +1518,28 @@
       "id": "1",
       "username": "slav4ik888",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://img.magic.ly/avatar/33547eb38887821615b356ba7c886643.webp?1640654585098"
     },
     {
       "id": "2",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://images.icon-icons.com/1879/PNG/512/iconfinder-3-avatar-2754579_120516.png"
     },
     {
       "id": "3",
       "username": "user_nuh",
       "password": "321",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
+    },
+    {
+      "id": "4",
+      "username": "manager_nuh",
+      "password": "321",
+      "roles": ["MANAGER"],
       "avatar": "https://img.icons8.com/cotton/512/sexy-woman.png"
     }
   ]

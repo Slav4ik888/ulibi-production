@@ -43,15 +43,15 @@ export const ArticleSortSelector = memo(({ sort, onChangeSort, order, onChangeOr
 
   const sortFieldOptions = useMemo<SelectOption<ArticleSortField>[]>(() => [
     {
-      value   : ArticleSortField.CREATED,
+      value   : 'createdAt',
       content : t('дате создания')
     },
     {
-      value   : ArticleSortField.TITLE,
+      value   : 'title',
       content : t('заголовку')
     },
     {
-      value   : ArticleSortField.VIEWS,
+      value   : 'views',
       content : t('просмотрам')
     }
   ], [t]);

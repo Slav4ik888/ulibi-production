@@ -23,23 +23,23 @@ export const ArticleTypeTabs = memo(({ type, styles = {}, onChangeType }: Props)
 
   const typeTabs = useMemo<TabItem<ArticleType>[]>(() => [
     {
-      value: ArticleType.ALL,
+      value: 'ALL',
       content: t('Все')
     },
     {
-      value: ArticleType.DESING,
+      value: 'Desing',
       content: t('Дизайн')
     },
     {
-      value: ArticleType.ECOMNOMICS,
+      value: 'Economic',
       content: t('Экономика')
     },
     {
-      value: ArticleType.IT,
+      value: 'IT',
       content: t('Айти')
     },
     {
-      value: ArticleType.SCIENCE,
+      value: 'Science',
       content: t('Наука')
     }
   ], [t]);

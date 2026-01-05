@@ -19,24 +19,24 @@ const Template: ComponentStory<typeof ArticleListItemSkeleton> = (args) => <Arti
 // LIGHT THEME
 export const ViewSmall = Template.bind({});
 ViewSmall.args = {
-  view: ArticlesView.TILE
+  view: 'TILE'
 };
 
 export const ViewBig = Template.bind({});
 ViewBig.args = {
-  view: ArticlesView.LIST
+  view: 'LIST'
 };
 
 // DARK THEME
 export const ViewSmallDark = Template.bind({});
 ViewSmallDark.args = {
-  view: ArticlesView.TILE
+  view: 'TILE'
 };
 ViewSmallDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const ViewBigDark = Template.bind({});
 ViewBigDark.args = {
-  view: ArticlesView.LIST
+  view: 'LIST'
 };
 ViewBigDark.decorators = [ThemeDecorator(Theme.DARK)];
 
@@ -44,12 +44,12 @@ ViewBigDark.decorators = [ThemeDecorator(Theme.DARK)];
 // ORANGE THEME
 export const ViewSmallOrange = Template.bind({});
 ViewSmallOrange.args = {
-  view: ArticlesView.TILE
+  view: 'TILE'
 };
 ViewSmallOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];
 
 export const ViewBigOrange = Template.bind({});
 ViewBigOrange.args = {
-  view: ArticlesView.LIST
+  view: 'LIST'
 };
 ViewBigOrange.decorators = [ThemeDecorator(Theme.ORANGE_DARK)];

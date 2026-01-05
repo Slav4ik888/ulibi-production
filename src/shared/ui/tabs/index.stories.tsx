@@ -19,15 +19,15 @@ const Template: ComponentStory<typeof Tabs> = (args) => <Tabs {...args} />;
 
 const tabs: TabItem<ArticleType>[] = [
   {
-    value   : ArticleType.ALL,
+    value   : 'ALL',
     content : 'Tab 1'
   },
   {
-    value   : ArticleType.DESING,
+    value   : 'Desing',
     content : 'Tab 2'
   },
   {
-    value   : ArticleType.ECOMNOMICS,
+    value   : 'Economic',
     content : 'Tab 3'
   }
 ]

@@ -23,14 +23,14 @@ const
   },
   big = {
     articles,
-    view: ArticlesView.LIST
+    view: 'LIST' as ArticlesView
   },
   withLoadingSmall = {
     loading: true
   },
   withLoadingBig = {
     loading: true,
-    view: ArticlesView.LIST
+    view: 'LIST' as ArticlesView
   }
 
 

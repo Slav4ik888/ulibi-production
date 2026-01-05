@@ -1,4 +1,5 @@
 export { userReducer, userActions } from './model/slice'
-export { selectUserAuthData, selectUserInited } from './model/selectors'
+export { selectUserAuthData, selectUserInited, selectUserRoles, isUserAdmin, isUserManager } from './model/selectors'
 export { useAuth } from './model/hooks'
-export { UserSchema } from './model'
+export type { UserSchema } from './model/types'
+export { UserRole } from './model/types'

@@ -8,13 +8,13 @@ import { Button, ButtonTheme, IconWrapper } from 'shared/ui';
 import s from './index.module.scss';
 
 
-const viewTypes = [
+const viewTypes:  Array<{view: ArticlesView, icon: React.FC<React.SVGProps<SVGSVGElement>>}> = [
   {
-    view: ArticlesView.TILE,
+    view: 'TILE',
     icon: TileIcon
   },
   {
-    view: ArticlesView.LIST,
+    view: 'LIST',
     icon: ListIcon
   }
 ]
@@ -28,9 +28,9 @@ interface Props {
 
 
 export const ArticleViewSelector: FC<Props> = memo(({ view, classname, onToggle }: Props) => {
-  const
-    { t } = useTranslation(),
-    handlerToggle = (newView: ArticlesView) => () => onToggle(newView);
+  const { t } = useTranslation();
+
+  const handlerToggle = (newView: ArticlesView) => () => onToggle(newView);
 
 
   return (

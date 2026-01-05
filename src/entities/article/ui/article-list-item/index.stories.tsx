@@ -20,11 +20,11 @@ const
   article = MOCK_ARTICLE,
   small = {
     article,
-    view: ArticlesView.TILE
+    view: 'TILE' as ArticlesView
   },
   big = {
     article,
-    view: ArticlesView.LIST
+    view: 'LIST' as ArticlesView
   };
 
 
