@@ -1,5 +1,5 @@
-import { memo, useCallback } from 'react';
-import { useAppDispatch, useInitialEffect } from 'shared/lib/hooks';
+import { memo, useCallback, useEffect } from 'react';
+import { useAppDispatch } from 'shared/lib/hooks';
 import { articleReducer } from '../../model/slice';
 import { fetchArticleById } from '../../model/services';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader';
@@ -12,7 +12,7 @@ import {
 import { Avatar, IconWrapper, Skeleton, Text, TextAlign, TextSize } from 'shared/ui';
 import EyeIcon from 'shared/assets/icons/eye.svg';
 import CalendarIcon from 'shared/assets/icons/calendar.svg';
-import { ArticleBlock, ArticleBlockType } from '../../model/types';
+import { ArticleBlock } from '../../model/types';
 import { ArticleImageBlockComponent } from '../article-image-block';
 import { ArticleCodeBlockComponent } from '../article-code-block';
 import { ArticleTextBlockComponent } from '../article-text-block';
@@ -27,18 +27,18 @@ const reducers: ReducersList = {
 
 
 interface Props {
-  id         : string
+  id?        : string
   className? : string
 }
 
 
 export const ArticleComponent = memo(({ id, className }: Props) => {
-  const
-    { t }    = useTranslation('article'),
-    dispatch = useAppDispatch(),
-    article  = useSelector(selectArticleData),
-    loading  = useSelector(selectArticleLoading),
-    error    = useSelector(selectArticleError);
+  const { t }    = useTranslation('article');
+  const dispatch = useAppDispatch();
+  const article  = useSelector(selectArticleData);
+  const loading  = useSelector(selectArticleLoading);
+  const error    = useSelector(selectArticleError);
+
 
   const renderBlock = useCallback((block: ArticleBlock) => {
     switch (block.type) {
@@ -56,7 +56,9 @@ export const ArticleComponent = memo(({ id, className }: Props) => {
     }
   }, []);
 
-  useInitialEffect(() => dispatch(fetchArticleById(id)));
+  useEffect(() => {
+    if (__PROJECT__ !== 'storybook') dispatch(fetchArticleById(id));
+  }, [id, dispatch]);
 
   let content;
 

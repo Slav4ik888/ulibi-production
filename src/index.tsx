@@ -1,4 +1,4 @@
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/providers/error-boundary';
 import { StoreProvider } from 'app/providers/store';
@@ -7,18 +7,24 @@ import { App } from './app';
 import 'shared/config/i18n';
 import './app/styles/index.scss';
 
+const container = document.getElementById('root');
 
-render(
-  <BrowserRouter>
-    <StoreProvider>
-      <ErrorBoundary>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </ErrorBoundary>
-    </StoreProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
+if (! container) throw new Error('Root element not found');
+
+const root = createRoot(container);
+
+root.render(
+  // <React.StrictMode>
+    <BrowserRouter>
+      <StoreProvider>
+        <ErrorBoundary>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
+        </ErrorBoundary>
+      </StoreProvider>
+    </BrowserRouter>
+  // </React.StrictMode>,
 );
 
 //
@@ -46,4 +52,4 @@ render(
 // "stylelint.config": null
 
 
-// git add . && git commit -m "lesson 73 end" && git push -u origin main
+// git add . && git commit -m "lesson 75 end" && git push -u origin main

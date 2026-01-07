@@ -1,6 +1,6 @@
 import { cn } from 'shared/lib/class-names/index';
 import { useTranslation } from 'react-i18next';
-import { memo, useCallback } from 'react';
+import { memo, Suspense, useCallback, useEffect } from 'react';
 import { VStack } from 'shared/ui/stack';
 import { Text } from 'shared/ui';
 import s from './index.module.scss';
@@ -16,7 +16,7 @@ import { fetchRecommendationsByArticleId } from '../../model/services/fetch-reco
 
 
 interface ArticleDetailsCommentsProps {
-  id: string
+  id?: string
   className?: string
 }
 
@@ -28,10 +28,12 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
   const comments = useSelector(selectArticleComments.selectAll);
   const loading = useSelector(selectArticleDetailsCommentsLoading);
 
-  useInitialEffect(() => {
-    dispatch(fetchCommentsByArticleId(id));
-    dispatch(fetchRecommendationsByArticleId());
-  });
+  useEffect(() => {
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchCommentsByArticleId(id));
+      dispatch(fetchRecommendationsByArticleId());
+    }
+  }, [id, dispatch]);
 
 
   const handlerSendComment = useCallback((text: string) => {
@@ -42,7 +44,9 @@ export const ArticleDetailsComments = memo((props: ArticleDetailsCommentsProps) 
   return (
     <VStack gap='8' className={cn('', {}, [className])}>
       <Text className={s.commentTitle} title={t('Комментарии')} />
-      <AddCommentForm onSendComment={handlerSendComment} />
+      <Suspense fallback={<div>{t('Загрузка комментариев...')}</div>}>
+        <AddCommentForm onSendComment={handlerSendComment} />
+      </Suspense>
       <CommentsList
         comments = {comments}
         loading  = {loading}

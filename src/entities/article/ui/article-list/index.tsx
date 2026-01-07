@@ -30,9 +30,10 @@ export interface Props {
 
 
 export const ArticleList: FC<Props> = ({
-  className, articles, loading, target,
+  className, loading, target,
+  articles    = [],
   virtualized = true,
-  view       = 'TILE',
+  view        = 'TILE',
 }) => {
   const { t } = useTranslation('article');
 
@@ -97,6 +98,7 @@ export const ArticleList: FC<Props> = ({
           registerChild
         }) => (
           <div
+            // @ts-ignore
             ref       = {registerChild}
             className = {cn(s.root, {}, [s[view], className])}
           >

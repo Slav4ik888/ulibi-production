@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { Article, ArticleBlockType, ArticleType } from 'entities/article/model/types';
+import { Article } from 'entities/article/model/types';
 
 
 export const MOCK_ARTICLE: Article = {

@@ -15,23 +15,22 @@ export default {
 } as ComponentMeta<typeof ArticleList>;
 
 
-const
-  Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />,
-  articles = [MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE],
-  small = {
-    articles,
-  },
-  big = {
-    articles,
-    view: 'LIST' as ArticlesView
-  },
-  withLoadingSmall = {
-    loading: true
-  },
-  withLoadingBig = {
-    loading: true,
-    view: 'LIST' as ArticlesView
-  }
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
+const articles = [MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE, MOCK_ARTICLE];
+const small = {
+  articles,
+};
+const big = {
+  articles,
+  view: 'LIST' as ArticlesView
+};
+const withLoadingSmall = {
+  loading: true
+};
+const withLoadingBig = {
+  loading: true,
+  view: 'LIST' as ArticlesView
+};
 
 
 // LIGHT THEME

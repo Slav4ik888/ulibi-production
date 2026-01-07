@@ -5,12 +5,14 @@ import { addCommentFormReducer } from 'features/add-comment-form/model';
 import { articleDetailsPageReducer } from 'pages/article-details-page';
 import { reducerArticlesPage } from 'pages/articles-page';
 import { profileReducer } from 'features/editable-profile-card';
+import { articleReducer } from 'entities/article';
 
 
 
 const defaultAsyncReducers: ReducersList = {
   login              : loginReducer,
   profile            : profileReducer,
+  article            : articleReducer,
   articleDetailsPage : articleDetailsPageReducer,
   addCommentForm     : addCommentFormReducer,
   articlesPage       : reducerArticlesPage

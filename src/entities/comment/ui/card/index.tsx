@@ -20,7 +20,7 @@ export const CommentCard = memo(({ className, comment, loading }: Props) => {
   const { t } = useTranslation();
 
   if (loading) return (
-    <VStack fullWidth className={cn(s.root, {}, [className, s.loading])}>
+    <VStack fullWidth gap='8' className={cn(s.root, {}, [className, s.loading])}>
       <HStack align='center'>
         <Skeleton width={30} height={30} borderRadius='50%' className={s.skeleton} />
         <Skeleton width={130} height={30} className={s.skeleton} />

@@ -2,9 +2,10 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { EditableProfileCard } from '.';
+import { StoreDecorator } from 'shared/config/storybook';
 
 export default {
-  title: 'features/editableProfileCard',
+  title: 'features/EditableProfileCard',
   component: EditableProfileCard,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -15,5 +16,6 @@ const Template: ComponentStory<typeof EditableProfileCard> = (args) => <Editable
 
 export const Normal = Template.bind({});
 Normal.args = {
-
+  id: '1'
 };
+Normal.decorators = [StoreDecorator({})];

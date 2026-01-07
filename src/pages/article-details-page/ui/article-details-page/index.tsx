@@ -18,14 +18,8 @@ const reducers: ReducersList = {
 
 
 const ArticlePageDetails = memo(() => {
-  const
-    { t } = useTranslation('article'),
-    { id } = useParams<{ id: string }>();
-
-
-  if (! id) return (
-    <div>{t('Статья не найдена')}</div>
-  );
+  const { t } = useTranslation('article');
+  const { id } = useParams<{ id: string }>();
 
 
   return (

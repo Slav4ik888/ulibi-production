@@ -6,7 +6,8 @@ import * as LS from 'shared/lib';
 const defaultTheme = LS.getTheme() as Theme || Theme.LIGHT;
 
 interface Props {
-  initial?: Theme;
+  initial?: Theme
+  children: React.ReactNode
 }
 
 export const ThemeProvider: FC<Props> = ({ initial, children }) => {

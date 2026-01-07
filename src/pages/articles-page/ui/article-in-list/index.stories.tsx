@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Theme } from 'app/providers/theme';
-import { ThemeDecorator } from 'shared/config/storybook';
+import { StoreDecorator, ThemeDecorator } from 'shared/config/storybook';
 import { ArticleInList } from '.';
 
 
 export default {
-  title     : 'pages/articleInList',
+  title     : 'pages/ArticleInList',
   component : ArticleInList,
   argTypes  : {
     backgroundColor: { control: 'color' }
@@ -16,7 +16,8 @@ const Template: ComponentStory<typeof ArticleInList> = () => <ArticleInList />;
 
 export const Light = Template.bind({});
 Light.args = {};
+Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

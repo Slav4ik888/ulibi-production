@@ -14,6 +14,7 @@ export type ReducersList = {
 interface Props {
   reducers            : ReducersList
   removeAfterUnmount? : boolean
+  children            : React.ReactNode
 }
 
 export const DynamicModuleLoader: FC<Props> = ({ children, removeAfterUnmount = false, reducers }) => {

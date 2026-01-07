@@ -4,7 +4,7 @@ import { useCallback, useRef } from 'react';
 export function useThrottle(callback: (...args: any[]) => void, delay: number) {
   const isThrottled = useRef(false);
 
-  const throttledCallback = useCallback((...args) => {
+  const throttledCallback = useCallback((...args: unknown[]) => {
     if (isThrottled.current) return;
 
     callback(...args);

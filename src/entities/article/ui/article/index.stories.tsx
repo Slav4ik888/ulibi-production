@@ -15,14 +15,14 @@ export default {
 } as ComponentMeta<typeof ArticleComponent>;
 
 
-const
-  Template: ComponentStory<typeof ArticleComponent> = (args) => <ArticleComponent {...args} />,
-  store: Partial<StateSchema> = {
-    article: {
-      data: MOCK_ARTICLE,
-      loading: false
-    }
+const Template: ComponentStory<typeof ArticleComponent> = (args) => <ArticleComponent {...args} />;
+const store: Partial<StateSchema> = {
+  article: {
+    data    : MOCK_ARTICLE,
+    error   : '',
+    loading : false
   }
+};
 
 
 // LIGHT THEME
